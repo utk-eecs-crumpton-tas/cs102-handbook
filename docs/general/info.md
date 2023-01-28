@@ -52,7 +52,7 @@ Now we'll need to install `g++`, which is the compiler we'll be using to compile
 Now that you have Ubuntu opened, enter the following line
 
 ```bash
-sudo apt update && sudo apt install `g++` vim -y
+sudo apt update && sudo apt install g++ vim -y
 ```
 
 It'll prompt you to enter a password because of the `sudo` command. Enter it, and wait for the installation to finish. If there are no errors then you're good to go!
