@@ -19,7 +19,9 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "Ethan0429", // Usually your GitHub org/user name.
-  projectName: "CS102-Writeups", // Usually your repo name.
+  projectName: "cs102-writeups", // Usually your repo name.
+  deploymentBranch: "gh-pages",
+  trailingSlash: false,
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
