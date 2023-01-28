@@ -134,12 +134,6 @@ g++ --version
 
 If it prints a bunch of version information, then you've successfully installed `g++` and you can stop here!
 
-:::note
-
-Although it appears you’ve installed `g++`, the Xcode suite actually installs Clang, which is another C++ compiler. It then sets `g++` to be an alias for the Clang compiler. This is most likely fine, but it might possibly compile differently than `g++`.
-
-:::
-
 ## If you installed `WSL`...
 
 If you installed `WSL` and have completed the steps above, then I recommend you install the **Remote - WSL** extension for VSCode. It'll allow you to open VScode from your Linux (`WSL`) terminal, which is a lot more convenient than using `vim`.
