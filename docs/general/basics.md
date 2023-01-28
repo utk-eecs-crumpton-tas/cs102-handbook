@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # Basics - Tips & Resources
@@ -71,12 +71,18 @@ scp <netid>@tesla<number>.eecs.utk.edu:~/cosc102/labs/lab1.cpp .
 
 ## Compiling and Running C++ Programs
 
-- `g++` - Stands for *GNU C++ Compiler*. This command is used to compile C++ programs. It is the default compiler for C++ programs on Unix/Linux systems. It is also the compiler we will be using in this course. 
+:::danger
+
+Whenever going to submit your code for an assignment, **ALWAYS** make sure it compiles *and* behaves (as intended) before doing so -- **ON THE LAB MACHINES**. Compilers work different across computers, so even if it compiled on your computer, it doesn't necessarily compile or behave the same way on the lab machines. The TA's grade using the lab machines, so if your code doesn't compile or work correctly there, you will not get credit for the assignment.
+
+:::
+
+- `g++` - Stands for *GNU C++ Compiler*. This command is used to compile C++ programs. It is the default compiler for C++ programs on Unix/Linux systems. It is also the compiler we will be using in this course.
 
 There are many ways to use the `g++` command, but the most common way is to use the following syntax:
 
 ```bash
-g++ -std=c++11 -o <binary> <source>.cpp;
+g++ -std=c++11 -o <binary> <source>.cpp
 ```
 
 | binary | source |
@@ -86,14 +92,20 @@ g++ -std=c++11 -o <binary> <source>.cpp;
 #### example
 
 ```bash
-g++ -std=c++11 -o lab1 lab1.cpp
+g++ -std=c++11 -o foo lab1.cpp
 ```
 
-This will compile the `lab1.cpp` file and create a binary called `lab1` that you can run with
+This will compile the `lab1.cpp` file and create a binary called `foo` that you can run with
 
 ```bash
-./lab1
+./foo
 ```
+
+:::note
+
+Notice `foo` is just a random name. You can name the executable whatever you want, since the `g++` command will create the binary you specify. Usually though you want to name it something that makes sense, like the name of the program you're writing e.g. `lab1` or `lab2` etc.
+
+:::
 
 We use `./` to tell the computer that we want to run a binary in the current directory. If you want to run a binary in a different directory, you can use the full path to the binary without the `.`
 
@@ -178,3 +190,11 @@ touch <new-file-name>
 ```bash
 cat <file>
 ```
+
+## Tips & Important Notes
+
+I'm just gonna throw out a bunch of small bits of info here that I see students struggle with often.
+
+- Instead of typing `/home/netid/` in SCP/SSH, use `~`. This is basically shorthand for that path. So `/home/netid` is the same thing as `~`.
+- When you're in a directory, you can use `..` to go back one directory. So if you're in `/home/netid/cosc102/labs`, you can use `cd ..` to go back to `/home/netid/cosc102`
+
