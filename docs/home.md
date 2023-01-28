@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ## General
 
-### [Getting Started](/docs/general/getting-started)
+### [Getting Started](/docs/general/info)
 
-### [CS102 Basics](/docs/general/cs102-basics)
+### [CS102 Basics](/docs/general/basics)
 
