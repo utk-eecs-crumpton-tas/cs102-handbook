@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Getting Started
 
-You'll want to follow this guide to make your life easier during the course.
+Installing `g++` and `WSL`.
 
 ## Introduction
 

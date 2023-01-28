@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Basics - Tips & Resources
 
-These are some tips and resources that you should know before starting the course.
+Tips and resources that are useful for the course.
 
 ## What is this?
 
