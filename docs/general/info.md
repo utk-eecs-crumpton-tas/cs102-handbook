@@ -117,7 +117,7 @@ For Mac users, we just need to install `g++` for compiling our C++ programs, but
 
 ### Installing Xcode Command Line Tools (`g++`)
 
-1. press `cmd + spcae` and type `terminal`, then press enter to open the terminal.
+1. press `cmd + space` and type `terminal`, then press enter to open the terminal.
 2. Once opened, type and enter the following line
 
     ```
