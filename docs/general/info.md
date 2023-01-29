@@ -27,7 +27,7 @@ For Windows users, we'll need to install WSL (Windows Subsystem for Linux).
 
 ### Installing WSL
 
-1. Navigate to the start menu in the bottom left corner, and find the Powershell application. Right click and *run as administrator*. 
+1. Navigate to the start menu in the bottom left corner, and find the Powershell application. Right click and *run as administrator*.
 
 ![start menu](/info/s1.png)
 
