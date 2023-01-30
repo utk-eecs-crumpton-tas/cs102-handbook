@@ -1,4 +1,4 @@
-import LinkWithIcon from "/src/components/LinkWithIcon";
+import LinkWithIcon from '/src/components/LinkWithIcon'
 
 # About Grading
 
@@ -412,13 +412,42 @@ This file should be in the same directory as your source code and binary. To com
 
 ```bash
 g++ -o my_program my_program.cpp
-diff <(./my_program) output.txt
+diff <(./my_program) lab_output.txt
 ```
 
 Run `diff` with the `-y` flag to get a side-by-side comparison.
 
 ```bash
-diff -y <(./my_program) output.txt
+diff -y <(./my_program) lab_output.txt
+```
+
+If you want to run your program and save the output to a file, you can do so like this
+
+```bash
+./my_program > my_output.txt
+```
+
+Then you can compare your output to the expected output using `diff` like this:
+
+```bash
+diff -y my_output.txt lab_output.txt
+
 ```
 
 This program should easily let you find if any of the mistakes listed above are present in your output.
+
+## Compiling
+
+:::danger
+If your code does not compile on a hydra or telsa lab machine and we cannot run it, it will be graded as a zero. You **must** make sure your code compiles on one of the lab machines before submitting it.
+:::
+
+This may seem like a steep policy, but this will be the policy used for all upper level classes, the difference here is since this is an intro class, some degree of error is expected. There will be two extra credit labs available throughout the semester you can use to make up for any points lost due to this policy.
+
+The best way to be certain your lab compiles is to download your submission from canvas, upload it to one of the lab machines, and verify that the submission compiles.
+
+The file can be uploaded using `scp SOURCE DESTINATION`, but in this case, the source is the file on your computer, and the destination is the lab machine.
+
+```bash
+scp my_program.cpp NETID@hydra0.eecs.utk.edu:~/uploads
+```
