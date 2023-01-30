@@ -1,0 +1,132 @@
+---
+sidebar_position: 1
+---
+
+# Variable
+
+Labels used for identifying certain types of data.
+
+## Summary
+
+A variable is a named location in memory used to store data values. A variable can be used to store a single value or a collection of values. A variable is created when you assign a value to it using the assignment operator `=`. The variable name is on the left side of the operator and the value to be stored in the variable is on the right side of the operator.
+
+### Terminology
+
+| Define/Initialize                                | Declare                                                 | Assign                                                         |
+| ------------------------------------------------ | ------------------------------------------------------- | -------------------------------------------------------------- |
+| To create a variable _and_ assign a value to it. | To create a variable _without_ assigning a value to it. | To assign a value to a variable that has already been created. |
+
+## Usage/Syntax
+
+A variable is made up of three parts:
+
+1. The data type of the variable
+2. The name of the variable
+3. The value of the variable
+
+#### Example
+
+```cpp
+<type> <name> = <value>;
+```
+
+### Declaration
+
+```cpp
+int x; // Declare a variable named x of type int
+```
+
+### Assignment
+
+```cpp
+x = 5; // Assign the value 5 to the variable x
+```
+
+### Define/Initialize
+
+```cpp
+int x = 5; // Declare a variable named x of type int and assign the value 5 to it
+```
+
+### Operators
+
+All C++ primitive data types support the following assignment operators:
+
+| Operator | Description    | Example  |
+| -------- | -------------- | -------- |
+| `=`      | Assignment     | `x = 5`  |
+| `+=`     | Addition       | `x += 5` |
+| `-=`     | Subtraction    | `x -= 5` |
+| `*=`     | Multiplication | `x *= 5` |
+| `/=`     | Division       | `x /= 5` |
+| `%=`     | Modulus        | `x %= 5` |
+| `++`     | Increment      | `x++`    |
+| `--`     | Decrement      | `x--`    |
+
+These operators can be used to perform operations on the value of a variable and subsequently assign the result to the variable.
+
+#### Example
+
+```cpp
+int x = 5;
+x += 5; // x is now 10
+```
+
+Another way to write this is:
+
+```cpp
+int x = 5;
+x = x + 5; // x is now 10
+```
+
+But it's more convenient to use the assignment operators.
+
+### Don't do this
+
+```cpp
+int x = 5;
+x + 5; // x is still 5
+```
+
+In the above example, the value of `x` is not changed because the assignment operator `=` is not used. We add `5` to `x` but we don't assign the result to `x`, so we essentially do nothing.
+
+### Naming Conventions
+
+There are two things to consider when creating a variable:
+
+1. The name of the variable should be descriptive.
+2. The name of the variable should **consistently** follow _some_ naming convention.
+
+:::info Naming Conventions
+
+A naming convention is a set of rules for naming variables, functions, classes, etc. The purpose of a naming convention is to make code more readable and consistent. It really doesn't matter which naming convention you use, **as long as you use it consistently.**
+
+:::
+
+#### Common Naming Conventions
+
+| Convention  | Description                                                             | Example   |
+| ----------- | ----------------------------------------------------------------------- | --------- |
+| Camel Case  | The first letter of each word is capitalized except for the first word. | `myName`  |
+| Snake Case  | Each word is separated by an underscore and all letters are lowercase.  | `my_name` |
+| Pascal Case | The first letter of each word is capitalized including the first word.  | `MyName`  |
+
+#### Example
+
+```cpp
+int x = 5; // Mostly bad
+
+int numberOfStudents = 5; // good
+```
+
+In the above example, the first variable name is not descriptive. It's not clear what `x` is supposed to represent. The second variable name is descriptive. It's clear that `numberOfStudents` is supposed to represent the number of students in a class.
+
+Sometimes it's appropriate to use arbitary names for variables. For example, when using a loop counter:
+
+```cpp
+for (int i = 0; i < 10; i++) {
+    // Do something
+}
+```
+
+In the above example, `i` is a loop counter. It's not important what `i` is called, as long as it's consistent. It's common to use `i` as a loop counter, but you could use any name you want.

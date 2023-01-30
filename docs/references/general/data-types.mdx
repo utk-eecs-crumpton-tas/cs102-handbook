@@ -1,0 +1,66 @@
+---
+sidebar_position: 2
+---
+
+import LinkWithIcon from "/src/components/LinkWithIcon";
+
+# Data Types
+
+The various data types in C++
+
+## Summary
+
+In C++, <LinkWithIcon to="./variable" text="variables" /> and <LinkWithIcon to="./function" text="functions" /> are declared with a data type. The data type determines the size and layout of the variable's memory; the range of values that can be stored within that memory; and the set of operations that can be applied to the variable.
+
+C++ is composed of [primitive](#primitive-data-types) data types, which are built into the language, and [derived](#derived-data-types) data types, which are defined in terms of primitive types.
+
+## Primitive Data Types
+
+The primitive data types in C++ are:
+
+- `char` - a single byte, typically used for <LinkWithIcon to="https://www.w3schools.com/charsets/ref_html_ascii.asp" text="ASCII characters" />.
+- `int` - a signed (positive/negative) integer.
+- `float` - decimal numbers with small precision.
+- `double` - decimal numbers with large precision.
+- `bool` - A `true` or `false` value.
+- `void` - a special type that indicates that a function does not return a value.
+
+### Arrays
+
+Every data type can also be an array. An array is a collection of values of the same type. For example, an array of `int` values is an array of integers.
+
+#### Example
+
+```cpp
+int myArray[5]; // array of 5 integers
+
+myArray[0] = 1; // set the first element to 1
+myArray[1] = 2; // set the second element to 2
+```
+
+The size of an array must be known at compile time. This means that you cannot create an array of a size that is determined at runtime. For example, you cannot do this:
+
+```cpp
+int size = 5;
+// This will error
+int myArray[size]; // error: size must be a constant/literal
+```
+
+### Const
+
+Every data type can also be a `const`. A `const` is a value that cannot be changed. For example, you can declare a `const` integer:
+
+#### Example
+
+```cpp
+const int myConst = 5;
+```
+
+This means the value of `myConst` cannot be changed and that it must be initialized when it is declared. In general, you should use `const` whenever possible.
+
+## Derived Data Types
+
+Derived data types can be anything. They are user-defined types. But C++ has a couple that you will use a lot:
+
+- <LinkWithIcon to="../string" text="std::string" />
+- <LinkWithIcon to="../vector" text="std::vector" />

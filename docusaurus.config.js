@@ -64,6 +64,13 @@ const config = {
         disableSwitch: true,
         respectPrefersColorScheme: false,
       },
+      liveCodeBlock: {
+        /**
+         * The position of the live playground, above or under the editor
+         * Possible values: "top" | "bottom"
+         */
+        playgroundPosition: "bottom",
+      },
       // Replace with your project's social card
       image: "img/cs102.png",
       navbar: {
@@ -117,9 +124,9 @@ const config = {
         },
       };
     },
+    /** */
   ],
   themes: ["@docusaurus/theme-live-codeblock"],
-  /** */
 };
 
 module.exports = config;
