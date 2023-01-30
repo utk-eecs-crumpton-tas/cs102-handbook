@@ -1,3 +1,5 @@
+import LinkWithIcon from "/src/components/LinkWithIcon";
+
 # About Grading
 
 ## Formatting
@@ -20,7 +22,7 @@ Each field of the header is worth 1 point. If you forget the header, you will lo
 
 ### Comments
 
-If your program does not have comments you will lose 3 points. You should get in the habit of commenting on your code. However, if you over-comment your code, you may also receive a small penalty. The idea behind comments is just to provide a brief explanation of what your code is doing. You should not need to comment on every line of code. Assume the reader of the code already knows C++, comments are just the help the reader understand if something may be unclear.
+If your program does not have comments you will lose 3 points. You should get in the habit of commenting on your code. However, if you over-comment your code, you may also receive a small penalty. The idea behind comments is just to provide a brief explanation of what your code is doing. You should not need to comment on every line of code. Assume the reader of the code already knows C++, comments are just to help the reader understand if something may be unclear.
 
 Examples of bad comments:
 
@@ -31,6 +33,20 @@ cout << "Hello" << endl; // prints "Hello" to the console
 ```cpp
 return 1; // return an error
 ```
+
+It's obvious that `cout` prints to the console, and it's obvious that `return 1` returns an error. These comments are not necessary. You should only comment on things that may not be obvious to the reader.
+
+Examples of good comments:
+
+```cpp
+// compute the sum of the first n integers
+int sum = 0;
+for (int i = 1; i <= n; i++) {
+    sum += i;
+}
+```
+
+Although a bit contrived, the comment above tells us what the block does without having to read the code. This is a good example of a comment that is useful.
 
 ### Bad Variable Names
 
@@ -255,6 +271,12 @@ int main() {
 Bad indentation makes code incredibly difficult to read. A couple of mistakes are okay, but if we cannot tell where your code blocks begin and end, you will lose points for this. The best advice I can give you is to use a code formatter. This is a program that will automatically fix any whitespace and indentation issues in your code and format everything in a consistent way. To format your code in vim while in normal mode use the command `gg=G`. To format in VS Code right click your code and select format document. You may need to install an extension in VS Code, the Microsoft `C/C++` extension should come with whatever you need. If you use a formatter on your code before submitting, you will never have to worry about losing points for this.
 
 A side note: if you are sharing code with a TA on the Discord server, please format your code first, this will make it much easier for us to help you!
+
+:::tip Code Formatter
+
+Ethan has talked a bit about automatic-code formatters for VScode in <LinkWithIcon to="/docs/general/pre-setup#extra" text="this document" /> as well, which is basically the `gg=G` command but for VScode.
+
+:::
 
 ### Compiler Warnings
 
