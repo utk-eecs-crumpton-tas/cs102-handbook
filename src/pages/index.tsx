@@ -7,7 +7,7 @@ import Link from "@docusaurus/Link";
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <header className="flex flex-col items-center justify-start my-auto">
+    <header className="flex flex-col items-center justify-start my-auto mx-10 text-center">
       <h1 className="text-white text-6xl">{siteConfig.title}</h1>
       <p className="text-white italic">{siteConfig.tagline}</p>
       <Link
