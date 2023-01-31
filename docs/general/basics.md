@@ -28,6 +28,12 @@ This page is aimed at Unix/Linux computers. If you are using Windows, it's more 
 scp <file> <netid>@tesla<number>.eecs.utk.edu:<destination>
 ```
 
+:::danger IMPORTANT
+
+Make sure `<destination>` exists on the lab computers. If it doesn't, you will get an error.
+
+:::
+
 #### From the lab computers to your computer
 
 ```bash
