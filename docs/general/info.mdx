@@ -16,9 +16,9 @@ This guide will cover installing `g++` for your computer. `g++` is the compiler 
 - _Mac Users_ - You can skip to the [Installing `g++`](/cs102-writeups/docs/general/info?os=macos#installing-xcode-command-line-tools-g) section
 - _Windows Users_ - Read on
 
-:::tip
+:::info Windows Users...
 
-_Windows Users_ - This guide will cover installing `WSL`, which is a Linux virtual machine specifically for Windows. It can be a bit annoying to set up, but it's the only way you can get a Unix experience on Windows without SSH, which is important **if you're a CS major**. Otherwise, I would skip the to the [Installing `g++` without WSL](#installing-g-without-wsl) section instead. `WSL` is not necessary for this course or to install `g++`.
+This guide will cover installing `WSL`, which is a Linux virtual machine specifically for Windows. It can be a bit annoying to set up, but it's the only way you can get a Unix experience on Windows without SSH, which is important **if you're a CS major**. Otherwise, I would skip the to the [Installing `g++` without WSL](/cs102-writeups/docs/general/info?os=windows-wsl#installing-wsl) section instead. `WSL` is not necessary for this course or to install `g++`.
 
 **Bottom line**: If you want to have a Unix environment on your own computer (way more comfortable than using SSH to do that), then install WSL. If you don't care about that, then you can skip it.
 
@@ -35,9 +35,9 @@ _Windows Users_ - This guide will cover installing `WSL`, which is a Linux virtu
     ]}>
 <TabItem value="windows-wsl">
 
-For Windows users, we'll need to install WSL (Windows Subsystem for Linux).
-
 ### Installing WSL
+
+For Windows users, we'll need to install WSL (Windows Subsystem for Linux).
 
 1. Navigate to the start menu in the bottom left corner, and find the Powershell application. Right click and _run as administrator_.
 
@@ -137,9 +137,9 @@ After the instruction where it says to do `g++ --version` in the command prompt,
 
 <TabItem value="macos">
 
-For Mac users, we just need to install `g++` for compiling our C++ programs, but first we'll need a couple of things
-
 ### Installing Xcode Command Line Tools (`g++`)
+
+For Mac users, we'll need to install Xcode Command Line Tools, which will install `g++` for us.
 
 1. press `cmd + space` and type `terminal`, then press enter to open the terminal.
 2. Once opened, type and enter the following line
