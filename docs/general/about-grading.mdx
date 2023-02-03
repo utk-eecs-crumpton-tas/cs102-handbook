@@ -1,4 +1,4 @@
-import LinkWithIcon from "/src/components/LinkWithIcon";
+import LinkWithIcon from '/src/components/LinkWithIcon'
 
 # About Grading
 
@@ -24,7 +24,7 @@ Each field of the header is worth 1 point. If you forget the header, you will lo
 
 ### Comments
 
-If your program does not have comments you will lose 3 points. You should get in the habit of commenting on your code. However, if you over-comment your code, you may also receive a small penalty. The idea behind comments is just to provide a brief explanation of what your code is doing. You should not need to comment on every line of code. Assume the reader of the code already knows C++, comments are just to help the reader understand if something may be unclear.
+If your program does not have comments you will lose 5 points. You should get in the habit of commenting on your code. However, if you over-comment your code, you may also receive a small penalty. The idea behind comments is just to provide a brief explanation of what your code is doing. You should not need to comment on every line of code. Assume the reader of the code already knows C++, comments are just to help the reader understand if something may be unclear.
 
 Examples of bad comments:
 
@@ -145,7 +145,11 @@ int main() {
 
 ### Non-Const Global Variables
 
-Minus 1 per global variable up to 3. Global variables are variables that are declared outside of any function. They are accessible from anywhere in your program. Non-const global variables are generally considered a bad practice, and you should avoid using them. It may not seem like a big deal now, but as your programs grow in size and complexity, global variables can lead to a lot of difficult-to-find bugs. If you do use a global variable, it should be declared as const.
+:::note
+The `const` keywrod in C++ is the equivalent of `final` in Java. It means that the variable cannot be changed.
+:::
+
+Minus 1 per non-const global variable up to 3. Global variables are variables that are declared outside of any function. They are accessible from anywhere in your program. Non-const global variables are generally considered a bad practice, and you should avoid using them. It may not seem like a big deal now, but as your programs grow in size and complexity, global variables can lead to a lot of difficult-to-find bugs. If you do use a global variable, it should be declared as `const`.
 
 ```cpp
 int my_global_variable = 0; // bad
@@ -438,7 +442,7 @@ This program should easily let you find if any of the mistakes listed above are 
 
 ## Compiling
 
-:::danger IMPORTANT
+:::danger Your Code Must Compile on the Lab Machines
 
 Whenever going to submit your code for an assignment, **ALWAYS** make sure it compiles _and_ behaves (as intended) before doing so -- **ON THE LAB MACHINES**. Compilers work different across computers, so even if it compiled on your computer, it doesn't necessarily compile or behave the same way on the lab machines. The TA's grade using the lab machines, so if your code doesn't compile or work correctly there, you will **not get credit** for the assignment. Trust me, it happens all the time.
 
