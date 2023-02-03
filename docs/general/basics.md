@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# Basics - Tips & Resources
+# Common Unix/Linux & g++ Commands
 
 Tips and resources that are useful for the course.
 
