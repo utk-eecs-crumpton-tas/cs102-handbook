@@ -13,9 +13,9 @@ Entirely optional but _highly recommended_.
 
 As I've said, this is completeley optional, so skip to the next document if doing this doesn't interest you. However I advise against it, since you'll have a much better experience throughout the semester if you do this.
 
-In this guide, I'll show you how to install VScode for both Windows and Mac users, which is pretty much the defacto text editor of choice for programming.
+In this guide, I'll show you how to install VS Code for both Windows and Mac users, which is pretty much the defacto text editor of choice for programming.
 
-### Installing VScode
+### Installing VS Code
 
 <Tabs
     groupId="operating-system"
@@ -29,10 +29,10 @@ In this guide, I'll show you how to install VScode for both Windows and Mac user
 <ol>
     <li>Go to <a href="https://code.visualstudio.com/download">this link</a> and download the installer for your system.</li>
     <li>Once downloaded, run the installer and follow the instructions.</li>
-    <li>Once installed, you should be able to open VScode by searching for it in the start menu.</li>
+    <li>Once installed, you should be able to open VS Code by searching for it in the start menu.</li>
 </ol>
 
-Mostly you should be using VScode from the command line. Let's test that out in the powershell now
+Mostly you should be using VS Code from the command line. Let's test that out in the powershell now
 
 ```bash
 # navigate to some directory that you're not afraid of making a file in
@@ -50,12 +50,12 @@ If you did everything correctly, you should see a new window open up with a blan
 <ol>
     <li>Go to <a href="https://code.visualstudio.com/download">this link</a> and download the installer for your system.</li>
     <li>Once downloaded, run the installer and follow the instructions.</li>
-    <li>Once installed, you should be able to open VScode by searching for it (hint: <code>cmd + space</code> to open spotlight search).</li>
+    <li>Once installed, you should be able to open VS Code by searching for it (hint: <code>cmd + space</code> to open spotlight search).</li>
 </ol>
 
-Ideally you'll be using the terminal a lot if you're on Mac, so we need to setup VScode to launch from the terminal. To do this, simply open VScode and press `cmd + shift + p` to open the command palette. Type in `shell command` and select `Shell Command: Install 'code' command in PATH`. This will allow you to open VScode from the terminal.
+Ideally you'll be using the terminal a lot if you're on Mac, so we need to setup VS Code to launch from the terminal. To do this, simply open VS Code and press `cmd + shift + p` to open the command palette. Type in `shell command` and select `Shell Command: Install 'code' command in PATH`. This will allow you to open VS Code from the terminal.
 
-Once that's done, quit VScode (`cmd + q`) and quit the terminal if it's open. Now, open the terminal back up and enter the following command
+Once that's done, quit VS Code (`cmd + q`) and quit the terminal if it's open. Now, open the terminal back up and enter the following command
 
 ```bash
 code test.cpp
@@ -67,7 +67,7 @@ If you did everything correctly, you should see a new window open up with a blan
 
 ## Extensions
 
-The best thing about VScode is its huge pool of community extensions. These are basically plugins that add extra functionality to VScode. You can find any extension available by clicking the building-blocks icon in the left sidebar of VScode and searching for one. (You can also install themes, but that's less important)
+The best thing about VS Code is its huge pool of community extensions. These are basically plugins that add extra functionality to VS Code. You can find any extension available by clicking the building-blocks icon in the left sidebar of VS Code and searching for one. (You can also install themes, but that's less important)
 
 At the very least, you should install the C++ official extension.
 
@@ -84,23 +84,23 @@ At the very least, you should install the C++ official extension.
         { label: 'MacOS Users', value: 'macos' },
     ]}>
 <TabItem value="macos">
-I also recommend enabling a couple VScode settings to make your life easier.
+I also recommend enabling a couple VS Code settings to make your life easier.
 
 1. Open the settings by pressing `cmd + ,` or by clicking the gear icon in the bottom left corner. Then, search for `auto save` and select `onFocusChange`. This will save you millions of times pressing `cmd + s` to save your file.
 
 2. (**This feature only works if you've installed the extension I listed above**) Still in the settings menu, search for `format on save` and check the box. I cannot recommend this enough. So many students have poor formatting which will lose you points and will be straight up unacceptable in later courses. This will automatically format your code when you save it, so you don't have to worry about it.
 
-VScode also comes with an integrated terminal which you can open by pressing `cmd + ~`. This will be useful for navigating around your filesystem and moving files since you won't have to move between windows this way. As well as running your programs once you've installed `g++`.
+VS Code also comes with an integrated terminal which you can open by pressing `cmd + ~`. This will be useful for navigating around your filesystem and moving files since you won't have to move between windows this way. As well as running your programs once you've installed `g++`.
 
 </TabItem>
 
 <TabItem value="windows">
-I also recommend enabling a couple VScode settings to make your life easier.
+I also recommend enabling a couple VS Code settings to make your life easier.
 
 1. Open the settings by pressing `ctrl + ,` or by clicking the gear icon in the bottom left corner. Then, search for `auto save` and select `onFocusChange`. This will save you millions of times pressing `ctrl + s` to save your file.
 
 2. (**This feature only works if you've installed the extension I listed above**) Still in the settings menu, search for `format on save` and check the box. I cannot recommend this enough. So many students have poor formatting which will lose you points and will be straight up unacceptable in later courses. This will automatically format your code when you save it, so you don't have to worry about it.
 
-VScode also comes with an integrated terminal which you can open by pressing `ctrl + ~`. This will be useful for navigating around your filesystem and moving files since you won't have to move between windows this way. As well as running your programs once you've installed `g++`.
+VS Code also comes with an integrated terminal which you can open by pressing `ctrl + ~`. This will be useful for navigating around your filesystem and moving files since you won't have to move between windows this way. As well as running your programs once you've installed `g++`.
 
 </TabItem></Tabs>
