@@ -18,37 +18,35 @@ This page is aimed at Unix/Linux computers. If you are using Windows, it's more 
 
 ---
 
-## Copying to/from the lab machines
+## Copying to/from the lab machines (`scp`)
 
-- `scp` - Stands for *Secure Copy*. This command allows you to copy files from a remote server to your local computer or vice versa.
+`scp` - Stands for *Secure Copy*. This command allows you to copy files from a remote server to your local computer or vice versa.
 
-#### From your computer to the lab computers
+:::note
+
+In the following examples, omit the `<>` characters. They are just placeholders for the actual values you need to use. Also note that `hydra` and `tesla` are interchangeable.
+
+:::
+
+### Syntax
+
+| File                                      | NetID          | Number            | Destination                                           |
+| ----------------------------------------- | -------------- | ----------------- | ----------------------------------------------------- |
+| The **path** to the file you want to copy | Your UTK NetID | Any number [0,30] | The **path** to the location you want the file copied |
+
+
+### From your computer to the lab computers
 
 ```bash
 scp <file> <netid>@tesla<number>.eecs.utk.edu:<destination>
 ```
 
-:::danger IMPORTANT
-
-Make sure `<destination>` exists on the lab computers. If it doesn't, you will get an error.
-
-:::
-
-#### From the lab computers to your computer
+### From the lab computers to your computer
 
 ```bash
 scp <netid>@tesla<number>.eecs.utk.edu:<file> <destination>
 ```
 
-| File                                      | NetID          | Number        | Destination                                           |
-| ----------------------------------------- | -------------- | ----------------- | ----------------------------------------------------- |
-| The **path** to the file you want to copy | Your UTK NetID | Any number [0,30] | The **path** to the location you want the file copied |
-
-:::caution
-
-The brackets `<>` are placeholders. You don't actually include them in the final command, just the contents within them
-
-:::
 
 ### Common SCP FAQs/Errors
 
@@ -77,7 +75,7 @@ scp <netid>@tesla<number>.eecs.utk.edu:~/cosc102/labs/lab1.cpp .
 
 ## Other commands you should know
 
-#### ls
+### List files in a directory
 
 - `ls` - Stands for *List*. This command is used to list the contents of a directory. It is often used to see what files are in a directory, or to see if a file exists in a directory. There are multiple flags you can use with `ls` that alter the output
 
@@ -87,7 +85,7 @@ ls -l # a more detailed list of the current directory. It shows things like file
 ls <directory/file> # lists the contents of a specific directory/lists whether a file exists in the current directory, respectively
 ```
 
-#### cd
+### Change directory
 
 - `cd` - Stands for *Change Directory*. This command is used to change the current directory. It is often used to navigate to a specific directory, or to navigate back to your home directory.
 
@@ -97,7 +95,7 @@ cd .. # changes the current directory to the parent directory of the current dir
 cd ~ # changes the current directory to your home directory
 ```
 
-#### pwd
+### Print current directory path
 
 - `pwd` - Stands for *Print Working Directory*. This command is used to print the current directory. It is often used to see what directory you are currently in.
 
@@ -105,7 +103,7 @@ cd ~ # changes the current directory to your home directory
 pwd
 ```
 
-#### mkdir
+### Make a new directory
 
 - `mkdir` - Stands for *Make Directory*. This command is used to create a new directory.
 
@@ -113,7 +111,7 @@ pwd
 mkdir <new-directory-name>
 ```
 
-#### cp
+### Copy a file or directory
 
 - `cp` - Stands for *Copy*. This command is used to copy a file or directory.
 
@@ -122,7 +120,7 @@ cp <source> <destination>
 cp -r <source-directory> <destination-directory>
 ```
 
-#### mv
+### Move/rename a file
 
 - `mv` - Stands for *Move*. This command is used to move a file to a different location. You can also use it to rename a file.
 
@@ -130,7 +128,7 @@ cp -r <source-directory> <destination-directory>
 mv <source> <destination> # moves source to destination or renames source to destination
 ```
 
-#### rm
+### Remove a file or directory
 
 - `rm` - Stands for *Remove*. This command is used to remove files and directories.
 
@@ -139,7 +137,7 @@ rm <file> # removes a file
 rm -r <directory> # removes a directory and all of its contents
 ```
 
-#### touch
+### Create a new file
 
 - `touch` - This command is used to create a new file.
 
@@ -147,7 +145,7 @@ rm -r <directory> # removes a directory and all of its contents
 touch <new-file-name>
 ```
 
-#### cat
+### Print the contents of a file
 
 - `cat` - Stands for *Concatenate*. This command is used to print the contents of a file to the terminal.
 
