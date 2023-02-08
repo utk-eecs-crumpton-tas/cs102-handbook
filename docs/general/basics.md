@@ -18,6 +18,26 @@ This page is aimed at Unix/Linux computers. If you are using Windows, it's more 
 
 ---
 
+## Logging into the lab machines
+
+`ssh` - Stands for *Secure Shell*. This command allows you to log into a remote server. It is used to log into the lab machines.
+
+### Syntax
+
+| NetID          | Number            |
+| -------------- | ----------------- |
+| Your UTK NetID | Any number [0,30] |
+
+```bash
+ssh <netid>@tesla<number>.eecs.utk.edu
+```
+
+:::note
+
+`tesla` and `hydra` are interchangeable. You can use either one to log into the lab machines. Also, any progress on the lab machines is transferred to the others. In other words, it doesn't matter what number or machine you use, you can always access your files from any other machine.
+
+:::
+
 ## Copying to/from the lab machines (`scp`)
 
 `scp` - Stands for *Secure Copy*. This command allows you to copy files from a remote server to your local computer or vice versa.
