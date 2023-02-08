@@ -63,7 +63,7 @@ scp <file> <netid>@tesla<number>.eecs.utk.edu:<destination>
 scp ~/Desktop/cs102/hello.cpp bricker1@hydra2.eecs.utk.edu:~/cs102/labs/lab1/
 
 # example (Windows)
-scp C:\Users\bricker1\Desktop\cs102\hello.cpp
+scp C:\Users\bricker1\Desktop\cs102\hello.cpp bricker1@hydra2.eecs.utk.edu:~/cs102/labs/lab1/
 ```
 
 ### From the lab computers to your computer
