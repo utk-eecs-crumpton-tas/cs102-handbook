@@ -29,7 +29,11 @@ This page is aimed at Unix/Linux computers. If you are using Windows, it's more 
 | Your UTK NetID | Any number [0,30] |
 
 ```bash
+# syntax
 ssh <netid>@tesla<number>.eecs.utk.edu
+
+# example
+ssh bricker1@hydra12.eecs.utk.edu
 ```
 
 :::note
@@ -42,12 +46,6 @@ ssh <netid>@tesla<number>.eecs.utk.edu
 
 `scp` - Stands for *Secure Copy*. This command allows you to copy files from a remote server to your local computer or vice versa.
 
-:::note
-
-In the following examples, omit the `<>` characters. They are just placeholders for the actual values you need to use. Also note that `hydra` and `tesla` are interchangeable.
-
-:::
-
 ### Syntax
 
 | File                                      | NetID          | Number            | Destination                                           |
@@ -58,13 +56,27 @@ In the following examples, omit the `<>` characters. They are just placeholders 
 ### From your computer to the lab computers
 
 ```bash
+# syntax
 scp <file> <netid>@tesla<number>.eecs.utk.edu:<destination>
+
+# example (Unix/Linux)
+scp ~/Desktop/cs102/hello.cpp bricker1@hydra2.eecs.utk.edu:~/cs102/labs/lab1/
+
+# example (Windows)
+scp C:\Users\bricker1\Desktop\cs102\hello.cpp
 ```
 
 ### From the lab computers to your computer
 
 ```bash
+# syntax
 scp <netid>@tesla<number>.eecs.utk.edu:<file> <destination>
+
+# example (Unix/Linux)
+scp bricker1@hydra2.eecs.utk.edu:~/cs102/labs/lab1/hello.cpp ~/Desktop/cs102/
+
+# example (Windows)
+scp bricker1@hydra2.eecs.utk.edu:~/cs102/labs/lab1/hello.cpp C:\Users\bricker1\Desktop\cs102\
 ```
 
 
