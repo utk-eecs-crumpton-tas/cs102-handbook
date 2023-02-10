@@ -64,7 +64,7 @@ These two methods are equivalent. I prefer the second method, since it's a littl
 
 ## Hints
 
-- `cin.get()` - This function is used to get a single character from the user. You'll use this for the operator.
+- `cin.get()` - This function is used to get a single character from the user. It's not necessary as it's interchangeable with `cin >> my_char`, but you can use it.
 
 - `cin.ignore()` - This function is used to ignore the rest of the line. This is useful when you want to get a single character from the user, but there is still data left in the input buffer. So if the enters `Agfjdkl` fort their operator, and you use `cin.get()` to get the first character, the rest of the line will still be in the input buffer. So the next time you try to get an integer from the user, it will get `gfjdkl` instead of the integer they entered. So you can use `cin.ignore()` to ignore the rest of the line. This way, the next time you try to get an integer from the user, it will get the integer they entered.
 
