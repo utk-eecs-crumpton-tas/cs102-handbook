@@ -20,5 +20,29 @@
     "prefix": "lwi",
     "body": ["<LinkWithIcon to=\"$1\" text=\"$2\" />"],
     "description": "Link with icon"
+  },
+
+  "OS Tabs": {
+    "scope": "mdx,tsx,jsx",
+    "prefix": "ostabs",
+    "body": [
+      "<Tabs",
+      "   groupId=\"operating-system\"",
+      "   queryString=\"os\"",
+      "   defaultValue=\"windows\"",
+      "   values={[",
+      "       { label: 'Windows Users', value: 'windows' },",
+      "       { label: 'Windows Users (WSL)', value: 'windows-wsl' },",
+      "       { label: 'MacOS Users', value: 'macos' },",
+      "]}>"
+    ],
+    "description": "OS Tabs"
+  },
+
+  "OS Tab": {
+    "scope": "mdx,tsx,jsx",
+    "prefix": "tabitem",
+    "body": ["<TabItem value=\"${1:windows}\">", "$2", "</TabItem>"],
+    "description": "OS Tab"
   }
 }
