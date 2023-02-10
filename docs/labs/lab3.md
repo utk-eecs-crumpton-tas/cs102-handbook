@@ -6,6 +6,12 @@ title: Lab 3 - Calculator
 
 Build a simple arithmetic calculator.
 
+## Meta
+
+| Lab | Source File | Description | Due Date |
+| --- | ----------- | ----------- | -------- |
+| 3 | `calc.cpp`    | Simple arithmetic calculator w/error handling | 2/16/2023 - 11:59pm |
+
 ## Introduction
 
 I'm not going to go over much here, since the program is really simple honestly. I'll just cover a couple of the main points of this lab.
