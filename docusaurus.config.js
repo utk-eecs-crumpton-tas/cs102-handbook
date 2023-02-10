@@ -6,6 +6,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
+  staticDirectories: ["public", "static"],
   title: "CS102 Writeups",
   tagline: "A collection of various helpful writeups for CS102 at UTK",
   favicon: "img/favicon.ico",
@@ -126,7 +127,10 @@ const config = {
     },
     /** */
   ],
-  themes: ["@docusaurus/theme-live-codeblock"],
+  themes: ["@docusaurus/theme-live-codeblock", "@docusaurus/theme-mermaid"],
+  markdown: {
+    mermaid: true,
+  },
 };
 
 module.exports = config;

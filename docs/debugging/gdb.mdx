@@ -1,0 +1,280 @@
+---
+title: Debugging with gdb
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import LinkWithIcon from "/src/components/LinkWithIcon";
+import MysysImg from "@site/static/img/msys2.png";
+
+# Debugging with `gdb`
+
+Learn how to use `gdb` to debug tricky problems.
+
+## What is `gdb`?
+
+`gdb` is program that allows you to debug your own programs. It's a dynamic debugger, which means it attaches to your program as it runs, and you can interact with your program like a surgeon operating on a patient.
+
+In this guide, I'll cover
+
+- Installing `gdb` for both MacOS & Windows
+- `gdb` commands and how to use them
+
+## Installing `gdb`
+
+If you can't get `gdb` to work, or you don't want to install it on your computer, you have a couple options.
+
+1. Use the lab machines. They have `gdb` installed already.
+2. Use the <LinkWithIcon text="online gdb debugger" to="https://www.onlinegdb.com/online_c++_compiler" />. It's a little bit slower, but it works.
+
+Otherwise, read on.
+
+<Tabs
+    groupId="operating-system"
+    queryString="os"
+    defaultValue="windows"
+    values={[
+        { label: 'Windows Users', value: 'windows' },
+        { label: 'Windows Users (WSL)', value: 'windows-wsl' },
+        { label: 'MacOS Users', value: 'macos' },
+    ]}>
+<TabItem value="windows">
+
+### Windows Users
+
+First let's check to see if it's already installed. Open up a terminal instance (powershell, cmd, terminal, whatever) and run the command `gdb`. If it works, skip to <LinkWithIcon to="#gdb-flowchart" text="the flowchart" /> to get started.
+
+Open the program `msys2`. There might be multiple, but just open the purple one. It should look like this:
+
+<img src={MysysImg} height="auto" width="120px" />
+
+Once opened, enter the following commands:
+
+```bash
+pacman -Syu
+pacman -Syu
+pacman -S mingw-w64-x86_64-gdb
+```
+
+**Make sure to answer any of the prompts with `y`**.
+
+Once that's done, restart any terminals you have open, and try running `gdb` again. It should work now. If it doesn't, then I don't recommend bothering with it. Just use the lab machines.
+
+</TabItem>
+
+<TabItem value="windows-wsl">
+
+### Windows Users (WSL)
+
+First let's check to see if it's already installed. Open up a terminal instance of Ubuntu and run the command `gdb`. If it works, skip to <LinkWithIcon to="#gdb-flowchart" text="the flowchart" /> to get started.
+
+If it doesn't work, run the following commands:
+
+```bash
+sudo apt update
+sudo apt upgrade
+sudo apt install gdb
+```
+
+**Make sure to answer any of the prompts with `y`**.
+
+Once that's done, restart any terminals you have open, and try running `gdb` again. It should work now. If it doesn't, then I don't recommend bothering with it. Just use the lab machines.
+
+</TabItem>
+
+<TabItem value="macos">
+
+### MacOS Users
+
+For MacOS users, we actually won't be using `gdb` directly. Instead, we'll be using `lldb`, which is a debugger that's built into Xcode. It's a little bit different than `gdb`, but it's more or less the same.
+
+First let's check to see if it's already installed. Open up a terminal instance and run the command `lldb`. If it works, skip to <LinkWithIcon to="#gdb-flowchart" text="the flowchart" /> to get started.
+
+If it doesn't work, follow the instructions <LinkWithIcon to="/cs102-writeups/docs/general/info?os=macos#installing-xcode-command-line-tools-g" text="here" /> to install the Xcode command line tools.
+
+</TabItem>
+
+</Tabs>
+
+## `gdb` flowchart
+
+Here's a flowchart of the commands you'll use in `gdb`, from start to finish. The commands needed are the labels of the arrows, and the arguments to the commands are wraped in `:`. Optional arguments are wrapped in `::`. Commands like `next/n` mean that you can use either `next` or `n` to execute that command.
+
+Lastly, of the `Debug Options` commands can be repeated by pressing `↩` (enter) without typing anything.
+
+:::danger README
+
+Each rectangle node in the chart is clickable and will take you to the section of this guide that covers that command more in depth.
+
+:::
+
+```mermaid
+graph TD
+Start[Start Debugging with gdb] -->|gdb :binary_name:| LoadProgram{LoadProgram} --> PreRun[Pre-Run]
+PreRun --> |break/b :line number or function name:| SetBreakpoint[Set Breakpoint]
+PreRun --> |"run/r :argument(s):"| StartExecution[Start Execution]
+StartExecution --> DebugOptions{Debug Options}
+DebugOptions --> |next/n| NextInstruction[Execute Next Instruction]
+DebugOptions --> |break/b :line number or function:| SetBreakpoint[Set Breakpoint]
+DebugOptions --> |step/s| StepIntoFunction[Step Into Function]
+DebugOptions --> |continue/c| ContinueExecution[Continue Execution]
+DebugOptions --> |print/p :variable name:| PrintVariable[Print Value of Variable]
+DebugOptions --> |backtrace/bt| Backtrace[Print Backtrace of Function Calls]
+DebugOptions --> |quit/q| EndDebugging[End Debugging Session]
+click Start href "/cs102-writeups/docs/debugging/gdb#starting-gdb"
+click StartExecution href "/cs102-writeups/docs/debugging/gdb#start-execution"
+click PreRun href "/cs102-writeups/docs/debugging/gdb#pre-run"
+click SetBreakpoint href "/cs102-writeups/docs/debugging/gdb#setting-breakpoints"
+click NextInstruction href "/cs102-writeups/docs/debugging/gdb#next-instruction"
+click StepIntoFunction href "/cs102-writeups/docs/debugging/gdb#step-into-function"
+click ContinueExecution href "/cs102-writeups/docs/debugging/gdb#continue-execution"
+click PrintVariable href "/cs102-writeups/docs/debugging/gdb#print-variable"
+click Backtrace href "/cs102-writeups/docs/debugging/gdb#backtrace"
+click EndDebugging href "/cs102-writeups/docs/debugging/gdb#end-debugging-session"
+```
+
+## Starting `gdb`
+
+:::info Before using `gdb`
+
+Before using `gdb` on your program, it needs to be compiled with the `-g` flag. It can go anywhere in the command. I usually put it at the end, but it doesn't matter.
+
+:::
+
+To start `gdb`, you need to run the command `gdb` followed by the name of the binary you want to debug. For example, if you want to debug the binary `hello`, you would run the command `gdb hello`.
+
+```bash
+# compile your program
+g++ hello.cpp -o hello -g
+gdb hello
+```
+
+## Pre-Run
+
+During this phase, you'll set any <LinkWithIcon to="#setting-breakpoints" text="breakpoints" /> you want to set, and then start the execution of your program.
+
+## Start Execution
+
+To start the execution of your program, you'll use the `run` command. You can also use the `r` command, which is a shortcut for `run`.
+
+From here on out, your prompt will change to `(gdb)`. Just note that it's not a part of the command you're typing.
+
+### Run
+
+```bash
+(gdb) run
+
+# or
+
+(gdb) r
+```
+
+### Run with Arguments
+
+A lot of the time, your program will need command line arguments to run. To pass arguments to your program, you can use the `run` command with arguments.
+
+```bash
+(gdb) r arg1 arg2 arg3 ...
+```
+
+## Setting Breakpoints
+
+Breakpoints are the most important part of debugging. When you set a breakpoint, it's like putting a stop sign in your program at a certain line. When your program reaches that line, it will stop and let you inspect the state of your program.
+
+### Break
+
+To set a breakpoint, you'll use the `break` command. You can also use the `b` command, which is a shortcut for `break`.
+
+```bash
+# break on line 5 of your entire program
+(gdb) break 5
+
+# break on the function `main`
+(gdb) break main
+```
+
+## Next Instruction
+
+Once you've hit a breakpoint, you can use the `next` command to execute the next instruction. You can also use the `n` command, which is a shortcut for `next`. Keep in mind that `next` will not take you into a function that's being called. It will execute it and then move on to the next line.
+
+```bash
+(gdb) next
+
+# or
+
+(gdb) n
+```
+
+## Step Into Function
+
+If you're on a line that calls a function, you can use the `step` command to step into that function. You can also use the `s` command, which is a shortcut for `step`. Unlike `next`, `step` will take you into the function that's being called.
+
+```bash
+(gdb) step
+
+# or
+
+(gdb) s
+```
+
+## Continue Execution
+
+If you wish to continue executing your program until it hits another breakpoint or finishes/crashes, you can use the `continue` command. You can also use the `c` command, which is a shortcut for `continue`.
+
+```bash
+(gdb) continue
+
+# or
+
+(gdb) c
+```
+
+## Print Variable
+
+Often times you'll want to print the value of a variable to see what it is. To do this, you can use the `print` command. You can also use the `p` command, which is a shortcut for `print`.
+
+```bash
+# print the value of the variable `x`
+(gdb) print x
+
+# or
+
+(gdb) p x
+```
+
+## Backtrace
+
+You'll usually use this command when your program crashes. It will print the "backtrace" of your program, which is a list of all the functions that were called before the crash, in order from the most recent to the oldest. The command is `backtrace`, but you can also use the `bt` command, which is a shortcut for `backtrace`.
+
+```bash
+(gdb) backtrace
+0  0x00007ffff7a4b0b3 in __GI_raise (sig=sig@entry=6) at ../sysdeps/unix/sysv/linux/raise.c:50
+1  0x00007ffff7a4c42a in __GI_abort () at abort.c:79
+2  0x00007ffff7a8f7ea in __libc_message (action=action@entry=do_abort, fmt=fmt@entry=0x7ffff7baa0a5 "%s\n") at ../sysdeps/posix/libc_fatal.c:181
+```
+
+Reading it's output, you can see that the crash happened on line 50 of the file `../sysdeps/unix/sysv/linux/raise.c`. And you can see that the function that called `raise` was `abort`, which was called by `libc_message` — hence the back**trace**.
+
+## End Debugging Session
+
+To end your debugging session, you can use the `quit` command. You can also use the `q` command, which is a shortcut for `quit`.
+
+```bash
+(gdb) quit
+```
+
+## More Useful Commands
+
+There's a ton of commands in `gdb`, and the ones listed above are the most useful in general. Here's a few more if you want more control and like using `gdb`
+
+- `start` - this command starts the program being debugged and stops at the first instruction.
+
+- `jump` - this command allows you to jump to a specific location in the program and continue executing from there.
+
+- `watch` - this command sets a watchpoint, which triggers a breakpoint when a specified memory location is written to or read from.
+
+- `rwatch` - this command sets a read watchpoint, which triggers a breakpoint when a specified memory location is read.
+
+- `awatch` - this command sets a write watchpoint, which triggers a breakpoint when a specified memory location is written to.
+
+- `shell` - this command allows you to run shell commands while in GDB, which can be useful for things like running scripts or viewing system information.

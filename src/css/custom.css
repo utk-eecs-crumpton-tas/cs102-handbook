@@ -62,3 +62,15 @@ code {
   color: #86eeac;
   background-color: #1f2937;
 }
+
+g:hover > rect {
+  fill: #ffffff !important;
+  transition: 0.1s;
+  transition-timing-function: ease-in-out;
+}
+
+a:hover .nodeLabel {
+  color: black !important;
+  transition: 0.1s;
+  transition-timing-function: ease-in-out;
+}
