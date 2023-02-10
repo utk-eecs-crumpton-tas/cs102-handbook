@@ -13,94 +13,13 @@ Learn how to use `gdb` to debug tricky problems.
 
 ## What is `gdb`?
 
-`gdb` is program that allows you to debug your own programs. It's a dynamic debugger, which means it attaches to your program as it runs, and you can interact with your program like a surgeon operating on a patient.
-
-In this guide, I'll cover
-
-- Installing `gdb` for both MacOS & Windows
-- `gdb` commands and how to use them
-
-## Installing `gdb`
-
-If you can't get `gdb` to work, or you don't want to install it on your computer, you have a couple options.
-
-1. Use the lab machines. They have `gdb` installed already.
-2. Use the <LinkWithIcon text="online gdb debugger" to="https://www.onlinegdb.com/online_c++_compiler" />. It's a little bit slower, but it works.
-
-Otherwise, read on.
-
-<Tabs
-    groupId="operating-system"
-    queryString="os"
-    defaultValue="windows"
-    values={[
-        { label: 'Windows Users', value: 'windows' },
-        { label: 'Windows Users (WSL)', value: 'windows-wsl' },
-        { label: 'MacOS Users', value: 'macos' },
-    ]}>
-<TabItem value="windows">
-
-### Windows Users
-
-First let's check to see if it's already installed. Open up a terminal instance (powershell, cmd, terminal, whatever) and run the command `gdb`. If it works, skip to <LinkWithIcon to="#gdb-flowchart" text="the flowchart" /> to get started.
-
-Open the program `msys2`. There might be multiple, but just open the purple one. It should look like this:
-
-<img src={MysysImg} height="auto" width="120px" />
-
-Once opened, enter the following commands:
-
-```bash
-pacman -Syu
-pacman -Syu
-pacman -S mingw-w64-x86_64-gdb
-```
-
-**Make sure to answer any of the prompts with `y`**.
-
-Once that's done, restart any terminals you have open, and try running `gdb` again. It should work now. If it doesn't, then I don't recommend bothering with it. Just use the lab machines.
-
-</TabItem>
-
-<TabItem value="windows-wsl">
-
-### Windows Users (WSL)
-
-First let's check to see if it's already installed. Open up a terminal instance of Ubuntu and run the command `gdb`. If it works, skip to <LinkWithIcon to="#gdb-flowchart" text="the flowchart" /> to get started.
-
-If it doesn't work, run the following commands:
-
-```bash
-sudo apt update
-sudo apt upgrade
-sudo apt install gdb
-```
-
-**Make sure to answer any of the prompts with `y`**.
-
-Once that's done, restart any terminals you have open, and try running `gdb` again. It should work now. If it doesn't, then I don't recommend bothering with it. Just use the lab machines.
-
-</TabItem>
-
-<TabItem value="macos">
-
-### MacOS Users
-
-For MacOS users, we actually won't be using `gdb` directly. Instead, we'll be using `lldb`, which is a debugger that's built into Xcode. It's a little bit different than `gdb`, but it's more or less the same.
-
-First let's check to see if it's already installed. Open up a terminal instance and run the command `lldb`. If it works, skip to <LinkWithIcon to="#gdb-flowchart" text="the flowchart" /> to get started.
-
-If it doesn't work, follow the instructions <LinkWithIcon to="/cs102-writeups/docs/general/info?os=macos#installing-xcode-command-line-tools-g" text="here" /> to install the Xcode command line tools.
-
-</TabItem>
-
-</Tabs>
+`gdb` is program that allows you to debug your own programs. It's a dynamic debugger, which means it attaches to your program as it runs, and you can interact with your program like a surgeon operating on a patient. This guide will teach you how to use `gdb` to debug your own programs.
 
 ## `gdb` flowchart
 
 Here's a flowchart of the commands you'll use in `gdb`, from start to finish. The commands needed are the labels of the arrows, and the arguments to the commands are wraped in `:`. Optional arguments are wrapped in `::`. Commands like `next/n` mean that you can use either `next` or `n` to execute that command.
 
-Lastly, of the `Debug Options` commands can be repeated by pressing `↩` (enter) without typing anything.
+Lastly, all of the `Debug Options` commands can be repeated by pressing `↩` (enter) without typing anything.
 
 :::danger README
 
