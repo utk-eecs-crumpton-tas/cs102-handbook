@@ -53,7 +53,7 @@ Alternatively, you can check the result of the `cin` operation directly.
 ```cpp
 int my_int;
 
-// cin >> x returns false if the user entered something other than an integer
+// returns false if the user entered something that doesn't match the type of x
 if (!(cin >> my_int)) {
     cout << "Invalid operator" << endl;
     return 1;
