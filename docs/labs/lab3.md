@@ -33,6 +33,35 @@ The only exception to this flow is the absolute value operation. This operation 
 - You must use a `switch` statement.
 - You muse handle erroneous input. If the user enters an invalid operator, you should output an error message.
 
+## Error Handling
+
+You should handle erroneous input. If the user enters an invalid operator, you should output an error message and exit the program. You can check for invalid input using the `cin.fail()` function. This function returns `true` if the last input operation failed. You can use this function to check if the user entered an invalid operator.
+
+```cpp
+int my_int;
+cin >> my_int;
+
+// a failure occurs if the user entered something other than an integer
+if (cin.fail()) {
+    cout << "Invalid operator" << endl;
+    return 1;
+}
+```
+
+Alternatively, you can check the result of the `cin` operation directly.
+
+```cpp
+int my_int;
+
+// cin >> x returns false if the user entered something other than an integer
+if (!(cin >> my_int)) {
+    cout << "Invalid operator" << endl;
+    return 1;
+}
+```
+
+These two methods are equivalent. I prefer the second method, since it's a little more concise, but it's up to you.
+
 ## Hints
 
 - `cin.get()` - This function is used to get a single character from the user. You'll use this for the operator.
