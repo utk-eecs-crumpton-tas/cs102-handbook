@@ -31,11 +31,13 @@ The only exception to this flow is the absolute value operation. This operation 
 
 - You cannot *re-use* code. Don't repeat something you've already done.
 - You must use a `switch` statement.
-- You muse handle erroneous input. If the user enters an invalid operator/operand, you should output the appropriate error message and exit the program.
+- You muse handle erroneous input. If the user enters an invalid operator, you should output the appropriate error message and exit the program.
 
 ## Error Handling
 
-You should handle erroneous input. If the user enters an invalid operator/operand, you should output an error message and exit the program. You can check for invalid input using the `cin.fail()` function. This function returns `true` if the last input operation failed. You can use this function to check if the user entered an invalid operator.
+### Operands
+
+You should handle erroneous input. If the user enters an invalid operator, you should output an error message and exit the program. You can check for invalid input using the `cin.fail()` function. This function returns `true` if the last input operation failed. You can use this function to check if the user entered an invalid operator.
 
 ```cpp
 int my_int;
@@ -43,7 +45,7 @@ cin >> my_int;
 
 // a failure occurs if the user entered something other than an integer
 if (cin.fail()) {
-    cout << "Invalid operand" << endl;
+    cout << "Invalid left operand" << endl;
     return 1;
 }
 ```
@@ -51,16 +53,18 @@ if (cin.fail()) {
 Alternatively, you can check the result of the `cin` operation directly.
 
 ```cpp
-char my_char;
+int my_int;
 
 // returns false if the user entered something that doesn't match the type of x
-if (!(cin >> my_char)) {
-    cout << "Invalid operator" << endl;
+if (!(cin >> my_int)) {
+    cout << "Invalid left operand" << endl;
     return 1;
 }
 ```
 
-These two methods are equivalent. I prefer the second method, since it's a little more concise, but it's up to you.
+### Operators
+
+In the case that an invalid operator is entered, you should run the program like normal. If the operator does not exist in your switch statement, then it will use the `default` case. In the `default` case, you should output an error message and exit the program.
 
 ## Hints
 
