@@ -29,20 +29,19 @@ Each rectangle node in the chart is clickable and will take you to the section o
 
 ```mermaid
 graph TD
-Start[Start Debugging with gdb] -->|gdb :binary_name:| LoadProgram{LoadProgram} --> PreRun[Pre-Run]
-PreRun --> |break/b :line number or function name:| SetBreakpoint[Set Breakpoint]
-PreRun --> |"run/r :argument(s):"| StartExecution[Start Execution]
+Start[Start Debugging with gdb] -->|gdb :binary_name:| LoadProgram{Load Program} -->|break/b :line number or function name:| SetBreakpointStart[Pre-run Breakpoint] -->|"run/r :argument(s):"| StartExecution[Start Execution]
 StartExecution --> DebugOptions{Debug Options}
-DebugOptions --> |next/n| NextInstruction[Execute Next Instruction]
-DebugOptions --> |break/b :line number or function:| SetBreakpoint[Set Breakpoint]
-DebugOptions --> |step/s| StepIntoFunction[Step Into Function]
-DebugOptions --> |continue/c| ContinueExecution[Continue Execution]
-DebugOptions --> |print/p :variable name:| PrintVariable[Print Value of Variable]
-DebugOptions --> |backtrace/bt| Backtrace[Print Backtrace of Function Calls]
+DebugOptions <--> |next/n| NextInstruction[Execute Next Instruction]
+DebugOptions <--> |break/b :line number or function:| SetBreakpoint[Set Breakpoint]
+DebugOptions <--> |step/s| StepIntoFunction[Step Into Function]
+DebugOptions <--> |continue/c| ContinueExecution[Continue Execution]
+DebugOptions <--> |print/p :variable name:| PrintVariable[Print Value of Variable]
+DebugOptions <--> |backtrace/bt| Backtrace[Print Backtrace of Function Calls]
 DebugOptions --> |quit/q| EndDebugging[End Debugging Session]
+
 click Start href "/cs102-writeups/docs/debugging/gdb#starting-gdb"
 click StartExecution href "/cs102-writeups/docs/debugging/gdb#start-execution"
-click PreRun href "/cs102-writeups/docs/debugging/gdb#pre-run"
+click SetBreakpointStart href "/cs102-writeups/docs/debugging/gdb#pre-run"
 click SetBreakpoint href "/cs102-writeups/docs/debugging/gdb#setting-breakpoints"
 click NextInstruction href "/cs102-writeups/docs/debugging/gdb#next-instruction"
 click StepIntoFunction href "/cs102-writeups/docs/debugging/gdb#step-into-function"
