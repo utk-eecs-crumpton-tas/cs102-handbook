@@ -1,12 +1,16 @@
-import LinkWithIcon from "/src/components/LinkWithIcon";
+import LinkWithIcon from '/src/components/LinkWithIcon'
 
 # Vim Cheatsheet
+
+Basic vim motions to get you started.
 
 ## Movement
 
 `h j k l` - left, down, up, right
 
 `w b` - forward a word, back a word
+
+`{ }` - jump up and down whole code blocks
 
 ## Editing
 
@@ -17,6 +21,10 @@ import LinkWithIcon from "/src/components/LinkWithIcon";
 `p` - paste what was yanked or deleted
 
 `u` - undo
+
+`d` or `y` combined with any other movement options to delete or yank different selections like `dw` to delete a word or `dj` to delete the line and the line below it.
+
+`gg=G` - format your document - use this religiously
 
 ## Visual Mode
 
@@ -32,11 +40,7 @@ import LinkWithIcon from "/src/components/LinkWithIcon";
 
 `escape, ctrl + c, ctrl + [` - exit insert mode
 
-`d` or `y` combine with any other movement options to delete or yank different selections like `dw` or `dj`
-
-`gg=G` - format your document - use this religiously
-
-`{ }` - jump up and down whole code blocks
+## Exiting
 
 `:q` - close the document
 
