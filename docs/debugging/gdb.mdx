@@ -103,7 +103,7 @@ Breakpoints are the most important part of debugging. When you set a breakpoint,
 
 ### Break
 
-To set a breakpoint, you'll use the `break` command. You can also use the `b` command, which is a shortcut for `break`.
+To set a breakpoint, you'll use the `break` command. You can also use the `b` command, which is a shortcut for `break`. You can set a breakpoint by line number or by function name.
 
 ```bash
 # break on line 5 of your entire program
@@ -168,12 +168,12 @@ You'll usually use this command when your program crashes. It will print the "ba
 
 ```bash
 (gdb) backtrace
-0  0x00007ffff7a4b0b3 in __GI_raise (sig=sig@entry=6) at ../sysdeps/unix/sysv/linux/raise.c:50
-1  0x00007ffff7a4c42a in __GI_abort () at abort.c:79
-2  0x00007ffff7a8f7ea in __libc_message (action=action@entry=do_abort, fmt=fmt@entry=0x7ffff7baa0a5 "%s\n") at ../sysdeps/posix/libc_fatal.c:181
+frame 0: 0x0000000100003640 a.out this_will_crash(str="Hello World") at b.cpp:8:10
+frame 1: 0x000000010000369d a.out main at b.cpp:14:20
+frame 2: 0x000000010001552e dyld start + 462
 ```
 
-Reading it's output, you can see that the crash happened on line 50 of the file `../sysdeps/unix/sysv/linux/raise.c`. And you can see that the function that called `raise` was `abort`, which was called by `libc_message` — hence the back**trace**.
+Reading it's output, you can see that the crash happened on line 8 of `b.cpp`, which is the line that calls the function `this_will_crash()` with an argument `str="Hello World"`. The function `this_will_crash()` was called from line 14 of `b.cpp`. So as you can see, the backtrace is a list of all the functions that were called before the crash, in order from the most recent to the oldest. Hence the name back**trace**.
 
 ## End Debugging Session
 

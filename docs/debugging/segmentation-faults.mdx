@@ -1,3 +1,5 @@
+import LinkWithIcon from "@site/src/components/LinkWithIcon";
+
 # Debugging Segmentation Faults
 
 ## What is a Segmentation Fault?
@@ -5,6 +7,8 @@
 A segmentation fault is a common error that occurs when a program tries to access a memory location that it is not allowed to access. Segmentation faults are often caused by dereferencing a null pointer, or by trying to access memory that has been freed.
 
 Here is an example of a segmentation fault:
+
+### Dereferencing a Null Pointer
 
 ```cpp
 int main() {
@@ -25,6 +29,8 @@ The segmentation fault occurs when we try to dereference the null pointer `p`. T
 
 Another common case is indexing a vector out-of-bounds
 
+### Indexing a Vector/Array Out-of-Bounds
+
 ```cpp
 #include <vector>
 using namespace std;
@@ -40,7 +46,7 @@ int main() {
 
 ### Using Print Statements
 
-Another way to debug segmentation faults is to use print statements. Print statements allow you to print the value of variables at different points in your program. This can be useful for finding the line of code that caused the segmentation fault.
+One way to debug segmentation faults is to use print statements. Print statements allow you to print the value of variables at different points in your program. This can be useful for finding the line of code that caused the segmentation fault.
 
 Let's look at an example of a program that has a segmentation fault:
 
@@ -179,7 +185,13 @@ By this way of adding print statements to our code, we can find the line of code
 
 ### Using GDB
 
-The easiest way to debug segmentation faults is to use GDB. GDB is a debugger that allows you to step through your program line-by-line and inspect the state of your program at any point. You can use GDB to find the line of code that caused the segmentation fault.
+:::note `gdb` prerequisites
+
+If you're not on the lab machines, you'll need to install `gdb` yourself if you haven't already. You can find `gdb` installation instructions in <LinkWithIcon to="/docs/general/info?os=windows#installing-gdb" text="this guide" />, and general usage information in our <LinkWithIcon to="/docs/debugging/gdb" text="gdb guide" />.
+
+:::
+
+The best way to debug trickier segmentation faults is to use GDB. GDB is a debugger that allows you to step through your program line-by-line and inspect the state of your program at any point. You can use GDB to find the line of code that caused the segmentation fault.
 
 To use GDB, first compile your program with debugging symbols:
 
