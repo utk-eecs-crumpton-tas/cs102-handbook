@@ -74,3 +74,8 @@ a:hover .nodeLabel {
   transition: 0.1s;
   transition-timing-function: ease-in-out;
 }
+
+u {
+  text-decoration: none;
+  border-bottom: 1px solid #dd1e4f;
+}
