@@ -311,7 +311,7 @@ As usual your program needs to adhere to the general requirements like proper in
 The program you turn in must compile and run on the lab machines using _this exact command:_
 
 ```
-g++ -Wall -O0 -g -std=c++11 -o lab5 lab5.cpp
+g++ -Wall -O0 -g -std=c++11 -o speeding speeding.cpp
 ```
 
 If it doesn't compile with that exactly, you _will_ ~~almost certainly~~ get a **0**. If you're having trouble getting it to compile, then you should ask for help on Discord or in office hours.
@@ -348,8 +348,8 @@ Navigate to your `lab2` directory and copy/paste this _entire_ command into your
 
 ```bash
 sudo apt install curl -y && \
-curl https://pastebin.com/raw/whKWBRR6 --output ticket.txt && \
-curl https://pastebin.com/raw/QBQAQr0i --output test.txt
+curl https://pastebin.com/raw/R4VX9JVD --output ticket.txt && \
+curl https://pastebin.com/raw/2PBSscgA --output test.txt
 ```
 
 </TabItem>
@@ -359,8 +359,8 @@ curl https://pastebin.com/raw/QBQAQr0i --output test.txt
 Navigate to your `lab2` directory and run these two commands in your PowerShell terminal. This will download the files and save them in your current directory.
 
 ```pwsh
-Invoke-WebRequest https://pastebin.com/raw/whKWBRR6 -OutFile ticket.txt
-Invoke-WebRequest https://pastebin.com/raw/QBQAQr0i -OutFile test.txt
+Invoke-WebRequest https://pastebin.com/raw/R4VX9JVD -OutFile ticket.txt
+Invoke-WebRequest https://pastebin.com/raw/2PBSscgA -OutFile test.txt
 ```
 
 </TabItem>
@@ -370,8 +370,8 @@ Invoke-WebRequest https://pastebin.com/raw/QBQAQr0i -OutFile test.txt
 Navigate to your `lab2` directory and copy/paste this _entire_ command into your terminal. This will download the files and save them in your current directory.
 
 ```bash
-curl https://pastebin.com/raw/whKWBRR6 --output ticket.txt && \
-curl https://pastebin.com/raw/QBQAQr0i --output test.txt
+curl https://pastebin.com/raw/R4VX9JVD --output ticket.txt && \
+curl https://pastebin.com/raw/2PBSscgA --output test.txt
 ```
 
 </TabItem>
@@ -400,7 +400,7 @@ Now that you've downloaded the testing files, you can use them to test your prog
 <TabItem value="unix">
 
 ```bash
-./lab5 < test.txt
+./speeding < test.txt
 ```
 
 </TabItem>
@@ -408,7 +408,7 @@ Now that you've downloaded the testing files, you can use them to test your prog
 <TabItem value="windows">
 
 ```pwsh
-./lab5 CON< test.txt
+./speeding CON< test.txt
 ```
 
 </TabItem>
