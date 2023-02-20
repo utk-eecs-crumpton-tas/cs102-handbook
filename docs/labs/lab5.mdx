@@ -245,9 +245,9 @@ Similar to the input file, the output file will be in a particular format.
 
 - **Day** - The day the ticket was issued. This is the third value in the input file.
 - **Month** - The month the ticket was issued, represented by a 3 letter abbreviation. This is the second value in the input file.
-- **Year** - The year the ticket was issued. This is the fourth value in the input file, and is in the format `yyyy`.
+- **Year** - The year the ticket was issued. This is the fourth value in the input file, and is in the format `yyyy` _OR_ `yy`.
 - **Citation** - The citation number (not a number). This is the first value in the input file.
-- **Fine** - The fine you calculated for the ticket.
+- **Fine** - The fine you calculated for the ticket based on the speed and road type.
 
 #### template
 
@@ -346,7 +346,7 @@ I've prepared two files for you here to make testing your program a bit easier i
 
 <TabItem value="windows-wsl">
 
-Navigate to your `lab2` directory and copy/paste this _entire_ command into your Ubuntu terminal. This will download the files and save them in your current directory.
+Navigate to your `lab5` directory and copy/paste this _entire_ command into your Ubuntu terminal. This will download the files and save them in your current directory.
 
 ```bash
 sudo apt install curl -y && \
@@ -358,7 +358,7 @@ curl https://pastebin.com/raw/ysk7eeLN --output test.txt
 
 <TabItem value="windows">
 
-Navigate to your `lab2` directory and run these two commands in your PowerShell terminal. This will download the files and save them in your current directory.
+Navigate to your `lab5` directory and run these two commands in your PowerShell terminal. This will download the files and save them in your current directory.
 
 ```pwsh
 Invoke-WebRequest https://pastebin.com/raw/R4VX9JVD -OutFile ticket.txt
@@ -369,7 +369,7 @@ Invoke-WebRequest https://pastebin.com/raw/ysk7eeLN -OutFile test.txt
 
 <TabItem value="macos">
 
-Navigate to your `lab2` directory and copy/paste this _entire_ command into your terminal. This will download the files and save them in your current directory.
+Navigate to your `lab5` directory and copy/paste this _entire_ command into your terminal. This will download the files and save them in your current directory.
 
 ```bash
 curl https://pastebin.com/raw/R4VX9JVD --output ticket.txt && \
