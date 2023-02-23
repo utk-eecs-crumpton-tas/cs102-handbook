@@ -187,90 +187,10 @@ By this way of adding print statements to our code, we can find the line of code
 
 :::note `gdb` prerequisites
 
-If you're not on the lab machines, you'll need to install `gdb` yourself if you haven't already. You can find `gdb` installation instructions in <LinkWithIcon to="/docs/general/info?os=windows#installing-gdb" text="this guide" />, and general usage information in our <LinkWithIcon to="/docs/debugging/gdb" text="gdb guide" />.
+If you're not on the lab machines, you'll need to install `gdb` yourself if you haven't already. You can find `gdb` installation instructions in <LinkWithIcon to="/docs/general/info?os=windows#installing-gdb" text="this guide" />.
 
 :::
 
 The best way to debug trickier segmentation faults is to use GDB. GDB is a debugger that allows you to step through your program line-by-line and inspect the state of your program at any point. You can use GDB to find the line of code that caused the segmentation fault.
 
-To use GDB, first compile your program with debugging symbols:
-
-```bash
-$ g++ -g segfault.cpp -o segfault
-```
-
-Then, run GDB on your program:
-
-```bash
-$ gdb segfault
-```
-
-GDB will start and you will be dropped into a GDB prompt. To run your program, type `run`:
-
-```bash
-(gdb) run
-Starting program: /home/username/segfault
-[Inferior 1 (process 12345) exited normally]
-```
-
-The program exited normally, but we didn't see any output. This is because GDB is running your program in a separate process, so it is not printing the output to the terminal. To print the output, type `print`:
-
-```bash
-(gdb) print
-$1 = 0
-```
-
-The output is `0`, which is the return value of the `main` function. To print the output of the program, we need to add a `printf` statement:
-
-```cpp
-#include <stdio.h>
-
-int main() {
-    int *p = NULL;
-    *p = 5;
-    printf("%d\n", *p);
-    return 0;
-}
-```
-
-Now, when we run GDB, we see the output:
-
-```bash
-(gdb) run
-Starting program: /home/username/segfault
-5
-[Inferior 1 (process 12345) exited normally]
-```
-
-The program exited normally, but we still didn't see the segmentation fault. To see the segmentation fault, we need to tell GDB to stop when the program encounters a segmentation fault. To do this, type `handle SIGSEGV nostop`:
-
-```bash
-(gdb) handle SIGSEGV nostop
-Signal        Stop	Print	Pass to program	Description
-SIGSEGV       No	Yes	Yes		segmentation fault
-```
-
-Now, when we run GDB, we see the segmentation fault:
-
-```bash
-(gdb) run
-Starting program: /home/username/segfault
-5
-Program received signal SIGSEGV, Segmentation fault.
-0x00005555555551a0 in main () at segfault.cpp:5
-5	    *p = 5;
-```
-
-The program crashed on line 5 of `segfault.cpp`, which is the line that caused the segmentation fault. To see the value of `p`, type `print p`:
-
-```bash
-(gdb) print p
-$1 = (int *) 0x0
-```
-
-`p` is a null pointer, so it is not allowed to access the memory location that it points to. To see the value of `*p`, type `print *p`:
-
-```bash
-(gdb) print *p
-Cannot access memory at address 0x0
-```
+If you haven't already, I recommend reading our <LinkWithIcon to="/docs/debugging/gdb" text="gdb guide" /> to get familiar with `gdb`.
