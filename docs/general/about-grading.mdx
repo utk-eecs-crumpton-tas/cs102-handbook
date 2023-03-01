@@ -1,4 +1,4 @@
-import LinkWithIcon from "/src/components/LinkWithIcon";
+import LinkWithIcon from '/src/components/LinkWithIcon'
 
 # About Grading
 
@@ -48,7 +48,30 @@ for (int i = 1; i <= n; i++) {
 }
 ```
 
-Although a bit contrived, the comment above tells us what the block does without having to read the code. This is a good example of a comment that is useful.
+### Formatting Comments
+
+Poorly formatted comments are -1. Comments should be formatted like this:
+
+```cpp
+// This is a good comment
+int main() {
+    // This is a good comment
+    int x = get_x();
+    if (x > 0) {
+        // This is a good comment
+        cout << "x is positive" << endl;
+    } else if (x == 0) {
+        cout << "x is zero" << endl; // This is a good comment
+//This is a bad comment
+    } else {
+    //This is a bad comment
+        cout << "x is negative" << endl;
+    }
+// This is a bad comment
+}
+```
+
+The indentation level of your comments should match the indentation level of the code they are commenting on.
 
 ### Bad Variable Names
 
