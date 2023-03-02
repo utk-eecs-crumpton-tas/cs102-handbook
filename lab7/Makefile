@@ -1,3 +1,8 @@
+# Define color codes
+CYAN = \033[36m
+YELLOW = \033[33m
+RESET = \033[0m
+
 all: bowling
 
 bowling: bowling.cpp
@@ -21,3 +26,13 @@ random: bowling generate_tests.py
 
 generate_tests.py:
 	curl https://raw.githubusercontent.com/Ethan0429/cs102-writeups/main/lab7/generate_tests.py --output generate_tests.py
+
+.PHONY: help
+
+help:
+	@echo "$(YELLOW)Available commands$(RESET)"
+	@echo
+	@echo "$(CYAN)make$(RESET):          Compiles bowling.cpp to binary file named bowling"
+	@echo "$(CYAN)make test1$(RESET):    Run bowling program with input1.txt"
+	@echo "$(CYAN)make test2$(RESET):    Run bowling program with input2.txt"
+	@echo "$(CYAN)make random$(RESET):   Generate random test cases and run bowling program with them"
