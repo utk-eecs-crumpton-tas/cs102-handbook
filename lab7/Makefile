@@ -37,7 +37,7 @@ test2: $(BINARY) input2.txt
 random: $(ZIP) $(BINARY)
 	@python3 generate_tests.py
 	@echo "$(YELLOW)Running $(BINARY) with random test cases...$(RESET)"
-	@echo "$(CYAN)Left is the expected output, right is your output - empty -> match$(RESET)"
+	@echo "$(CYAN)Left is the expected output, right is your output - empty means passed$(RESET)"
 	@bash cmp.sh $(BINARY)
 
 help:
