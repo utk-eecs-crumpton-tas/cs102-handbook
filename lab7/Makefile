@@ -1,10 +1,3 @@
-# Define color codes
-CYAN = \033[36m
-YELLOW = \033[33m
-RESET = \033[0m
-RED = \033[0;31m
-
-
 CCFLAGS = -g -std=c++11
 BINARY = bowling
 SOURCES = $(BINARY).cpp
@@ -36,26 +29,26 @@ test2: $(BINARY) input2.txt
 
 random: $(ZIP) $(BINARY)
 	@python3 generate_tests.py
-	@echo "$(YELLOW)Running $(BINARY) with random test cases...$(RESET)"
-	@echo "$(CYAN)Left is the expected output, right is your output - empty means passed$(RESET)"
+	@echo "Running $(BINARY) with random test cases..."
+	@echo "Left is the expected output, right is your output - empty means passed"
 	@bash cmp.sh $(BINARY)
 
 help:
 	@echo
-	@echo "$(YELLOW)Available commands$(RESET)"
+	@echo "Available commands"
 	@echo
-	@echo "$(CYAN)make$(RESET):          Compiles '$(SOURCES)' to binary file named '$(BINARY)'"
-	@echo "$(CYAN)make test1$(RESET):    Run '$(BINARY)' with input1.txt"
-	@echo "$(CYAN)make test2$(RESET):    Run '$(BINARY)' with input2.txt"
-	@echo "$(CYAN)make random$(RESET):   Generate random test cases and compare your output to the expected output"
+	@echo "make:          Compiles '$(SOURCES)' to binary file named '$(BINARY)'"
+	@echo "make test1:    Run '$(BINARY)' with input1.txt"
+	@echo "make test2:    Run '$(BINARY)' with input2.txt"
+	@echo "make random:   Generate random test cases and compare your output to the expected output"
 
 Makefile: FORCE
-	@echo "$(YELLOW)Checking for updates to Makefile...$(RESET)"
+	@echo "Checking for updates to Makefile..."
 	@curl --silent https://raw.githubusercontent.com/Ethan0429/cs102-writeups/main/$(LAB)/Makefile -o Makefile.tmp
-	@cmp -s Makefile.tmp Makefile && rm Makefile.tmp || (mv -f Makefile.tmp Makefile && echo "$(BLUE)Updated Makefile - Restarting...$(RESET)")
+	@cmp -s Makefile.tmp Makefile && rm Makefile.tmp || (mv -f Makefile.tmp Makefile && echo "Updated Makefile - Restarting...")
 
 $(ZIP): FORCE
-	@echo "$(YELLOW)Checking for updates to $(ZIP)...$(RESET)"
+	@echo "Checking for updates to $(ZIP)..."
 	@curl --silent -L https://github.com/Ethan0429/cs102-writeups/raw/main/$(LAB)/$(ZIP) -o $(ZIP).tmp
-	@cmp -s $(ZIP).tmp $(ZIP) && rm $(ZIP).tmp || (mv -f $(ZIP).tmp $(ZIP) && echo "$(BLUE)Updated $(ZIP)$(RESET)")
-	@unzip -o -q $(ZIP) || @echo "$(RED)Unable to unzip $(ZIP). Check that you have unzip installed.$(RESET)"
+	@cmp -s $(ZIP).tmp $(ZIP) && rm $(ZIP).tmp || (mv -f $(ZIP).tmp $(ZIP) && echo "Updated $(ZIP)")
+	@unzip -o -q $(ZIP) || @echo "Unable to unzip $(ZIP). Check that you have unzip installed."
