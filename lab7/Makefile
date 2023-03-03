@@ -2,6 +2,8 @@
 CYAN = \033[36m
 YELLOW = \033[33m
 RESET = \033[0m
+RED= \033[0;31m
+
 
 CCFLAGS = -g -std=c++11
 BINARY = bowling
@@ -53,10 +55,10 @@ help:
 Makefile: FORCE
 	@echo "$(YELLOW)Checking for updates to Makefile...$(RESET)"
 	@curl --silent https://raw.githubusercontent.com/Ethan0429/cs102-writeups/main/$(LAB)/Makefile -o Makefile.tmp
-	@cmp -s Makefile.tmp Makefile && rm Makefile.tmp || (mv -f Makefile.tmp Makefile && echo "Updated Makefile - Restarting Makefile...")
+	@cmp -s Makefile.tmp Makefile && rm Makefile.tmp || (mv -f Makefile.tmp Makefile && echo "$(YELLOW)Updated Makefile - Restarting...$(RESET)")
 
 $(ZIP): FORCE
 	@echo "$(YELLOW)Checking for updates to $(ZIP)...$(RESET)"
 	@curl --silent -L https://github.com/Ethan0429/cs102-writeups/raw/main/$(LAB)/$(ZIP) -o $(ZIP).tmp
-	@cmp -s $(ZIP).tmp $(ZIP) && rm $(ZIP).tmp || (mv -f $(ZIP).tmp $(ZIP) && echo "Updated $(ZIP)")
-	@unzip -o -q $(ZIP) || @echo "Unable to unzip $(ZIP). Check that you have unzip installed."
+	@cmp -s $(ZIP).tmp $(ZIP) && rm $(ZIP).tmp || (mv -f $(ZIP).tmp $(ZIP) && echo "$(YELLOW)Updated $(ZIP)$(RESET)")
+	@unzip -o -q $(ZIP) || @echo "$(RED)Unable to unzip $(ZIP). Check that you have unzip installed.$(RESET)"
