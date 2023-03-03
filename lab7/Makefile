@@ -20,7 +20,7 @@ input1.txt:
 input2.txt:
 	curl https://pastebin.com/raw/wfVRnrvj --output input2.txt
 
-.PHONY: help FORCE random test1 test2
+.PHONY: help random test1 test2 Makefile $(ZIP)
 FORCE:
 
 test1: $(BINARY) input1.txt
@@ -29,7 +29,7 @@ test1: $(BINARY) input1.txt
 test2: $(BINARY) input2.txt
 	./$(BINARY) < input2.txt | sed 's/: /:\n/g'
 
-random: $(BINARY) generate_tests.py
+random: $(BINARY) generate_tests.py $(ZIP)
 	@python3 generate_tests.py
 	@echo "$(YELLOW)Running $(BINARY) with random test cases...$(RESET)"
 	@echo "$(CYAN)Left is the expected output, right is your output - empty -> match$(RESET)"
