@@ -34,14 +34,11 @@ test1: $(BINARY) input1.txt
 test2: $(BINARY) input2.txt
 	./$(BINARY) < input2.txt | sed 's/: /:\n/g'
 
-random: $(BINARY) generate_tests.py $(ZIP)
+random: $(ZIP) $(BINARY)
 	@python3 generate_tests.py
 	@echo "$(YELLOW)Running $(BINARY) with random test cases...$(RESET)"
 	@echo "$(CYAN)Left is the expected output, right is your output - empty -> match$(RESET)"
 	@bash cmp.sh $(BINARY)
-
-generate_tests.py:
-	curl https://raw.githubusercontent.com/Ethan0429/cs102-writeups/main/$(LAB)/generate_tests.py --output generate_tests.py
 
 help:
 	@echo
