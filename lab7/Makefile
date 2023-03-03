@@ -25,7 +25,7 @@ input2.txt:
 clean:
 	rm -rf $(BINARY) input1.txt input2.txt $(ZIP) out.txt sol.txt test.txt cmp.sh generate_tests.py macos linux
 
-.PHONY: help random test1 test2 Makefile $(ZIP)
+.PHONY: help random test1 test2
 FORCE:
 
 test1: $(BINARY) input1.txt
