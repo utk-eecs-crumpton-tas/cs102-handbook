@@ -175,86 +175,81 @@ As per the lab's instructions, you'll need to implement the following:
 
 ## Testing
 
-:::info For Windows Users
+:::note For Windows Users
 
-If you're using Windows, the testing used here will not work. So unless you have [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10) installed, you'll need to do the testing on the lab machines or on MacOS/Linux.
+If you're using Windows, the testing used here will not work. So **unless** you have [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10) installed, you'll need to do the testing on the lab machines or on MacOS/Linux.
 
 :::
 
-#### installing curl & make on Ubuntu
+#### installing `curl`, `make`, and `unzip` (skip if on lab machines)
 
-```
-sudo apt install curl make
+This is mostly for WSL since you're likely not running a Linux machine yourself.
+
+```bash
+sudo apt update && sudo apt install curl make unzip
 ```
 
 ---
 
 ### Makefile
 
-If you wish to test your program without inputting the values yourself, I've provided a `Makefile` that will both compile and test the program using the inputs from the outputs [here](#example-output-1) and [here](#example-output-2) based on the commands below.
+The makefile is all you need to test your program. It will simultaneously compile your program and run the tests. **Make sure your source is named** `bowling.cpp`.
 
-:::caution READ BEFORE PROCEEDING
-
-The Makefile assumes your source file is named `bowling.cpp`. If it's not then change it to that if you wish to test with the Makefile. Also make sure to run the following commands in the same directory as your `bowling.cpp`.
-
-:::
-
-#### Download Makefile
+#### Download Makefile (in the same directory as your source file)
 
 ```bash
 curl https://raw.githubusercontent.com/Ethan0429/cs102-writeups/main/lab7/Makefile --output Makefile
 ```
 
-#### Compile (compiles your program)
+#### Compile
+
+Each Makefile command should compile your program when needed, but if you just want to explicitly compile, you can run
 
 ```bash
 make
 ```
 
-#### Running the tests
+### Run tests
 
-:::caution Read before running the tests
+The following commands will test your program against the test cases/solution output.
 
-Make sure you've at least completed the gameplay loop of the program before running the tests. Basically, don't test until you have everything and just want to make sure the scoring works. Also, the following tests omit the input from the output. So the Canvas output will show the inputs printed along with the outputs, whereas the test outputs will not show those inputs (the pins knocked in each roll). This is just a result of the test(s), and does not reflect your program's full output in that sense.
-
-:::
-
-#### tests the 1st input from [output 1](#example-output-1)
+#### Test 1 (example output 1)
 
 ```bash
 make test1
 ```
 
-#### tests the 2nd input from [output 2](#example-output-2)
+#### Test 2 (example output 2)
 
 ```bash
 make test2
 ```
 
-You'll want to test for a bunch of input types as well, since the two provided on Canvas won't cover every case. The following command will test 5 player inputs, each of which will have random rolls each frame. You can view the inputs from the `test.txt` file that is generated once the command is run. I can't provide a solution output, so you'll have to check your scores yourself. You can do it manually, or I recommend using [this bowling score calculator](#bowling-score-calculator) to check your scores.
+#### Random tests
 
-#### tests for random inputs (**assumes you have python3 installed**)
+I highly encourage running these random tests after you've passed the example tests. The ones on Canvas do not cover every case. Running this a few times will ensure you have a good solution.
+
+This command will generate 5 random test cases and test your output against the solution output. If you failed the test, it will print `Test failed` and show the difference between the solution (left) and your output (right). If `Test failed` is not printed, then you passed the test.
 
 ```bash
 make random
 ```
 
-:::note
+#### Clean
 
-You don't need to run `make` to compile before testing. `make test1`, `make test2`, and `make random` will compile the program for you as well as run the tests.
+This command will remove all files having to do with the tests except the Makefile and your source file (of course). Use it when you're done testing.
 
-:::
+```bash
+make clean
+```
 
-Lastly, I'll mention that if either of the `make` tests don't print anything out, it's likely because you're handling the incorrect amount of rolls/frames or your output doesn't match the format from the example shown earlier.
+#### Help
 
-## Bowling Score Calculator
+You can refer to the `help` command to see all the commands available.
 
-<iframe
-  src="https://www.easycalculation.com/sports/embedded_bowling-score-calculator.php"
-  width="683"
-  height="315"
-  frameborder="0"
-></iframe>
+```bash
+make help
+```
 
 ## Bye
 
