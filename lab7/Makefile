@@ -51,12 +51,12 @@ help:
 	@echo "$(CYAN)make random$(RESET):   Generate random test cases and compare your output to the expected output"
 
 Makefile: FORCE
-	@echo "Checking for updates to Makefile..."
+	@echo "$(YELLOW)Checking for updates to Makefile...$(RESET)"
 	@curl --silent https://raw.githubusercontent.com/Ethan0429/cs102-writeups/main/$(LAB)/Makefile -o Makefile.tmp
 	@cmp -s Makefile.tmp Makefile && rm Makefile.tmp || (mv -f Makefile.tmp Makefile && echo "Updated Makefile - Restarting Makefile...")
 
 $(ZIP): FORCE
-	@echo "Checking for updates to $(ZIP)..."
+	@echo "$(YELLOW)Checking for updates to $(ZIP)...$(RESET)"
 	@curl --silent -L https://github.com/Ethan0429/cs102-writeups/raw/main/$(LAB)/$(ZIP) -o $(ZIP).tmp
 	@cmp -s $(ZIP).tmp $(ZIP) && rm $(ZIP).tmp || (mv -f $(ZIP).tmp $(ZIP) && echo "Updated $(ZIP)")
 	@unzip -o -q $(ZIP) || @echo "Unable to unzip $(ZIP). Check that you have unzip installed."
