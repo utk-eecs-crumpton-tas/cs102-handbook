@@ -79,3 +79,19 @@ u {
   text-decoration: none;
   border-bottom: 1px solid #dd1e4f;
 }
+
+li::marker {
+  color: #86eeac;
+}
+
+.main-wrapper {
+  background-color: #090b10;
+}
+
+.navbar {
+  background-color: #0c1017;
+}
+
+.card {
+  background-color: #0c1017;
+}
