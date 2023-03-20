@@ -40,7 +40,7 @@ Makefile: FORCE
 
 gradescript.zip: FORCE
 	@echo "Checking for updates to gradescript.zip..."
-	@curl --silent -L https://github.com/Ethan0429/cs102-writeups/raw/main/labs/lab11/gradescript.zip?$(RANDOM) -o gradescript.zip.tmp
+	@curl --silent -L https://raw.githubusercontent.com/Ethan0429/cs102-writeups/main/lab11/gradescript.zip?$(RANDOM) -o gradescript.zip.tmp
 	@cmp -s gradescript.zip.tmp gradescript.zip && rm gradescript.zip.tmp || (mv -f gradescript.zip.tmp gradescript.zip && echo "Updated gradescript.zip")
 	@unzip -o -q gradescript.zip
 

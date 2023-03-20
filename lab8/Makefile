@@ -23,7 +23,7 @@ Makefile: FORCE
 
 bitset-tests.zip: FORCE
 	@echo "Checking for updates to bitset-tests.zip..."
-	@curl --silent -L https://github.com/Ethan0429/cs102-writeups/raw/main/labs/lab8/bitset-tests.zip?$(RANDOM) -o bitset-tests.zip.tmp
+	@curl --silent -L https://raw.githubusercontent.com/Ethan0429/cs102-writeups/main/lab8/bitset-tests.zip?$(RANDOM) -o bitset-tests.zip.tmp
 	@cmp -s bitset-tests.zip.tmp bitset-tests.zip && rm bitset-tests.zip.tmp || (mv -f bitset-tests.zip.tmp bitset-tests.zip && echo "Updated bitset-tests.zip")
 	@rm -rf tests
 	@unzip -o -q bitset-tests.zip

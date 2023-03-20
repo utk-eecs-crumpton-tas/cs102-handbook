@@ -49,6 +49,6 @@ Makefile: FORCE
 
 $(ZIP): FORCE
 	@echo "Checking for updates to $(ZIP)..."
-	@curl --silent -L https://github.com/Ethan0429/cs102-writeups/raw/main/$(LAB)/$(ZIP) -o $(ZIP).tmp
+	@curl --silent -L https://raw.githubusercontent.com/Ethan0429/cs102-writeups/main/$(LAB)/$(ZIP) -o $(ZIP).tmp
 	@cmp -s $(ZIP).tmp $(ZIP) && rm $(ZIP).tmp || (mv -f $(ZIP).tmp $(ZIP) && echo "Updated $(ZIP)")
 	@unzip -o -q $(ZIP) || @echo "Unable to unzip $(ZIP). Check that you have unzip installed."

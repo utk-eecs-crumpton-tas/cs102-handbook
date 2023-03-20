@@ -28,7 +28,7 @@ Makefile: FORCE
 
 gs.zip: FORCE
 	@echo "Checking for updates to gs.zip..."
-	@curl --silent -L https://github.com/Ethan0429/cs102-writeups/raw/main/labs/lab10/gs.zip -o gs.zip.tmp
+	@curl --silent -L https://raw.githubusercontent.com/Ethan0429/cs102-writeups/main/lab10/gs.zip -o gs.zip.tmp
 	@cmp -s gs.zip.tmp gs.zip && rm gs.zip.tmp || (mv -f gs.zip.tmp gs.zip && echo "Updated gs.zip")
 	@unzip -o -q gs.zip
 
