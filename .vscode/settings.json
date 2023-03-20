@@ -1,3 +1,6 @@
 {
-  "cSpell.enabled": true
+    "files.associations": {
+        "*.md": "markdown",
+        "iostream": "cpp"
+    }
 }
