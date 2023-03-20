@@ -24,7 +24,7 @@ for i in {I,X,Y}; do
     rm out.ppm 2>/dev/null && rm sol.ppm 2>/dev/null
     echo "./lab11 $gdir/bee.ppm $gdir/out$i.ppm $i"
     ./$exe $gdir/bee.ppm $gdir/out$i.ppm $i
-    diff -y --suppress-common-lines $gdir/out$i.ppm $gdir/sol$i.ppm
+    diff -q $gdir/out$i.ppm $gdir/sol$i.ppm
 
     if [ $? == 0 ]; then
         echo -e "${GREEN}passed command: $i - bee.ppm to out.ppm${NC}\n"
@@ -45,7 +45,7 @@ for i in {I,X,Y}; do
     rm out.ppm 2>/dev/null && rm sol.ppm 2>/dev/null
     echo -e "./lab11 $gdir/bee.ppm - $i > out$i.ppm"
     ./$exe $gdir/bee.ppm - $i >$gdir/out$i.ppm
-    diff -y --suppress-common-lines $gdir/out$i.ppm $gdir/sol$i.ppm
+    diff -q $gdir/out$i.ppm $gdir/sol$i.ppm
 
     if [ $? == 0 ]; then
         echo -e "${GREEN}passed command: $i - bee.ppm to stdout${NC}\n"
@@ -66,7 +66,7 @@ for i in {I,X,Y}; do
     rm out.ppm 2>/dev/null && rm sol.ppm 2>/dev/null
     echo -e "./lab11 - $gdir/out$i.ppm $i < $gdir/bee.ppm"
     ./$exe - $gdir/out$i.ppm $i <$gdir/bee.ppm
-    diff -y --suppress-common-lines $gdir/out$i.ppm $gdir/sol$i.ppm
+    diff -q $gdir/out$i.ppm $gdir/sol$i.ppm
 
     if [ $? == 0 ]; then
         echo -e "${GREEN}passed command: $i - stdin to out.ppm${NC}\n"
@@ -87,7 +87,7 @@ for i in {I,X,Y}; do
     rm out.ppm 2>/dev/null && rm sol.ppm 2>/dev/null
     echo -e "./lab11 - - $i < $gdir/bee.ppm > out$i.ppm"
     ./$exe - - $i <$gdir/bee.ppm >$gdir/out$i.ppm
-    diff -y --suppress-common-lines $gdir/out$i.ppm $gdir/sol$i.ppm
+    diff -q $gdir/out$i.ppm $gdir/sol$i.ppm
 
     if [ $? == 0 ]; then
         echo -e "${GREEN}passed command: $i - stdin to stdout${NC}\n"
@@ -107,7 +107,7 @@ done
 rm out.ppm 2>/dev/null && rm sol.ppm 2>/dev/null
 echo -e "./lab11 - - < $gdir/bee.ppm > out.ppm"
 ./$exe - - <$gdir/bee.ppm >$gdir/out.ppm
-diff -y --suppress-common-lines $gdir/out.ppm $gdir/bee.ppm
+diff -q $gdir/out.ppm $gdir/bee.ppm
 
 if [ $? == 0 ]; then
     echo -e "${GREEN}passed command: no change${NC}\n"
