@@ -107,6 +107,11 @@ const config = {
             className: "code-block-error-line",
             line: "This will error",
           },
+          {
+            className: "theme-code-block-highlighted-line",
+            line: "Highlight",
+            block: { start: "highlight-start", end: "highlight-end" },
+          },
         ],
       },
     }),

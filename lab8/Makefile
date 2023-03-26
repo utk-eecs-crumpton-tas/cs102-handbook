@@ -18,7 +18,7 @@ clean:
 
 Makefile: FORCE
 	@echo "Checking for updates to Makefile..."
-	@curl --silent https://raw.githubusercontent.com/Ethan0429/cs102-writeups/tree/main/lab8/Makefile?$(RANDOM) -o Makefile.tmp
+	@curl --silent https://raw.githubusercontent.com/Ethan0429/cs102-writeups/main/lab8/Makefile?$(RANDOM) -o Makefile.tmp
 	@cmp -s Makefile.tmp Makefile && rm Makefile.tmp || (mv -f Makefile.tmp Makefile && echo "Updated Makefile - Restarting Makefile...")
 
 bitset-tests.zip: FORCE

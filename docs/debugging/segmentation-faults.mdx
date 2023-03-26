@@ -13,6 +13,8 @@ Here is an example of a segmentation fault:
 ```cpp
 int main() {
     int *p = nullptr; // p is a pointer to an integer, and it is initialized to null
+
+    // This will error
     *p = 5; // This line causes a segmentation fault because p is a null pointer
     return 0;
 }
@@ -37,6 +39,8 @@ using namespace std;
 
 int main() {
     vector<int> v = {1, 2, 3};
+
+    // This will error
     v[3] = 4; // This line causes a segmentation fault because v only has 3 elements
     return 0;
 }
@@ -73,6 +77,7 @@ int main() {
   }
 
   // add last element to the first
+  // This will error
   integers[0] = integers[0] + integers[10] // This line causes a segmentation fault;
 
   cout << "Doubled each element" << endl;
@@ -135,11 +140,14 @@ int main() {
     cout << integers[i] << endl;
   }
 
+  // Highlight
   cout << "I will print" << endl;
 
   // add last element to the first
+  // This will error
   integers[0] += integers[10]; // This line causes a segmentation fault;
 
+  // Highlight
   cout << "I will not print" << endl;
 
   cout << "Doubled each element" << endl;
