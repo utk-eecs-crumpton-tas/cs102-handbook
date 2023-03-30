@@ -32,21 +32,12 @@ All of this to say that you should understand every data type is just a certain 
 
 In this lab, you'll be working primarily with `int`'s so let's discuss that. Here are some sequences of bits representing `int`'s and their decimal equivalent
 
-```
-0000 0000 0000 0000 0000 0000 0000 0000 = 0 in dec
-```
-
-```
-0000 0000 0000 0000 0000 0000 0000 0001 = 1 in dec
-```
-
-```
-0000 0000 0000 0000 0000 0000 0000 0010 = 2 in dec
-```
-
-```
-0000 0000 0000 0000 0000 0000 0001 0000 = 16 in dec
-```
+| Binary                                  | Decimal |
+| --------------------------------------- | ------- |
+| 0000 0000 0000 0000 0000 0000 0000 0000 | 0       |
+| 0000 0000 0000 0000 0000 0000 0000 0001 | 1       |
+| 0000 0000 0000 0000 0000 0000 0000 0010 | 2       |
+| 0000 0000 0000 0000 0000 0000 0001 0000 | 16      |
 
 The pattern here is 2 to the power of the **set** bit's index. A **set** bit is just a bit that is 1 instead of 0. That will give you the decimal equivalent of the binary representation. If there are more than 1 set bits, then you just need to calculate that bit's value individually and then add up all of the values. So if you have `int == 3`, it would look like
 
@@ -64,12 +55,12 @@ Keep in mind that every bitwise operator can be mixed and matched with each othe
 
 Here are the following bitwise operators you'll be working with for C++
 
-```
-&  - bitwise AND operator
-|  - bitwise OR operator
->> - bitshift right operator
-<< - bitshift left operator
-```
+| Operator | Description             |
+| -------- | ----------------------- |
+| &        | bitwise AND operator    |
+| &#124;   | bitwise OR operator     |
+| >>       | bitshift right operator |
+| <<       | bitshift left operator  |
 
 Ignoring what these do for now, similar to an expression `a + 3` in C++, `a & 3` does not modify `a`. It hasn't been stored anywhere. You'd have to do `a += 3` to actually modify `a` itself. It's the same with bitwise operators `a &= 3`.
 
@@ -332,7 +323,7 @@ make tests
 If your script fails, the script will `diff` your output with the expected output and look like
 
 ```
-&gt; scripts/test.bash bitset.cpp
+scripts/test.bash bitset.cpp
 a1-cli.txt FAILED
 
 YOURS                                         EXPECTED
@@ -373,8 +364,8 @@ i2-to-binary-2.txt PASSED
 
 If you want to run one of the inputs without diffing, you can do so manually like this
 
-```bash
-make test CASE=&lt;case&gt;
+````bash
+make test CASE=case
 ```
 
 where `<case>` is the name of the input file you want to test with (e.g. `a1-cli.txt`) -- all of which can be found within the `tests/in/` directory.
@@ -385,7 +376,7 @@ _removes all test files & scripts_
 
 ```bash
 make clean
-```
+````
 
 ### Errors
 
