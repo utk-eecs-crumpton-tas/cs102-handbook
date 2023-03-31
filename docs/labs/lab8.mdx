@@ -2,6 +2,8 @@
 title: Lab 8 - BITSET
 ---
 
+import LinkWithIcon from "/src/components/LinkWithIcon";
+
 # Lab 8 - BITSET
 
 ## README!
@@ -266,134 +268,6 @@ Notice all 0-elements between any non-zero elements are removed.
 
 ## Testing
 
-Abram has provided test scripts to make sure your code is working correctly, and there is a `Makefile` included here that will make running the scripts and compiling your code easier.
+Abram has provided extensive tests to ensure you get a good grade for this lab. I **highly** recommend running these tests, otherwise you will have a hard time understanding if your code works exactly as it should.
 
-As per usual, the tests provided are made for Unix systems, and therefore will not work on Windows unless running WSL/git-bash.
-
-Abram will also be putting a version number on this in case anyone thinks of anything else in the next couple of days.
-
-### Setup & Downloading Makefile
-
-Before downloading the Makefile, I recommend you setup your lab directory to look something like this
-
-<img src="../assets/dir.png" alt="lab8 directory" width="500px" />
-
-As you can see, my directory is setup as `~/cs102/bitset` and contains a `lab8.cpp` file. This should be your working directory for this lab, and it's where you'll run the rest of the commands from.
-
-You'll also need `make`, `unzip`, `curl`, and `g++` installed on your system. If you're on Ubuntu WSL (default distro), you can install these with
-
-```
-sudo apt update && apt upgrade && apt install make unzip curl g++
-```
-
-If you're on the lab machines, they should already be installed.
-
-From this directory, you can now download the Makefile by running
-
-```bash
-curl -L https://tinyurl.com/mn6fb5zr --output Makefile
-```
-
----
-
-Similar to lab 7, the `Makefile` for this lab provides a few commands that you can use to compile/test your code
-
-:::note
-
-Keep in mind that each of these `make` commands (save for `make clean`) will also compile your code for you, so you don't have to run `make` every time you want to compile before a test.
-
-:::
-
-### Compile & Download Test Cases
-
-_compiles `lab8.cpp` into `lab8`, downloads `bitset-tests.zip` and extracts them to the current directory once_
-
-```
-make
-```
-
-### Run Tests
-
-_runs all the tests using `scripts/test.bash` & `tests/in/` as input files & `tests/out/` as output files_
-
-```
-make tests
-```
-
-If your script fails, the script will `diff` your output with the expected output and look like
-
-```
-scripts/test.bash bitset.cpp
-a1-cli.txt FAILED
-
-YOURS                                         EXPECTED
-> 0                                             > 0
-> > 0000_0000_0000_0000_0000_0000_0000_0001   | > > 0000 0000 0000 0000 0000 0000 0000 0001
-> 0000_0000_0000_0000_0000_0000_0000_0001     | > 0000 0000 0000 0000 0000 0000 0000 0001
-> > 1                                           > > 1
-> Unknown command 'oops'                        > Unknown command 'oops'
-```
-
-The left column is your program's output corresponding to the input file, and the right column is the solution output. The `|` character denotes a line that is different between the two outputs.
-
-If you pass all the scripts, the output should look like this
-
-```bash
-a1-cli.txt PASSED
-b1-test.txt PASSED
-b2-test-double.txt PASSED
-c1-set.txt PASSED
-c2-set-double.txt PASSED
-d1-clear.txt PASSED
-d2-clear-double.txt PASSED
-e1-out-of-bounds.txt PASSED
-f1-to-binary-formatting.txt PASSED
-g1-grow1.txt PASSED
-g2-grow2.txt PASSED
-g3-grow3.txt PASSED
-g4-grow4.txt PASSED
-h1-shrink1.txt PASSED
-h2-shrink2.txt PASSED
-h3-shrink3.txt PASSED
-h4-shrink4.txt PASSED
-i1-to-binary-1.txt PASSED
-i2-to-binary-2.txt PASSED
-```
-
-### Run Individual Test Case
-
-If you want to run one of the inputs without diffing, you can do so manually like this
-
-````bash
-make test CASE=case
-```
-
-where `<case>` is the name of the input file you want to test with (e.g. `a1-cli.txt`) -- all of which can be found within the `tests/in/` directory.
-
-### Clean
-
-_removes all test files & scripts_
-
-```bash
-make clean
-````
-
-### Errors
-
-#### Permission Denied
-
-If you're getting something like "permission denied" when running `make`, you can try running `chmod -R 777 .` to give yourself full permissions on the current directory. If that still doesn't work, just do `sudo` before any of the `make` commands.
-
-#### Command 'make' not found
-
-If you're getting something like "command 'make' not found", then make sure you followed the instructions in [Setup & Downloading Makefile](#setup--downloading-makefile) exactly.
-
-#### Failing Test Z
-
-If you're failing the last test, `z1-to-binary-formatting.txt`, then you're okay. It's related to this [Discord announcement](https://discord.com/channels/935991929978621962/939284715205169212/1037753087277944942). Basically the lab requires the spacing to be done from the right, but the old gradescript did it from the left. The new one is up to date, however there is no penalty because of the mistake.
-
----
-
-### Bye
-
-Let me know if you guys need any help setting these up!
+You can find all the test-related stuff <LinkWithIcon to="https://github.com/seeker-3/cs102-resources/blob/main/guides/bitset-tests.md" text="here" />. Good luck!

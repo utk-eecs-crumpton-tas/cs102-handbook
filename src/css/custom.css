@@ -95,3 +95,33 @@ li::marker {
 .card {
   background-color: #0c1017;
 }
+
+.bitwise-display {
+  display: grid;
+  grid-template-columns: repeat(9, auto);
+  grid-gap: 2px;
+  font-family: monospace;
+  font-size: 1.2em;
+  text-align: center;
+  align-items: center;
+}
+
+.bitwise-display > div {
+  border: 1px solid #525252;
+  padding: 2px 5px;
+  background-color: #1e2021;
+}
+
+.bitwise-display .operator,
+.bitwise-display .spacer {
+  border: none;
+  background-color: transparent;
+}
+
+.bitwise-display .operator {
+  font-weight: bold;
+}
+
+.bitwise-display .result {
+  border-top: 2px solid #000;
+}
