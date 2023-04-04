@@ -36,12 +36,12 @@ All of this to say that you should understand every data type is just a certain 
 
 In this lab, you'll be working primarily with `int`'s so let's discuss that. Here are some sequences of bits representing `int`'s and their decimal equivalent
 
-| Binary                                  | Decimal |
-| --------------------------------------- | ------- |
-| 0000 0000 0000 0000 0000 0000 0000 0000 | 0       |
-| 0000 0000 0000 0000 0000 0000 0000 0001 | 1       |
-| 0000 0000 0000 0000 0000 0000 0000 0010 | 2       |
-| 0000 0000 0000 0000 0000 0000 0001 0000 | 16      |
+| Binary                                                  | Decimal |
+| ------------------------------------------------------- | ------- |
+| `0000` `0000` `0000` `0000` `0000` `0000` `0000` `0000` | 0       |
+| `0000` `0000` `0000` `0000` `0000` `0000` `0000` `0001` | 1       |
+| `0000` `0000` `0000` `0000` `0000` `0000` `0000` `0010` | 2       |
+| `0000` `0000` `0000` `0000` `0000` `0000` `0001` `0000` | 16      |
 
 The pattern here is 2 to the power of the **set** bit's index. A **set** bit is just a bit that is 1 instead of 0. That will give you the decimal equivalent of the binary representation. If there are more than 1 set bits, then you just need to calculate that bit's value individually and then add up all of the values. So if you have `int == 3`, it would look like
 
