@@ -16,7 +16,9 @@ On Mac, you should be able to install these dependencies with [Homebrew](https:/
 
 Make sure your lab is in its own directory. This will prevent conflicts for gradescripts for future labs.
 
-> **Note** > `lab-directory` and `lab.cpp` are filler names for your actual lab directory and source file.
+:::note
+`lab-directory` and `lab.cpp` are filler names for your actual lab directory and source file.
+:::
 
 Moving your lab into its own directory:
 
@@ -54,8 +56,10 @@ abradl11:hydra0 ~/cs102/lab-directory› cat lab.cpp
 
 ## Download the Gradescript
 
-> **Note** > `lab-tests.zip` is a filler name for the actual zip file for the lab you are working on.
-> All of the zip files for the gradescripts can be found [here](https://github.com/seeker-3/cs102-resources/tree/main/tests).
+:::note
+`lab-tests.zip` is a filler name for the actual zip file for the lab you are working on.
+All of the zip files for the gradescripts can be found [here](https://github.com/seeker-3/cs102-resources/tree/main/tests).
+:::
 
 Download the gradescripts with:
 
@@ -81,9 +85,10 @@ lab.cpp  lab-tests.zip  scripts/ tests/
 
 ## Using the Gradescript
 
-> **Note**
-> The script will recompile your program each time you run it, so you don't need to recompile it yourself.
-> The gradescript will create a file in your directory called `lab.bin` which is your compiled program.
+:::note
+The script will recompile your program each time you run it, so you don't need to recompile it yourself.
+The gradescript will create a file in your directory called `lab.bin` which is your compiled program.
+:::
 
 Run the tests like this:
 
