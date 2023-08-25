@@ -1,16 +1,16 @@
 ---
-title: Lab 3 - Calculator
+title: Calculator
 ---
 
-# Lab 3 - Calculator
+# Calculator
 
 Build a simple arithmetic calculator.
 
 ## Meta
 
-| Lab | Source File | Description | Due Date |
-| --- | ----------- | ----------- | -------- |
-| 3 | `calc.cpp`    | Simple arithmetic calculator w/error handling | 2/16/2023 - 11:59pm |
+| Lab | Source File | Description                                   | Due Date            |
+| --- | ----------- | --------------------------------------------- | ------------------- |
+| 3   | `calc.cpp`  | Simple arithmetic calculator w/error handling | 2/16/2023 - 11:59pm |
 
 ## Introduction
 
@@ -21,11 +21,11 @@ I'm not going to go over much here, since the program is really simple honestly.
 Your program should do a few things:
 
 1. Prompt user for left **operand**.
-2. Prompt user for *operator*.
+2. Prompt user for _operator_.
 3. Prompt user for right **operand**.
 4. Perform the operation and output the result.
 
-Note that the **operands** are integers, while the *operator* is a single character. You should use a `switch` statement to determine which operation to perform.
+Note that the **operands** are integers, while the _operator_ is a single character. You should use a `switch` statement to determine which operation to perform.
 
 :::note
 
@@ -35,7 +35,7 @@ The only exception to this flow is the absolute value operation. This operation 
 
 ## Requirements
 
-- You cannot *re-use* code. Don't repeat something you've already done.
+- You cannot _re-use_ code. Don't repeat something you've already done.
 - You must use a `switch` statement.
 - You muse handle erroneous input. If the user enters an invalid operator, you should output the appropriate error message and exit the program.
 
