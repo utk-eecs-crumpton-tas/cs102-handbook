@@ -20,9 +20,9 @@ I'm not going to go over much here, since the program is really simple honestly.
 
 Your program should do a few things:
 
-1. Prompt user for left **operand**.
+1. Prompt user for the left **operand**.
 2. Prompt user for _operator_.
-3. Prompt user for right **operand**.
+3. Prompt user for the right **operand**.
 4. Perform the operation and output the result.
 
 Note that the **operands** are integers, while the _operator_ is a single character. You should use a `switch` statement to determine which operation to perform.
@@ -37,7 +37,7 @@ The only exception to this flow is the absolute value operation. This operation 
 
 - You cannot _re-use_ code. Don't repeat something you've already done.
 - You must use a `switch` statement.
-- You muse handle erroneous input. If the user enters an invalid operator, you should output the appropriate error message and exit the program.
+- You must handle erroneous input. If the user enters an invalid operator, you should output the appropriate error message and exit the program.
 
 ## Error Handling
 
