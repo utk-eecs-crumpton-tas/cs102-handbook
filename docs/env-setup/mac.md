@@ -4,6 +4,8 @@ sidebar_position: 3
 
 # Mac Environment Setup
 
+Setting up homebrew, g++, and VSCode on mac.
+
 ## Install Homebrew
 
 Homebrew is a package manager for macOS. It allows you to install and manage software packages from the command line.

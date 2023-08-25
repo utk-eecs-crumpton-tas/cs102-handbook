@@ -4,6 +4,8 @@ sidebar_position: 2
 
 # Gradescripts
 
+How to use the gradescripts for the labs.
+
 These tests are designed to be run on the lab machines, but they should also work on your own machine if you have the correct dependencies installed, namely `bash`, `g++`, `diff`, `valgrind`, `realpath`, and `unzip`.
 
 On Windows Subsystem for Linux, you should be able to install these dependencies with `apt`

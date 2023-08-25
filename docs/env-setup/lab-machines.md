@@ -4,6 +4,8 @@ sidebar_position: 1
 
 # Lab Machines Environment Setup
 
+Installing neovim and oh-my-zsh on the lab machines
+
 This guide will walk you through installing [https://ohmyz.sh/](https://ohmyz.sh/) and [neovim](https://neovim.io/) with [neovim kickstart](https://github.com/nvim-lua/kickstart.nvim) as well as setting up a language server to enable inline code analysis and autocomplete.
 
 ## Setup
