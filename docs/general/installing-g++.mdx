@@ -2,10 +2,10 @@
 sidebar_position: 2
 ---
 
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
-import LinkWithIcon from "/src/components/LinkWithIcon";
-import MysysImg from "@site/static/img/msys2.png";
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+import LinkWithIcon from '/src/components/LinkWithIcon'
+import MysysImg from '@site/static/img/msys2.png'
 
 # Installing g++
 
@@ -15,12 +15,12 @@ Installing `g++` (Mac & Windows) and `WSL` (Windows)
 
 This guide will cover installing `g++` for your computer. `g++` is the compiler we'll be using to compile our C++ code in this course. It's not necessary to have it on your computer if you only intend to use the lab computers, but it's highly recommended since that is not a pleasant experience.
 
-- _Mac Users_ - You can skip to the [Installing `g++`](/cs102-writeups/docs/general/info?os=macos#installing-xcode-command-line-tools-g) section
+- _Mac Users_ - You can skip to the [Installing `g++`](/cs102-writeups/docs/general/installing-g++?os=macos#installing-xcode-command-line-tools-g) section
 - _Windows Users_ - Read on
 
 :::info Windows Users...
 
-This guide will cover installing `WSL`, which is a Linux virtual machine specifically for Windows. It can be a bit annoying to set up, but it's the only way you can get a Unix experience on Windows without SSH, which is important **if you're a CS major**. Otherwise, I would skip to the [Installing `g++` without WSL](/cs102-writeups/docs/general/info?os=windows#installing-g-without-wsl) section instead. `WSL` is not necessary for this course or to install `g++`.
+This guide will cover installing `WSL`, which is a Linux virtual machine specifically for Windows. It can be a bit annoying to set up, but it's the only way you can get a Unix experience on Windows without SSH, which is important **if you're a CS major**. Otherwise, I would skip to the [Installing `g++` without WSL](/cs102-writeups/docs/general/installing-g++?os=windows#installing-g-without-wsl) section instead. `WSL` is not necessary for this course or to install `g++`.
 
 **Bottom line**: If you want to have a Unix environment on your own computer (way more comfortable than using SSH to do that), then install WSL. If you don't care about that, then you can skip it.
 
@@ -43,7 +43,7 @@ For Windows users, we'll need to install WSL (Windows Subsystem for Linux).
 
 1. Navigate to the start menu in the bottom left corner, and find the Powershell application. Right click and _run as administrator_.
 
-![start menu](/info/s1.png)
+![start menu](/installing-g++/s1.png)
 
 2. Once the shell is open, copy and enter the following line
 
@@ -51,11 +51,11 @@ For Windows users, we'll need to install WSL (Windows Subsystem for Linux).
    wsl --install
    ```
 
-   ![note about WSL](/info/note1.png)
+   ![note about WSL](/installing-g++/note1.png)
 
 3. Once WSL is installed, **restart your computer**. I recommend running Ubuntu (the default Linux distribution that's installed) and setting up your new Linux system. It should look like this
 
-   ![ubuntu](/info/s2.png)
+   ![ubuntu](/installing-g++/s2.png)
 
    Once started, it should prompt you to create a username/password. Once you've done that, you're set!
 
@@ -119,7 +119,7 @@ If it prints "Hello world!" to your screen, then you've set everything up correc
 
 If you installed `WSL` and have completed the steps above, then I recommend you install the **Remote - WSL** extension for VS Code. It'll allow you to open VS Code from your Linux (`WSL`) terminal, which is a lot more convenient than using `vim`.
 
-If you're not familiar with VS Code or extensions, then read the [Pre-setup](/docs/general/pre-setup).
+If you're not familiar with VS Code or extensions, then read the [Pre-setup](/docs/general/vscode-setup).
 
 Lastly, I recommend installing Microsoft's official [Terminal emulator](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab) for Windows. It's a lot more convenient than command prompt or powershell.
 
@@ -229,7 +229,7 @@ For MacOS users, we actually won't be using `gdb` directly. Instead, we'll be us
 
 First let's check to see if it's already installed. Open up a terminal instance and run the command `lldb`. If it works, skip to <LinkWithIcon to="/docs/debugging/gdb" text="this gdb guide" /> to get started.
 
-If it doesn't work, follow the instructions <LinkWithIcon to="/cs102-writeups/docs/general/info?os=macos#installing-xcode-command-line-tools-g" text="here" /> to install the Xcode command line tools.
+If it doesn't work, follow the instructions <LinkWithIcon to="/cs102-writeups/docs/general/installing-g++?os=macos#installing-xcode-command-line-tools-g" text="here" /> to install the Xcode command line tools.
 
 </TabItem></Tabs>
 
