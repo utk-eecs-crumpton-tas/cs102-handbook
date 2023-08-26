@@ -260,5 +260,3 @@ The highest set bit is the 192nd bit here (starting from 0). If you clear the 19
 ```
 
 Notice all 0-elements between any non-zero elements are removed.
-
----

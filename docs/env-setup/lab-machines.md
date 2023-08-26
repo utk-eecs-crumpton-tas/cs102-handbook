@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Lab Machines Environment Setup
 
-Installing Neovim and Oh-My-Zsh on the lab machines
+Setting up Oh-My-Zsh and Neovim on the lab machines.
 
 This guide will walk you through installing [https://ohmyz.sh/](https://ohmyz.sh/) and [Neovim](https://neovim.io/) with [Neovim kickstart](https://github.com/nvim-lua/kickstart.nvim) as well as setting up a language server to enable inline code analysis and autocomplete.
 
@@ -78,7 +78,7 @@ Watch the following video to learn about customizing Neovim and the `init.lua` f
 
 Here is a collection of Vim themes you can use
 
-[neovim themes](https://vimcolorschemes.com/)
+[Neovim themes](https://vimcolorschemes.com/)
 
 If you wanted to change your theme to, for example, [Tokyo Night](https://github.com/folke/tokyonight.nvim), find the section of the `init.lua` file that looks like this:
 
@@ -103,4 +103,4 @@ And change it to this:
 
 Check out [this page](/docs/general/vim-cheatsheet) for a short reference of vim commands.
 
-On Mac, the color scheme for Neovim may not display right for the default Terminal app. I recommend using [hyper](https://hyper.is/) as an alternative.
+On Mac, the color scheme for Neovim may not display right for the default Terminal app. I recommend using [Hyper](https://hyper.is/) as an alternative.

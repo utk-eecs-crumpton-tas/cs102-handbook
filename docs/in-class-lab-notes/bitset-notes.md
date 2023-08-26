@@ -193,6 +193,5 @@ ToBinary(0b1001, 6); // Does not return "000000 000000 000000 000000 000010 01 "
 ## Helpful Resources
 
 - [Ethan's walkthrough of the whole lab](https://ethan0429.github.io/cs102-writeups/docs/labs/lab8)
-- [My tests](https://github.com/seeker-3/cs102-resources/blob/main/guides/bitset-tests.md)
 
 Make sure to set up the tests first thing. These are the tests we will grade the lab with!

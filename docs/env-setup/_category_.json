@@ -3,6 +3,6 @@
   "position": 2,
   "link": {
     "type": "generated-index",
-    "description": "How to set up your c++ development environment."
+    "description": "How to set up your C++ development environment. Use the Mac and Windows guides if you would like to develop locally with VSCode. Use the lab machines guide if you would like to do all your work on the lab machines over ssh using Neovim."
   }
 }

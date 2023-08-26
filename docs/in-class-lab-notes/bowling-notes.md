@@ -207,7 +207,3 @@ Frame 10 strike - add frame 10 roll 1 + roll 2 + roll 3
 Frame 9 double strike edge case - add frame 9 roll 1 + frame 10 roll 1 + frame 10 roll 2 (not frame 10 roll 3)
 
 ![frame9-double-strike-edge-case](/img/labs/bowling/frame9-double-strike-edge-case.png)
-
-## Tests
-
-The tests for this lab can be found [here](https://github.com/seeker-3/cs102-resources/blob/main/guides/bowling-tests.md). There are the same tests your labs will be graded with.
