@@ -4,7 +4,9 @@ sidebar_position: 3
 
 # Mac Environment Setup
 
-Setting up homebrew, g++, and VSCode on mac.
+Setting up homebrew, g++, and VSCode on Mac.
+
+To run the following commands, open a terminal with `cmd+space` and search for `Terminal.app`.
 
 ## Install Homebrew
 
@@ -30,7 +32,7 @@ GCC is a compiler for C and C++.
 brew install gcc
 ```
 
-GCC will be run with the command `g++-13` instead of `g++`. On a mac, `g++` points to the Apple clang c++ compiler, which is not the same as GCC.
+GCC will be run with the command `g++-13` instead of `g++`. On a Mac, `g++` points to the Apple Clang C++ compiler, which is not the same as GCC.
 
 ```bash
 g++-13 -std=c++11 -o lab0 lab0.cpp
@@ -48,9 +50,9 @@ brew install --cask visual-studio-code
 
 To add extensions to vscode, hit `cmd+shift+x`.
 
-Install the following extensions:
+Search for and install the following extensions:
 
-- `ms-vscode.cpptools-extension-pack`
+- `ms-vscode.cpptools-extension-pack` aka `C/C++ Extension Pack`
 
 ## VSCode Explorer
 
@@ -60,15 +62,64 @@ This will allow you to open vscode from the command line with the command `code`
 
 On your system, create a directory for your cs102 files, such as `~/cs102`.
 
-Open vscode from the command line with the command `code ~/cs102`.
+```bash
+mkdir ~/cs102
+```
+
+Open VSCode from the command line with the command:
+
+```bash
+code ~/cs102
+```
 
 You should see all your files in the file explorer on the left with `cmd+shift+e`.
 
+You can create a new file such as `hello.cpp` with the new file icon in the file explorer and put the following code in it:
+
+```cpp
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  cout << "Hello World!" << endl;
+  return 0;
+}
+```
+
 ## VSCode Terminal
 
-To open a terminal in vscode, hit ctrl+\`.
+To open a terminal in vscode, hit `` ctrl+` `` (control and backtick).
 
 If you have a file explorer open to the side, it should start the terminal session in the directory you have open.
+
+run `pwd` to see the current directory:
+
+```bash
+pwd
+```
+
+run `ls` and you should see your `hello.cpp` file:
+
+```bash
+ls
+```
+
+You can also compile and run your code from the terminal:
+
+Compile:
+
+```bash
+g++-13 -std=c++11 -o hello hello.cpp
+```
+
+Run:
+
+```bash
+./hello
+```
+
+And it should print `Hello World!` to the terminal.
 
 ## VSCode Code Formatting
 

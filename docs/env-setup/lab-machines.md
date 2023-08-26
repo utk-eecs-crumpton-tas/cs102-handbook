@@ -10,6 +10,8 @@ This guide will walk you through installing [https://ohmyz.sh/](https://ohmyz.sh
 
 ## Setup
 
+First log into a lab machine with [`ssh`](/docs/general/common-linux-commands#logging-into-the-lab-machines).
+
 To run the install, run the following command
 
 ```bash
@@ -44,9 +46,9 @@ Scroll down to `clangd` and press `i`.
 
 The script adds the following plugins to OMZ
 
-- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
-- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
-- [autoupdate](https://github.com/tamcore/autoupdate-oh-my-zsh-plugins)
+- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) - This plugin suggests commands as you type based on history and completions similar to the way a web browser suggests websites.
+- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) - This plugin adds color to the command line.
+- [autoupdate](https://github.com/tamcore/autoupdate-oh-my-zsh-plugins) - This plugin automatically updates custom user plugins.
 
 ## Customizing
 
@@ -100,3 +102,5 @@ And change it to this:
 ```
 
 Check out [this page](/docs/general/vim-cheatsheet.mdx) for a short reference of vim commands.
+
+On Mac, the color scheme for Neovim may not display right for the default Terminal app. I recommend using [hyper](https://hyper.is/) as an alternative.
