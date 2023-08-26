@@ -98,3 +98,5 @@ And change it to this:
     config = function() vim.cmd.colorscheme('tokyonight') end,
 },
 ```
+
+Check out [this page](/docs/general/vim-cheatsheet.mdx) for a short reference of vim commands.
