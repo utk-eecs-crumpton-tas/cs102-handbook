@@ -1,57 +1,55 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # Vim Cheatsheet
 
-Basic vim motions to get you started.
+Basic Vim motions to get you started.
 
 ## Movement
 
-`h j k l` - left, down, up, right
-
-`w b` - forward a word, back a word
-
-`{ }` - jump up and down whole code blocks
+- `h j k l` - Left, Down, Up, Right (recommended over the arrow keys)
+- `w b` - Go forward a word, go back a word
+- `{ }` - Jump up and down whole code blocks
+- `gg` - Go to the top of the document
+- `G` - Go to the bottom of the document
+- `0` - Go to the beginning of the line
+- `^` - Go to the first non-whitespace character of the line
+- `$` - Go to the end of the line
 
 ## Editing
 
-`yy` - copy a line
-
-`dd` - delete a line (similar to cut)
-
-`p` - paste what was yanked or deleted
-
-`u` - undo
-
-`d` or `y` combined with any other movement options to delete or yank different selections like `dw` to delete a word or `dj` to delete the line and the line below it.
-
-`gg=G` - format your document - use this religiously
+- `yy` - Copy a line
+- `dd` - Delete a line (similar to cut)
+- `p` - Paste what was yanked or deleted
+- `u` - Undo
+- `ctrl + r` - Redo
+- `x` - Delete a character
+- `r` - Replace a character
+- `d` or `y` combined with any other movement options to delete or yank different selections like `dw` to delete a word or `dj` to delete the line and the line below it.
+- `gg=G` - Format your document - use this religiously
 
 ## Visual Mode
 
-`v` - visual mode for text selection
+Used for highlighting and selecting text.
 
-`shift + v` - visual line mode, for selecting whole lines
-
-`y d` - in visual mode to copy or cut selection
+- `v` - visual mode for text selection
+- `shift + v` - visual line mode, for selecting whole lines
+- `y d` - in visual mode to copy or cut selection
+- `p` - Paste over selection
 
 ## Insert Mode
 
-`i` - insert mode
-
-`escape, ctrl + c, ctrl + [` - exit insert mode
+- `i` - insert mode
+- `escape` - exit insert mode
 
 ## Exiting
 
-`:q` - close the document
+- `:q` - Close a document
+- `:wq` - Save and exit a document
+- `:q!` - Close the document without saving
+- `shift + ZZ` - An alias for `:wq` to save and exit a document
 
-`:wq` - save and exit a document
+<!-- There is a [vim VS Code extension](https://marketplace.visualstudio.com/items?itemName=VS Codevim.vim) if you want to use vim key bindings in VS Code. This is another good [vim VS Code extension](https://marketplace.visualstudio.com/items?itemName=VSCodevim.vim) for setting up the VS Code extension. -->
 
-`:q!` - close the document without saving.
-
-`shift + ZZ` - an alias for `:wq` to save and exit a document
-
-{/* There is a [vim VS Code extension](https://marketplace.visualstudio.com/items?itemName=VS Codevim.vim) if you want to use vim key bindings in VS Code. This is another good [vim VS Code extension](https://marketplace.visualstudio.com/items?itemName=VS Codevim.vim) for setting up the VS Code extension. */}
-
-If you want to dive deeper into vim, this YouTuber, [The Primeagen](https://www.youtube.com/@ThePrimeagen) is a good place to start.
+If you want to dive deeper into Vim, this YouTuber, [The Primeagen](https://www.youtube.com/@ThePrimeagen) is a good place to start.
