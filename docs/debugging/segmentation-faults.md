@@ -1,4 +1,6 @@
-importlink:m '@site/src/componentslink: Debu ults
+# Debugging Segmentation Faults
+
+How to debug segmentation faults
 
 ## What is a Segmentation Fault?
 
@@ -188,15 +190,3 @@ Segmentation fault (core dumped)
 Since the program crashes before it prints out the line `I will not print`, but after it prints out the line `I will print`, we know that the line that caused the segmentation fault is `integers[0] += integers[10];`.
 
 By this way of adding print statements to our code, we can find the line of code that caused the segmentation fault.
-
-{/* ### Using GDB */}
-
-{/* :::note `gdb` prerequisites */}
-
-{/* If you're not on the lab machines, you'll need to install `gdb` yourself if you haven't already. You can find `gdb` installation instructions in link:"/docs/general/installing-g++?os=windows#installing-gdb" . */}
-
-{/* ::: */}
-
-{/* The best way to debug trickier segmentation faults is to use GDB. GDB is a debugger that allows you to step through your program line-by-line and inspect the state of your program at any point. You can use GDB to find the line of code that caused the segmentation fault. */}
-
-{/* If you haven't already, I recommend reading our link:"/docs/debugging/gdb" to get familiar with `gdb`. */}

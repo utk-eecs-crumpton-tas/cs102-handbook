@@ -4,9 +4,9 @@ sidebar_position: 1
 
 # Lab Machines Environment Setup
 
-Installing neovim and oh-my-zsh on the lab machines
+Installing Neovim and Oh-My-Zsh on the lab machines
 
-This guide will walk you through installing [https://ohmyz.sh/](https://ohmyz.sh/) and [neovim](https://neovim.io/) with [neovim kickstart](https://github.com/nvim-lua/kickstart.nvim) as well as setting up a language server to enable inline code analysis and autocomplete.
+This guide will walk you through installing [https://ohmyz.sh/](https://ohmyz.sh/) and [Neovim](https://neovim.io/) with [Neovim kickstart](https://github.com/nvim-lua/kickstart.nvim) as well as setting up a language server to enable inline code analysis and autocomplete.
 
 ## Setup
 
@@ -54,7 +54,7 @@ The script adds the following plugins to OMZ
 
 ### Oh My Zsh
 
-To customize omz plugins, edit the `~/.zshrc` file with
+To customize OMZ plugins, edit the `~/.zshrc` file with
 
 ```bash
 nvim ~/.zshrc
@@ -66,17 +66,17 @@ If you want to add additional plugins, you can `git clone` them into `~/.oh-my-z
 
 ### Neovim
 
-To customize neovim, edit the `~/.config/nvim/init.lua` file with
+To customize Neovim, edit the `~/.config/nvim/init.lua` file with
 
 ```bash
 nvim ~/.config/nvim/init.lua
 ```
 
-Watch the following video to learn about customizing neovim and the `init.lua` file
+Watch the following video to learn about customizing Neovim and the `init.lua` file
 
 [![Effective Neovim: Instant IDE](https://img.youtube.com/vi/stqUbv-5u2s/0.jpg)](https://youtu.be/stqUbv-5u2s?t=226)
 
-Here is a collection of vim themes you can use
+Here is a collection of Vim themes you can use
 
 [neovim themes](https://vimcolorschemes.com/)
 
@@ -101,6 +101,6 @@ And change it to this:
 },
 ```
 
-Check out [this page](/docs/general/vim-cheatsheet.mdx) for a short reference of vim commands.
+Check out [this page](/docs/general/vim-cheatsheet) for a short reference of vim commands.
 
 On Mac, the color scheme for Neovim may not display right for the default Terminal app. I recommend using [hyper](https://hyper.is/) as an alternative.

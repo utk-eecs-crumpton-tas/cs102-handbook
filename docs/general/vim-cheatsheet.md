@@ -2,8 +2,6 @@
 sidebar_position: 3
 ---
 
-import LinkWithIcon from '/src/components/LinkWithIcon'
-
 # Vim Cheatsheet
 
 Basic vim motions to get you started.
@@ -54,6 +52,6 @@ Basic vim motions to get you started.
 
 `shift + ZZ` - an alias for `:wq` to save and exit a document
 
-{/* There is a <LinkWithIcon to="https://marketplace.visualstudio.com/items?itemName=VS Codevim.vim" text="vim VS Code extension" /> if you want to use vim key bindings in VS Code. This is another good <LinkWithIcon to="https://marketplace.visualstudio.com/items?itemName=VS Codevim.vim" text="vim VS Code extension" /> for setting up the VS Code extension. */}
+{/* There is a [vim VS Code extension](https://marketplace.visualstudio.com/items?itemName=VS Codevim.vim) if you want to use vim key bindings in VS Code. This is another good [vim VS Code extension](https://marketplace.visualstudio.com/items?itemName=VS Codevim.vim) for setting up the VS Code extension. */}
 
-If you want to dive deeper into vim, this YouTuber, <LinkWithIcon to="https://www.youtube.com/@ThePrimeagen" text="The Primeagen" /> is a good place to start.
+If you want to dive deeper into vim, this YouTuber, [The Primeagen](https://www.youtube.com/@ThePrimeagen) is a good place to start.

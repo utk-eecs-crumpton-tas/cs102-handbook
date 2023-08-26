@@ -93,13 +93,13 @@ To open a terminal in vscode, hit `` ctrl+` `` (control and backtick).
 
 If you have a file explorer open to the side, it should start the terminal session in the directory you have open.
 
-run `pwd` to see the current directory:
+Run `pwd` to see the current directory:
 
 ```bash
 pwd
 ```
 
-run `ls` and you should see your `hello.cpp` file:
+Run `ls` and you should see your `hello.cpp` file:
 
 ```bash
 ls

@@ -4,7 +4,6 @@ title: Speeding Ticket Calculator
 
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
-import LinkWithIcon from '/src/components/LinkWithIcon'
 
 # Speeding Ticket Calculator
 
@@ -99,11 +98,11 @@ E712221 6 4 2015 200 25 h
 E219221 12 25 17 2000 10 p
 ```
 
-The above text is what is actually inside the input file. Notice how each line conforms to the <LinkWithIcon to="#input-file-format" text="format I mentioned" />. Each line is a ticket, and each ticket is composed of 7 values, separated by spaces, just like I listed above.
+The above text is what is actually inside the input file. Notice how each line conforms to the [format I mentioned](#input-file-format). Each line is a ticket, and each ticket is composed of 7 values, separated by spaces, just like I listed above.
 
 ### Reading The File & The `fstream` Library
 
-As I mentioned <LinkWithIcon to="#Introduction" text="here" />, `fstream` is the file equivalent of `iostream`.
+As I mentioned [here](#Introduction), `fstream` is the file equivalent of `iostream`.
 
 `cin` is to `iostream` as `ifstream` is to `fstream`. You can think of `cin` as just a _pre-defined_ keyword that we can use to easily read from `stdin` (the technical term for the keyboard, basically). `ifstream` is almost the exact same as `cin`, but it's not pre-defined, and it's used to read from a file instead of `stdin` (the keyboard).
 

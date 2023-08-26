@@ -15,12 +15,12 @@ Installing `g++` (Mac & Windows) and `WSL` (Windows)
 
 This guide will cover installing `g++` for your computer. `g++` is the compiler we'll be using to compile our C++ code in this course. It's not necessary to have it on your computer if you only intend to use the lab computers, but it's highly recommended since that is not a pleasant experience.
 
-- _Mac Users_ - You can skip to the [Installing `g++`](/cs102-writeups/docs/general/installing-g++?os=macos#installing-xcode-command-line-tools-g) section
+- _Mac Users_ - You can skip to the [Installing `g++`](/docs/general/installing-g++?os=macos#installing-xcode-command-line-tools-g) section
 - _Windows Users_ - Read on
 
 :::info Windows Users...
 
-This guide will cover installing `WSL`, which is a Linux virtual machine specifically for Windows. It can be a bit annoying to set up, but it's the only way you can get a Unix experience on Windows without SSH, which is important **if you're a CS major**. Otherwise, I would skip to the [Installing `g++` without WSL](/cs102-writeups/docs/general/installing-g++?os=windows#installing-g-without-wsl) section instead. `WSL` is not necessary for this course or to install `g++`.
+This guide will cover installing `WSL`, which is a Linux virtual machine specifically for Windows. It can be a bit annoying to set up, but it's the only way you can get a Unix experience on Windows without SSH, which is important **if you're a CS major**. Otherwise, I would skip to the [Installing `g++` without WSL](/docs/general/installing-g++?os=windows#installing-g-without-wsl) section instead. `WSL` is not necessary for this course or to install `g++`.
 
 **Bottom line**: If you want to have a Unix environment on your own computer (way more comfortable than using SSH to do that), then install WSL. If you don't care about that, then you can skip it.
 
@@ -172,7 +172,7 @@ If it prints a bunch of version information, then you've successfully installed 
 - Windows
 - MacOS
 
-If you want a reference for how to use `gdb`, you can check out <LinkWithIcon to="/docs/debugging/gdb" text="this guide we've written" />.
+If you want a reference for how to use `gdb`, you can check out [this guide we've written](/docs/debugging/gdb).
 
 <Tabs
     groupId="operating-system"
@@ -185,7 +185,7 @@ If you want a reference for how to use `gdb`, you can check out <LinkWithIcon to
     ]}>
 <TabItem value="windows-wsl">
 
-First let's check to see if it's already installed. Open up a terminal instance of Ubuntu and run the command `gdb`. If it works, skip to <LinkWithIcon to="/docs/debugging/gdb" text="this gdb guide" /> to get started.
+First let's check to see if it's already installed. Open up a terminal instance of Ubuntu and run the command `gdb`. If it works, skip to [this gdb guide](/docs/debugging/gdb) to get started.
 
 If it doesn't work, run the following commands:
 
@@ -203,7 +203,7 @@ Once that's done, restart any terminals you have open, and try running `gdb` aga
 
 <TabItem value="windows">
 
-First let's check to see if it's already installed. Open up a terminal instance (powershell, cmd, terminal, whatever) and run the command `gdb`. If it works, skip to <LinkWithIcon to="/docs/debugging/gdb" text="this gdb guide" /> to get started.
+First let's check to see if it's already installed. Open up a terminal instance (powershell, cmd, terminal, whatever) and run the command `gdb`. If it works, skip to [this gdb guide](/docs/debugging/gdb) to get started.
 
 Open the program `msys2`. There might be multiple, but just open the purple one. It should look like this:
 
@@ -227,9 +227,9 @@ Once that's done, restart any terminals you have open, and try running `gdb` aga
 
 For MacOS users, we actually won't be using `gdb` directly. Instead, we'll be using `lldb`, which is a debugger that's built into Xcode. It's a little bit different than `gdb`, but it's more or less the same.
 
-First let's check to see if it's already installed. Open up a terminal instance and run the command `lldb`. If it works, skip to <LinkWithIcon to="/docs/debugging/gdb" text="this gdb guide" /> to get started.
+First let's check to see if it's already installed. Open up a terminal instance and run the command `lldb`. If it works, skip to [this gdb guide](/docs/debugging/gdb) to get started.
 
-If it doesn't work, follow the instructions <LinkWithIcon to="/cs102-writeups/docs/general/installing-g++?os=macos#installing-xcode-command-line-tools-g" text="here" /> to install the Xcode command line tools.
+If it doesn't work, follow the instructions [here](/docs/general/installing-g++?os=macos#installing-xcode-command-line-tools-g) to install the Xcode command line tools.
 
 </TabItem></Tabs>
 

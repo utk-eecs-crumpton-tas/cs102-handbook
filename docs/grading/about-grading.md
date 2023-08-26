@@ -2,8 +2,6 @@
 sidebar_position: 1
 ---
 
-import LinkWithIcon from '/src/components/LinkWithIcon'
-
 # About Grading
 
 How to format your lab submissions.
@@ -173,7 +171,7 @@ int main() {
 ### Non-Const Global Variables
 
 :::note
-The `const` keywrod in C++ is the equivalent of `final` in Java. It means that the variable cannot be changed.
+The `const` keyword in C++ is the equivalent of `final` in Java. It means that the variable cannot be changed.
 :::
 
 Minus 1 per non-const global variable up to 3. Global variables are variables that are declared outside of any function. They are accessible from anywhere in your program. Non-const global variables are generally considered a bad practice, and you should avoid using them. It may not seem like a big deal now, but as your programs grow in size and complexity, global variables can lead to a lot of difficult-to-find bugs. If you do use a global variable, it should be declared as `const`.
@@ -301,15 +299,15 @@ int main() {
 }
 ```
 
-Bad indentation makes code incredibly difficult to read. A couple of mistakes are okay, but if we cannot tell where your code blocks begin and end, you will lose points for this. The best advice I can give you is to use a code formatter. This is a program that will automatically fix any whitespace and indentation issues in your code and format everything in a consistent way. To format your code in vim while in normal mode use the command `gg=G`. To format in VS Code right click your code and select format document. You may need to install an extension in VS Code, the Microsoft `C/C++` extension should come with whatever you need. If you use a formatter on your code before submitting, you will never have to worry about losing points for this.
+Bad indentation makes code incredibly difficult to read. A couple of mistakes are okay, but if we cannot tell where your code blocks begin and end, you will lose points for this. The best advice I can give you is to use a code formatter. This is a program that will automatically fix any whitespace and indentation issues in your code and format everything in a consistent way. To format your code in Vim while in normal mode use the command `gg=G`. To format in VS Code right-click your code and select format document. You may need to install an extension in VS Code, the Microsoft `C/C++` extension should come with whatever you need. If you use a formatter on your code before submitting, you will never have to worry about losing points for this.
 
-A side note: if you are sharing code with a TA on the Discord server, please format your code first, this will make it much easier for us to help you!
+A side note: If you are sharing code with a TA on the Discord server, please format your code first, this will make it much easier for us to help you!
 
-{/* :::tip Code Formatter */}
+<!-- :::tip Code Formatter -->
 
-{/* Ethan has talked a bit about automatic-code formatters for VS Code in link:"/docs/general/vscode-setup#extra" as well, which is basically the `gg=G` command but for VS Code. */}
+<!-- Ethan has talked a bit about automatic-code formatters for VS Code in link:"/docs/general/vscode-setup#extra" as well, which is basically the `gg=G` command but for VS Code. -->
 
-{/* ::: */}
+<!-- ::: -->
 
 ### Compiler Warnings
 
@@ -471,15 +469,15 @@ This program should easily let you find if any of the mistakes listed above are 
 
 :::danger Your Code Must Compile on the Lab Machines
 
-Whenever going to submit your code for an assignment, **ALWAYS** make sure it compiles _and_ behaves (as intended) before doing so -- **ON THE LAB MACHINES**. Compilers work different across computers, so even if it compiled on your computer, it doesn't necessarily compile or behave the same way on the lab machines. The TA's grade using the lab machines, so if your code doesn't compile or work correctly there, you will **not get credit** for the assignment. Trust me, it happens all the time.
+Whenever you are going to submit your code for an assignment, **ALWAYS** make sure it compiles _and_ behaves (as intended) before doing so -- **ON THE LAB MACHINES**. Compilers work differently across computers, so even if it compiles on your computer, it doesn't necessarily compile or behave the same way on the lab machines. The TA's grade using the lab machines, so if your code doesn't compile or work correctly there, you will **not get credit** for the assignment. Trust me, it happens all the time.
 
 :::
 
-This may seem like a steep policy, but this will be the policy used for all upper level classes, the difference here is since this is an intro class, some degree of error is expected. There will be two extra credit labs available throughout the semester you can use to make up for any points lost due to this policy.
+This may seem like a steep policy, but this will be the policy used for all upper-level classes, the difference here is since this is an intro class, some degree of error is expected. There will be two extra credit labs available throughout the semester you can use to make up for any points lost due to this policy.
 
-The best way to be certain your lab compiles is to download your submission from canvas, upload it to one of the lab machines, and verify that the submission compiles.
+The best way to be certain your lab compiles is to download your submission from Canvas, upload it to one of the lab machines, and verify that the submission compiles.
 
-The file can be uploaded using `scp SOURCE DESTINATION` (more on that in the <LinkWithIcon to="/docs/general/common-linux-commands#copying-tofrom-the-lab-machines" text="scp quick-guide" />) , but in this case, the source is the file on your computer, and the destination is the lab machine.
+The file can be uploaded using `scp SOURCE DESTINATION` (more on that in the [scp quick guide](/docs/general/common-linux-commands#copying-tofrom-the-lab-machines)), but in this case, the source is the file on your computer, and the destination is the lab machine.
 
 ```bash
 scp my_program.cpp NETID@hydra0.eecs.utk.edu:~/uploads

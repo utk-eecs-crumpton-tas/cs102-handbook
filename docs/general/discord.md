@@ -2,8 +2,6 @@
 sidebar_position: 4
 ---
 
-import LinkWithIcon from '/src/components/LinkWithIcon'
-
 # Sharing Code on Discord
 
 :::info
@@ -14,13 +12,14 @@ Before sharing your code on Discord, please format it first. Poorly formatted co
 
 There are 3 ways to share code on Discord:
 
-1. [Copying and pasting the code into Discord](#copying-and-pasting)
-2. [Uploading a file](#uploading-a-file)
-3. [Taking a screenshot](#taking-a-screenshot)
+- [Sharing Code on Discord](#sharing-code-on-discord)
+  - [Copying and Pasting](#copying-and-pasting)
+  - [Uploading a File](#uploading-a-file)
+  - [Taking a Screenshot](#taking-a-screenshot)
 
 ## Copying and Pasting
 
-Discord supports a subset of the markup language known as <LinkWithIcon to="https://www.markdownguide.org/" text="markdown" />. Markdown lets you share code with mono-spacing and syntax highlighting in discord by wrapping it in backticks. <LinkWithIcon to="https://www.markdownguide.org/extended-syntax/#fenced-code-blocks" text="Here is the documentation for markdown code blocks for reference." />
+Discord supports a subset of the markup language known as [markdown](https://www.markdownguide.org/). Markdown lets you share code with mono-spacing and syntax highlighting in discord by wrapping it in backticks. [Here](https://www.markdownguide.org/extended-syntax/#fenced-code-blocks) is the documentation for markdown code blocks for reference.
 
 For example, if you wanted to share the following code:
 
@@ -60,7 +59,7 @@ Discord limits the size of messages you can send, so this approach is mainly use
 
 ## Uploading a File
 
-Uploading a file is simple, you can either select the plus icon on the left side of the message box or simply drag and drop the file into the app. Uploading a file should be a last resort. You should do your best to try to figure out which part of your program is not working and ask questions about the piece you are struggling with. We will help if you are _really_ stuck, but please try to find bugs on your own if you can. Here is the section reference on <LinkWithIcon to="/cs102-writeups/docs/debugging/segmentation-faults#how-to-debug-segmentation-faults" text="debugging with print statements" />.
+Uploading a file is simple, you can either select the plus icon on the left side of the message box or simply drag and drop the file into the app. Uploading a file should be a last resort. You should do your best to try to figure out which part of your program is not working and ask questions about the piece you are struggling with. We will help if you are _really_ stuck, but please try to find bugs on your own if you can. Here is the section reference on [debugging with print statements](/docs/debugging/segmentation-faults#how-to-debug-segmentation-faults).
 
 ## Taking a Screenshot
 
