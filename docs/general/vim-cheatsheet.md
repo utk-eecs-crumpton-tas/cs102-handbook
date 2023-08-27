@@ -40,7 +40,14 @@ Used for highlighting and selecting text.
 
 ## Insert Mode
 
-- `i` - insert mode
+- `i` - Insert mode before the cursor
+- `a` - Insert mode after the cursor
+- `shift + i` - Insert mode at the beginning of the line
+- `shift + a` - Insert mode at the end of the line
+- `o` - Insert mode on a new line below the cursor
+- `shift + o` - Insert mode on a new line above the cursor
+- `c` - Same as `d` but also enters insert mode
+- `cc` - Delete a line and enter insert mode
 - `escape` - exit insert mode
 
 ## Exiting
