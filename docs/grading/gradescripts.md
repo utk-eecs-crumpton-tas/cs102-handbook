@@ -64,7 +64,7 @@ All of the zip files for the gradescripts can be found [here](https://github.com
 Download the gradescripts with:
 
 ```bash
-curl https://raw.githubusercontent.com/seeker-3/cs102-resources/main/tests/lab-tests.zip -o lab-tests.zip
+wget https://raw.githubusercontent.com/seeker-3/cs102-resources/main/tests/lab-tests.zip
 ```
 
 Substituting `lab-tests.zip` with the name of the zip file for the lab you are working on.
