@@ -31,4 +31,4 @@ This site compiles a collection of various write-ups for CS 102 at UTK intended 
 ## External Resources
 
 - [Professor Crumpton's Notes](https://camille-chanel.github.io/cs102/)
-- [grade-scripts](https://github.com/seeker-3/cs102-resources/tree/main/tests)
+- [grade-scripts](https://github.com/utk-eecs-crumpton-tas/cs102-downloads/tree/main/tests)

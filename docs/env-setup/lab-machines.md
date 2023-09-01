@@ -15,7 +15,7 @@ First log into a lab machine with [`ssh`](/docs/general/common-linux-commands#lo
 To run the install, run the following command
 
 ```bash
-curl https://raw.githubusercontent.com/seeker-3/cs102-resources/main/scripts/install.bash | bash
+curl https://raw.githubusercontent.com/utk-eecs-crumpton-tas/cs102-downloads/main/scripts/install.bash | bash
 ```
 
 Then restart the shell

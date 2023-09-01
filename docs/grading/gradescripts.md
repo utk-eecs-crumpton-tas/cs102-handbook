@@ -58,13 +58,13 @@ abradl11:hydra0 ~/cs102/lab-directory› cat lab.cpp
 
 :::note
 `lab-tests.zip` is a filler name for the actual zip file for the lab you are working on.
-All of the zip files for the gradescripts can be found [here](https://github.com/seeker-3/cs102-resources/tree/main/tests).
+All of the zip files for the gradescripts can be found [here](https://github.com/utk-eecs-crumpton-tas/cs102-downloads/tree/main/tests).
 :::
 
 Download the gradescripts with:
 
 ```bash
-wget https://raw.githubusercontent.com/seeker-3/cs102-resources/main/tests/lab-tests.zip
+wget https://raw.githubusercontent.com/utk-eecs-crumpton-tas/cs102-downloads/main/tests/lab-tests.zip
 ```
 
 Substituting `lab-tests.zip` with the name of the zip file for the lab you are working on.
