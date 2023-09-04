@@ -21,13 +21,16 @@ Basic Vim motions to get you started.
 
 - `yy` - Copy a line
 - `dd` - Delete a line (similar to cut)
-- `p` - Paste what was yanked or deleted
+- `p` - Paste what was yanked or deleted after the cursor
 - `u` - Undo
 - `ctrl + r` - Redo
 - `x` - Delete a character
 - `r` - Replace a character
 - `d` or `y` combined with any other movement options to delete or yank different selections like `dw` to delete a word or `dj` to delete the line and the line below it.
-- `gg=G` - Format your document - use this religiously
+- `shift + d` - Delete from the cursor to the end of the line
+- `shift + y` - Copy from the cursor to the end of the line
+- `shift + p` - Paste before the cursor
+- `gg=G` - Format your document
 
 ## Visual Mode
 
@@ -48,6 +51,7 @@ Used for highlighting and selecting text.
 - `shift + o` - Insert mode on a new line above the cursor
 - `c` - Same as `d` but also enters insert mode
 - `cc` - Delete a line and enter insert mode
+- `shift + c` - Delete from the cursor to the end of the line and enter insert mode
 - `escape` - exit insert mode
 
 ## Exiting
@@ -55,7 +59,7 @@ Used for highlighting and selecting text.
 - `:q` - Close a document
 - `:wq` - Save and exit a document
 - `:q!` - Close the document without saving
-- `shift + ZZ` - An alias for `:wq` to save and exit a document
+- `shift + zz` - An alias for `:wq` to save and exit a document
 
 <!-- There is a [vim VS Code extension](https://marketplace.visualstudio.com/items?itemName=VS Codevim.vim) if you want to use vim key bindings in VS Code. This is another good [vim VS Code extension](https://marketplace.visualstudio.com/items?itemName=VSCodevim.vim) for setting up the VS Code extension. -->
 
