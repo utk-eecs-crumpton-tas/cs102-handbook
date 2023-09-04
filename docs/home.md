@@ -17,7 +17,7 @@ This site compiles a collection of various write-ups for CS 102 at UTK intended 
   for the course.
 
 - [Grading](/docs/category/grading) - Information about grading
-  and grade-scripts.
+  and using the gradescripts.
 
 - [In-Class Lab Notes](/docs/category/in-class-lab-notes) - Introduction
   to the new material needed for the labs.
@@ -31,4 +31,4 @@ This site compiles a collection of various write-ups for CS 102 at UTK intended 
 ## External Resources
 
 - [Professor Crumpton's Notes](https://camille-chanel.github.io/cs102/)
-- [grade-scripts](https://github.com/utk-eecs-crumpton-tas/cs102-downloads/tree/main/tests)
+- [Gradescripts download page](https://github.com/utk-eecs-crumpton-tas/cs102-downloads/tree/main/tests)
