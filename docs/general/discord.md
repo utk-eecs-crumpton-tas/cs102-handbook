@@ -6,7 +6,7 @@ sidebar_position: 2
 
 :::info
 
-Before sharing your code on Discord, please format it first. Poorly formatted code is hard to read and even harder to debug. If you're using vim, you can format your code in normal mode by typing `gg=G`. If you're using VSCode, you can format your code right clicking and selecting format document.
+Before sharing your code on Discord, please format it first. If you're using Vim, you can format your code in normal mode by typing `gg=G`. If you're using VSCode, you can format your code with `shift+alt+f`.
 
 :::
 
@@ -19,7 +19,7 @@ There are 3 ways to share code on Discord:
 
 ## Copying and Pasting
 
-Discord supports a subset of the markup language known as [markdown](https://www.markdownguide.org/). Markdown lets you share code with mono-spacing and syntax highlighting in discord by wrapping it in backticks. [Here](https://www.markdownguide.org/extended-syntax/#fenced-code-blocks) is the documentation for markdown code blocks for reference.
+Discord supports a subset of the markup language known as [markdown](https://www.markdownguide.org/). Markdown lets you share code with mono-spacing and syntax highlighting in Discord by wrapping it in backticks. [Here](https://www.markdownguide.org/extended-syntax/#fenced-code-blocks) is the documentation for markdown code blocks for reference.
 
 For example, if you wanted to share the following code:
 
@@ -67,5 +67,5 @@ A screenshot is okay in some situations, but if we need to make edits to the cod
 
 ![example screenshot](@site/static/img/example-screenshot.png)
 
-- You can take a screenshot on mac by pressing `command + shift + 4` and then dragging your mouse to select the area you want to capture.
-- You can take a screenshot on windows by pressing `windows + shift + s` and then dragging your mouse to select the area you want to capture.
+- You can take a screenshot on Mac by pressing `command + shift + 4` and then dragging your mouse to select the area you want to capture.
+- You can take a screenshot on Windows by pressing `Windows + shift + s` and then dragging your mouse to select the area you want to capture.

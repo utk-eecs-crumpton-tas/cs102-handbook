@@ -2,7 +2,7 @@
 
 Here is a graph of what the rooms look like
 
-![room1-diagram](/img/labs/mud.png)
+![room1-diagram](@site/static/img/labs/mud.png)
 
 ## File Format
 

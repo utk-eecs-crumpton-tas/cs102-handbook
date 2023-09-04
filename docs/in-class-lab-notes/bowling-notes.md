@@ -186,24 +186,24 @@ void print_game_summary(const vector<string> &player_names,
 
 Spare - add current frame roll 1 + current frame roll 2 + next frame roll 1
 
-![spare](/img/labs/bowling/spare.png)
+![spare](@site/static/img/labs/bowling/spare.png)
 
 Strike - add current frame roll 1 + next frame roll 1 + next frame roll 2
 
-![strike](/img/labs/bowling/strike.png)
+![strike](@site/static/img/labs/bowling/strike.png)
 
 Double strike - add current frame roll 1 + next frame roll 1 + next next frame roll 1
 
-![double-strike](/img/labs/bowling/double-strike.png)
+![double-strike](@site/static/img/labs/bowling/double-strike.png)
 
 Frame 10 spare - add frame 10 roll 1 + roll 2 + roll 3
 
-![frame10-spare](/img/labs/bowling/frame10-spare.png)
+![frame10-spare](@site/static/img/labs/bowling/frame10-spare.png)
 
 Frame 10 strike - add frame 10 roll 1 + roll 2 + roll 3
 
-![frame10-strike](/img/labs/bowling/frame10-strike.png)
+![frame10-strike](@site/static/img/labs/bowling/frame10-strike.png)
 
 Frame 9 double strike edge case - add frame 9 roll 1 + frame 10 roll 1 + frame 10 roll 2 (not frame 10 roll 3)
 
-![frame9-double-strike-edge-case](/img/labs/bowling/frame9-double-strike-edge-case.png)
+![frame9-double-strike-edge-case](@site/static/img/labs/bowling/frame9-double-strike-edge-case.png)

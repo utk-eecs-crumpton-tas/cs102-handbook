@@ -299,7 +299,7 @@ int main() {
 }
 ```
 
-Bad indentation makes code incredibly difficult to read. A couple of mistakes are okay, but if we cannot tell where your code blocks begin and end, you will lose points for this. The best advice I can give you is to use a code formatter. This is a program that will automatically fix any whitespace and indentation issues in your code and format everything in a consistent way. To format your code in Vim while in normal mode use the command `gg=G`. To format in VS Code right-click your code and select format document. You may need to install an extension in VS Code, the Microsoft `C/C++` extension should come with whatever you need. If you use a formatter on your code before submitting, you will never have to worry about losing points for this.
+Bad indentation makes code incredibly difficult to read. A couple of mistakes are okay, but if we cannot tell where your code blocks begin and end, you will lose points for this. The best advice I can give you is to use a code formatter. This is a program that will automatically fix any whitespace and indentation issues in your code and format everything in a consistent way. To format your code in Vim while in normal mode use the command `gg=G`. To format in VS Code right-click your code and select format document or hit `shift+alt+f`. You may need to install an extension in VS Code, the Microsoft `C/C++` extension should come with whatever you need. If you use a formatter on your code before submitting, you will never have to worry about losing points for this.
 
 A side note: If you are sharing code with a TA on the Discord server, please format your code first, this will make it much easier for us to help you!
 
