@@ -6,15 +6,33 @@ sidebar_position: 2
 
 How to use the gradescripts for the labs.
 
-These tests are designed to be run on the lab machines, but they should also work on your own machine if you have the correct dependencies installed, namely `bash`, `g++`, `diff`, `valgrind`, `realpath`, and `unzip`.
+## Prerequisites
 
-On Windows Subsystem for Linux, you should be able to install these dependencies with `apt`
+These tests are designed to be run on the lab machines, but they should also work on your machine if you have the correct dependencies installed, namely `g++`,`wget`, `unzip`, `diff` and `valgrind`.
 
 On Mac, you should be able to install these dependencies with [Homebrew](https://brew.sh/)
 
+On Windows Subsystem for Linux, you should be able to install these dependencies with `apt`
+
+Homebrew for Mac:
+
+:::warning
+`valgrind` is not available on Mac, for the assignments that include a `leak-check`, you will not be able to test locally.
+:::
+
+```sh
+brew install gcc wget diffutils
+```
+
+APT for WSL Windows Debian/Ubuntu:
+
+```sh
+apt install -y gcc wget unzip diffutils valgrind
+```
+
 ## Pre-setup
 
-Make sure your lab is in its own directory. This will prevent conflicts for gradescripts for future labs.
+Make sure your lab is in its own directory. This will prevent conflicts with gradescripts for future labs.
 
 :::note
 `lab-directory` and `lab.cpp` are filler names for your actual lab directory and source file.
@@ -25,32 +43,32 @@ Moving your lab into its own directory:
 Make a new directory:
 
 ```bash
-abradl11:hydra0 ~/cs102› mkdir lab-directory
+abradl11:hydra0 ~/cs102/labs› mkdir lab-directory
 ```
 
 Move your `lab.cpp` file into the new directory (or just create it in the directory if don't have one yet):
 
 ```bash
-abradl11:hydra0 ~/cs102› mv lab.cpp lab-directory
+abradl11:hydra0 ~/cs102/labs› mv lab.cpp lab-directory
 ```
 
 Change into the new directory:
 
 ```bash
-abradl11:hydra0 ~/cs102› cd lab-directory/
+abradl11:hydra0 ~/cs102/labs› cd lab-directory/
 ```
 
 Your directory should look like this:
 
 ```bash
-abradl11:hydra0 ~/cs102/lab-directory› ls
+abradl11:hydra0 ~/cs102/labs/lab-directory› ls
 lab.cpp
 ```
 
 You can verify the contents of the `lab.cpp` with:
 
 ```bash
-abradl11:hydra0 ~/cs102/lab-directory› cat lab.cpp
+abradl11:hydra0 ~/cs102/labs/lab-directory› cat lab.cpp
 *your source code*
 ```
 
@@ -72,14 +90,14 @@ Substituting `lab-tests.zip` with the name of the zip file for the lab you are w
 Unzip the tests:
 
 ```bash
-abradl11:hydra0 ~/cs102/lab-directory› unzip lab-tests.zip
+abradl11:hydra0 ~/cs102/labs/lab-directory› unzip lab-tests.zip
 *lots of output*
 ```
 
 And your directory should look like this:
 
 ```bash
-abradl11:hydra0 ~/cs102/lab-directory› ls
+abradl11:hydra0 ~/cs102/labs/lab-directory› ls
 lab.cpp  lab-tests.zip  scripts/ tests/
 ```
 
@@ -101,7 +119,7 @@ The tests use the `diff` command to compare your output to the tests. the `|` sy
 Example:
 
 ```txt
-abradl11:hydra0 ~/cs102/calculator-lab› bash scripts/test.bash calculator.cpp
+abradl11:hydra0 ~/cs102/labs/calculator-lab› bash scripts/test.bash calculator.cpp
 Testing absolute-value-operator (1/28)
   stdout     passed
 
@@ -126,7 +144,7 @@ For more info run with the print flag:
 Inspect additional information about the test with the `--print` flag:
 
 ```txt
-abradl11:hydra0 ~/cs102/calculator-lab› bash scripts/test.bash calculator.cpp --print input
+abradl11:hydra0 ~/cs102/labs/calculator-lab› bash scripts/test.bash calculator.cpp --print input
 Testing absolute-value-operator (1/28)
   stdout     passed
 
@@ -165,7 +183,7 @@ Output components
 - `stderr` expects output written to `cerr`
 - `stdout` expects output written to `cout`
 - `fout` expects output written to an `ofstream`
-- `leak-check` checks for memory leaks
+- `leak-check` checks for memory leaks with `valgrind`
 
 Input components
 
@@ -173,7 +191,7 @@ Input components
 - `fin` provides input to `ifstream`
 - `arguments` provide command-line arguments
 
-All files associated with a test can be found in `tests/<test-name>/`
+All files associated with a test can be found in `tests/<test-name>/` e.g. `tests/001-absolute-value-operator/`
 
 ## Debugging
 
@@ -186,7 +204,7 @@ cerr << "Debug information!" << endl;
 ```
 
 ```txt
-abradl11:hydra0 ~/cs102/calculator-lab› bash scripts/test.bash calculator.cpp --print output
+abradl11:hydra0 ~/cs102/labs/calculator-lab› bash scripts/test.bash calculator.cpp --print output
 Testing absolute-value-operator (1/28)
   stdout     passed
 
