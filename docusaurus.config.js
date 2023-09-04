@@ -1,47 +1,47 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require("prism-react-renderer/themes/github");
-const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+const lightCodeTheme = require('prism-react-renderer/themes/github')
+const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  staticDirectories: ["public", "static"],
-  title: "CS102 Writeups",
-  tagline: "A collection of various helpful writeups for CS102 at UTK",
-  favicon: "img/favicon.ico",
+  staticDirectories: ['public', 'static'],
+  title: 'CS102 Writeups',
+  tagline: 'A collection of various helpful writeups for CS102 at UTK',
+  favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: "https://ethan0429.github.io/",
+  url: 'https://ethan0429.github.io/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/cs102-writeups/",
+  baseUrl: '/cs102-writeups/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "Ethan0429", // Usually your GitHub org/user name.
-  projectName: "cs102-writeups", // Usually your repo name.
-  deploymentBranch: "gh-pages",
+  organizationName: 'Ethan0429', // Usually your GitHub org/user name.
+  projectName: 'cs102-writeups', // Usually your repo name.
+  deploymentBranch: 'gh-pages',
   trailingSlash: false,
 
-  onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: "en",
-    locales: ["en"],
+    defaultLocale: 'en',
+    locales: ['en'],
   },
 
   presets: [
     [
-      "classic",
+      'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve("./sidebars.js"),
+          sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
         },
@@ -51,7 +51,7 @@ const config = {
           // Remove this to remove the "edit this page" links.
         },
         theme: {
-          customCss: require.resolve("./src/css/custom.css"),
+          customCss: require.resolve('./src/css/custom.css'),
         },
       }),
     ],
@@ -61,7 +61,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       colorMode: {
-        defaultMode: "dark",
+        defaultMode: 'dark',
         disableSwitch: true,
         respectPrefersColorScheme: false,
       },
@@ -70,10 +70,10 @@ const config = {
          * The position of the live playground, above or under the editor
          * Possible values: "top" | "bottom"
          */
-        playgroundPosition: "bottom",
+        playgroundPosition: 'bottom',
       },
       // Replace with your project's social card
-      image: "img/cs102.png",
+      image: 'img/cs102.png',
       navbar: {
         // title: "CS 102 Writeups",
         // logo: {
@@ -82,35 +82,35 @@ const config = {
         // },
         items: [
           {
-            type: "doc",
-            docId: "home",
-            position: "left",
-            label: "Writeups",
+            type: 'doc',
+            docId: 'home',
+            position: 'left',
+            label: 'Writeups',
           },
           // { to: "/blog", label: "Blog", position: "left" },
           {
-            href: "https://github.com/Ethan0429/cs102-writeups",
-            label: "GitHub",
-            position: "right",
+            href: 'https://github.com/Ethan0429/cs102-writeups',
+            label: 'GitHub',
+            position: 'right',
           },
         ],
       },
-      footer: {
-        style: "dark",
-        copyright: `Written by Ethan Rickert, Undergraduate TA for COSC 102 2023 spring semester`,
-      },
+      // footer: {
+      //   style: "dark",
+      //   copyright: `Written by Ethan Rickert, Undergraduate TA for COSC 102 2023 spring semester`,
+      // },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
         magicComments: [
           {
-            className: "code-block-error-line",
-            line: "This will error",
+            className: 'code-block-error-line',
+            line: 'This will error',
           },
           {
-            className: "theme-code-block-highlighted-line",
-            line: "Highlight",
-            block: { start: "highlight-start", end: "highlight-end" },
+            className: 'theme-code-block-highlighted-line',
+            line: 'Highlight',
+            block: { start: 'highlight-start', end: 'highlight-end' },
           },
         ],
       },
@@ -121,21 +121,21 @@ const config = {
      */
     async function myPlugin(context, options) {
       return {
-        name: "docusaurus-tailwindcss",
+        name: 'docusaurus-tailwindcss',
         configurePostCss(postcssOptions) {
           // Appends TailwindCSS and AutoPrefixer.
-          postcssOptions.plugins.push(require("tailwindcss"));
-          postcssOptions.plugins.push(require("autoprefixer"));
-          return postcssOptions;
+          postcssOptions.plugins.push(require('tailwindcss'))
+          postcssOptions.plugins.push(require('autoprefixer'))
+          return postcssOptions
         },
-      };
+      }
     },
     /** */
   ],
-  themes: ["@docusaurus/theme-live-codeblock", "@docusaurus/theme-mermaid"],
+  themes: ['@docusaurus/theme-live-codeblock', '@docusaurus/theme-mermaid'],
   markdown: {
     mermaid: true,
   },
-};
+}
 
-module.exports = config;
+module.exports = config
