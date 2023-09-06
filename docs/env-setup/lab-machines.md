@@ -18,12 +18,6 @@ To run the install, run the following command
 bash -c "$(curl https://raw.githubusercontent.com/utk-eecs-crumpton-tas/cs102-downloads/main/scripts/install.bash)"
 ```
 
-Then restart the shell
-
-```bash
-exec zsh
-```
-
 ## Adding the C++ Language Server to Neovim
 
 Open neovim
