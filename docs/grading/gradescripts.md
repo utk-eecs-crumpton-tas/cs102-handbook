@@ -35,7 +35,9 @@ apt install -y gcc wget unzip diffutils valgrind
 Make sure your lab is in its own directory. This will prevent conflicts with gradescripts for future labs.
 
 :::note
-`lab-directory` and `lab.cpp` are filler names for your actual lab directory and source file.
+**`lab-directory` and `lab.cpp` are placeholders** for your actual lab directory and source file.
+
+You should name your lab directory something like `penname-lab` or `calculator-lab` and your source file `penname.cpp` or `calculator.cpp`.
 :::
 
 Moving your lab into its own directory:
@@ -75,22 +77,21 @@ abradl11:hydra0 ~/cs102/labs/lab-directory› cat lab.cpp
 ## Download the Gradescript
 
 :::note
-`lab-tests.zip` at the end of the URL in the line below is a **placeholder** for the actual zip file URL.
-A list of the zip files for the gradescripts can be found [here](https://github.com/utk-eecs-crumpton-tas/cs102-downloads/tree/main/tests).
+**`LAB_NAME-tests.zip` is a placeholder**. You will need to replace `LAB_NAME-tests.zip` at the end of the URL with the name of the zip file from the [list of files](https://github.com/utk-eecs-crumpton-tas/cs102-downloads/tree/main/tests) for your current assignment. E.g `penname-tests.zip` for the penname lab or `calculator-tests.zip` for the calculator lab.
 :::
 
 Download the gradescripts with:
 
 ```bash
-wget https://raw.githubusercontent.com/utk-eecs-crumpton-tas/cs102-downloads/main/tests/lab-tests.zip
+wget https://raw.githubusercontent.com/utk-eecs-crumpton-tas/cs102-downloads/main/tests/LAB_NAME-tests.zip
 ```
 
-Substituting `lab-tests.zip` at the end of the URL with the name of the zip file from the [list of files](https://github.com/utk-eecs-crumpton-tas/cs102-downloads/tree/main/tests) mentioned above.
+**Replacing `LAB_NAME-tests.zip` at the end of the URL** with the correct zip file name from the [list of files](https://github.com/utk-eecs-crumpton-tas/cs102-downloads/tree/main/tests) mentioned above.
 
 Unzip the tests:
 
 ```bash
-abradl11:hydra0 ~/cs102/labs/lab-directory› unzip lab-tests.zip
+abradl11:hydra0 ~/cs102/labs/lab-directory› unzip LAB_NAME-tests.zip
 *lots of output*
 ```
 
@@ -98,7 +99,7 @@ And your directory should look like this:
 
 ```bash
 abradl11:hydra0 ~/cs102/labs/lab-directory› ls
-lab.cpp  lab-tests.zip  scripts/ tests/
+lab.cpp  LAB_NAME-tests.zip  scripts/ tests/
 ```
 
 ## Using the Gradescript
@@ -116,7 +117,7 @@ bash scripts/test.bash lab.cpp
 
 The tests use the `diff` command to compare your output to the tests. the `|` symbol means the two lines are different. The `>` symbol with output in green means the line is extra in your program. The `<` symbol with output in red means the line is missing is yours. If the lines look the same, then it could be a whitespace issue.
 
-Example:
+Calculator lab example:
 
 ```txt
 abradl11:hydra0 ~/cs102/labs/calculator-lab› bash scripts/test.bash calculator.cpp
@@ -191,7 +192,7 @@ Input components
 - `fin` provides input to `ifstream`
 - `arguments` provide command-line arguments
 
-All files associated with a test can be found in `tests/<test-name>/` e.g. `tests/001-absolute-value-operator/`
+All files associated with a test can be found in `tests/TEST_NAME/` e.g. `tests/001-absolute-value-operator/`
 
 ## Debugging
 
@@ -204,17 +205,17 @@ cerr << "Debug information!" << endl;
 ```
 
 ```txt
-abradl11:hydra0 ~/cs102/labs/calculator-lab› bash scripts/test.bash calculator.cpp --print output
-Testing absolute-value-operator (1/28)
+abradl11:hydra0 ~/cs102/labs/calculator-lab› scripts/test.bash calculator.cpp --print output
+(1/28)  absolute-value-operator
   stdout     passed
 
-Testing absolute-value-b (2/28)
+(2/28)  absolute-value-b
   stdout     passed
 
-Testing absolute-value-B (3/28)
+(3/28)  absolute-value-B
   stdout     passed
 
-Testing absolute-value-positive (4/28)
+(4/28)  absolute-value-positive
   stdout     failed
 
 expected                                                        yours
@@ -222,23 +223,24 @@ Enter left operand:                                             Enter left opera
 Enter operation:                                                Enter operation:
 Result = 77                                                   | Result = -77
 
-stdout
-cat /home/abradl11/cs102/calculator-lab/tests/004-absolute-value-positive/stdout.tmp.txt
+run with
+./lab.bin <tests/004-absolute-value-positive/stdin.tmp.txt
+
+your stdout
+cat tests/004-absolute-value-positive/stdout.tmp.txt
 Enter left operand:
 Enter operation:
 Result = -77
 
-stderr
-cat /home/abradl11/cs102/calculator-lab/tests/004-absolute-value-positive/stderr.tmp.txt
+your stderr
+cat tests/004-absolute-value-positive/stderr.tmp.txt
 Debug information!
 ```
 
 Noticed the `Debug information!` line in the `stderr` section.
 
-You can also run the compiled program by itself with:
+You can see how the lab was run and run by itself under the run with section:
 
 ```bash
-./lab.bin
+./lab.bin <tests/004-absolute-value-positive/stdin.tmp.txt
 ```
-
-You will also need to supply arguments and standard input manually depending on the lab.
