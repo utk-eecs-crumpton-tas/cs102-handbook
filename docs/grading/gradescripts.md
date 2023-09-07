@@ -75,8 +75,8 @@ abradl11:hydra0 ~/cs102/labs/lab-directory› cat lab.cpp
 ## Download the Gradescript
 
 :::note
-`lab-tests.zip` is a filler name for the actual zip file for the lab you are working on.
-All of the zip files for the gradescripts can be found [here](https://github.com/utk-eecs-crumpton-tas/cs102-downloads/tree/main/tests).
+`lab-tests.zip` at the end of the URL in the line below is a **placeholder** for the actual zip file URL.
+A list of the zip files for the gradescripts can be found [here](https://github.com/utk-eecs-crumpton-tas/cs102-downloads/tree/main/tests).
 :::
 
 Download the gradescripts with:
@@ -85,7 +85,7 @@ Download the gradescripts with:
 wget https://raw.githubusercontent.com/utk-eecs-crumpton-tas/cs102-downloads/main/tests/lab-tests.zip
 ```
 
-Substituting `lab-tests.zip` with the name of the zip file for the lab you are working on.
+Substituting `lab-tests.zip` at the end of the URL with the name of the zip file from the [list of files](https://github.com/utk-eecs-crumpton-tas/cs102-downloads/tree/main/tests) mentioned above.
 
 Unzip the tests:
 
