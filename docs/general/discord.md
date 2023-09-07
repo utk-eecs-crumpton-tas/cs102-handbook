@@ -4,6 +4,8 @@ sidebar_position: 2
 
 # Sharing Code on Discord
 
+How to share code on Discord.
+
 :::info
 
 Before sharing your code on Discord, please format it first. If you're using Vim, you can format your code in normal mode by typing `gg=G`. If you're using VSCode, you can format your code with `shift+alt+f`.
