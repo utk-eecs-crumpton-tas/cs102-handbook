@@ -6,12 +6,15 @@ sidebar_position: 1
 
 ## About
 
-This site compiles a collection of various write-ups for CS 102 at UTK intended for helping students with labs or general course-related questions.
+This site compiles a collection of documentation for CS 102 at UTK intended for helping students with labs or general course-related questions.
 
 ## Sections Overview
 
 - [Environment Setup](/docs/category/env-setup) - Setting up
-  your environment for the course.
+  your C++ development environment and IDE for the course.
+
+- [Tutorials](/docs/category/tutorials) - Tutorials for
+  various topics in the course.
 
 - [General](/docs/category/general) - General reference and tips
   for the course.

@@ -48,7 +48,7 @@ Your row size in this case will be 32, the number of bits in an `int`.
 
 For this lab, you will not use xor!!
 
-[Ethan's overview of bitwise operators](https://ethan0429.github.io/cs102-writeups/docs/labs/lab8#bitwise-operators)
+[Ethan's overview of bitwise operators](/docs/lab-walkthroughs/bitset#bitwise-operators)
 
 ### Operator precedence
 
@@ -132,7 +132,7 @@ bool BITSET::Test(const int index) const {
 
 ## Bitset Calculators
 
-[Ethan's examples of bitwise calculators](https://ethan0429.github.io/cs102-writeups/docs/labs/lab8#examples)
+[Ethan's examples of bitwise calculators](/docs/lab-walkthroughs/bitset#examples)
 
 ## vector APIs you will need for this lab
 
@@ -192,6 +192,6 @@ ToBinary(0b1001, 6); // Does not return "000000 000000 000000 000000 000010 01 "
 
 ## Helpful Resources
 
-- [Ethan's walkthrough of the whole lab](https://ethan0429.github.io/cs102-writeups/docs/labs/lab8)
+- [Ethan's walkthrough of the whole lab](/docs/lab-walkthroughs/bitset)
 
 Make sure to set up the tests first thing. These are the tests we will grade the lab with!

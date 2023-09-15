@@ -15,7 +15,7 @@ Homebrew is a package manager for macOS. It allows you to install and manage sof
 Get it [here](https://brew.sh/) or run the following command in a terminal:
 
 :::warning
-Do not run this command while logged into the lab machines with `ssh`. Run it on your own computer.
+Do not run this command while logged into the lab machines with `ssh`. Run it locally on your own computer.
 :::
 
 ```bash

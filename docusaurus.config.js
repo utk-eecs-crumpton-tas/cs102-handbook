@@ -7,8 +7,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   staticDirectories: ['public', 'static'],
-  title: 'CS102 Writeups',
-  tagline: 'A collection of various helpful writeups for CS102 at UTK',
+  title: 'CS102 Handbook',
+  tagline: 'A collection of various helpful documentation for CS102 at UTK',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -75,7 +75,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/cs102.png',
       navbar: {
-        // title: "CS 102 Writeups",
+        // title: "CS 102 Handbook",
         // logo: {
         //   alt: "My Site Logo",
         //   src: "img/logo.svg",
@@ -85,7 +85,7 @@ const config = {
             type: 'doc',
             docId: 'home',
             position: 'left',
-            label: 'Writeups',
+            label: 'CS102 Handbook',
           },
           // { to: "/blog", label: "Blog", position: "left" },
           {
