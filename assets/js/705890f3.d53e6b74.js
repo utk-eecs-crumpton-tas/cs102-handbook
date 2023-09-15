@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkcosc_102_writeups=self.webpackChunkcosc_102_writeups||[]).push([[8016],{53411:s=>{s.exports=JSON.parse('{"permalink":"/cs102-writeups/blog/tags/hola","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
