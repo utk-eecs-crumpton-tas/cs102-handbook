@@ -10,7 +10,7 @@ This site compiles a collection of documentation for CS 102 at UTK intended for 
 
 ## Sections Overview
 
-- [Environment Setup](/docs/category/env-setup) - Setting up
+- [Environment Setup](/docs/category/environment-setup) - Setting up
   your C++ development environment and IDE for the course.
 
 - [Tutorials](/docs/category/tutorials) - Tutorials for
