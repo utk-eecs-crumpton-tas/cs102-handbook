@@ -68,7 +68,7 @@ Later in the course, you may be required to compile programs with extra flags th
 
 `ssh` - Stands for _Secure Shell_. This command allows you to log into a remote server. It is used to log into the lab machines.
 
-### Syntax
+### `ssh` Syntax
 
 | NetID          | Number            |
 | -------------- | ----------------- |
@@ -90,9 +90,13 @@ ssh bricker1@hydra12.eecs.utk.edu
 
 ## Copying to/from the lab machines (`scp`)
 
+:::note
+[Here](/docs/tutorials/ssh-and-scp.md) is a full `ssh` and `scp` tutorial.
+:::
+
 `scp` - Stands for _Secure Copy_. This command allows you to copy files from a remote server to your local computer or vice versa.
 
-### Syntax
+### `scp` Syntax
 
 | File                                      | NetID          | Number            | Destination                                           |
 | ----------------------------------------- | -------------- | ----------------- | ----------------------------------------------------- |
@@ -105,10 +109,10 @@ ssh bricker1@hydra12.eecs.utk.edu
 scp <file> <netid>@tesla<number>.eecs.utk.edu:<destination>
 
 # example (Unix/Linux)
-scp ~/Desktop/cs102/hello.cpp bricker1@hydra2.eecs.utk.edu:~/cs102/labs/lab1/
+scp ~/Documents/cs102/hello.cpp bricker1@hydra2.eecs.utk.edu:~/cs102/labs/lab1/
 
 # example (Windows)
-scp C:\Users\bricker1\Desktop\cs102\hello.cpp bricker1@hydra2.eecs.utk.edu:~/cs102/labs/lab1/
+scp C:\Users\bricker1\Documents\cs102\hello.cpp bricker1@hydra2.eecs.utk.edu:~/cs102/labs/lab1/
 ```
 
 ### From the lab computers to your computer
@@ -118,10 +122,10 @@ scp C:\Users\bricker1\Desktop\cs102\hello.cpp bricker1@hydra2.eecs.utk.edu:~/cs1
 scp <netid>@tesla<number>.eecs.utk.edu:<file> <destination>
 
 # example (Unix/Linux)
-scp bricker1@hydra2.eecs.utk.edu:~/cs102/labs/lab1/hello.cpp ~/Desktop/cs102/
+scp bricker1@hydra2.eecs.utk.edu:~/cs102/labs/lab1/hello.cpp ~/Downloads/
 
 # example (Windows)
-scp bricker1@hydra2.eecs.utk.edu:~/cs102/labs/lab1/hello.cpp C:\Users\bricker1\Desktop\cs102\
+scp bricker1@hydra2.eecs.utk.edu:~/cs102/labs/lab1/hello.cpp C:\Users\bricker1\Downloads\
 ```
 
 ### Common SCP FAQs/Errors
