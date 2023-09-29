@@ -1,4 +1,4 @@
-# Boiling Water Lab Notes
+# Boiling Water Notes
 
 ## New APIs
 
