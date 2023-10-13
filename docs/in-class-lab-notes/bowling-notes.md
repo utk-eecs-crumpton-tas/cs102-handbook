@@ -15,26 +15,34 @@ Three main components
 
 [Bowling calculator](https://bowlinggenius.com/)
 
-Spare - add current frame roll 1 + current frame roll 2 + next frame roll 1
+Spare: add current frame roll 1 + current frame roll 2 + next frame roll 1
+
+Frame 1: 5 + 5 + 6 = 16
 
 ![spare](@site/static/img/labs/bowling/spare.png)
 
-Strike - add current frame roll 1 + next frame roll 1 + next frame roll 2
+Strike: add current frame roll 1 + next frame roll 1 + next frame roll 2
+
+Frame 1: 10 + 3 + 4 = 17
 
 ![strike](@site/static/img/labs/bowling/strike.png)
 
-Double strike - add current frame roll 1 + next frame roll 1 + next next frame roll 1
+Double strike: add current frame roll 1 + next frame roll 1 + next next frame roll 1
+
+Frame 1: 10 + 10 + 5 = 25
 
 ![double-strike](@site/static/img/labs/bowling/double-strike.png)
 
-Frame 10 spare - add frame 10 roll 1 + roll 2 + roll 3
+Frame 10 spare: add frame 10 roll 1 + roll 2 + roll 3
 
 ![frame10-spare](@site/static/img/labs/bowling/frame10-spare.png)
 
-Frame 10 strike - add frame 10 roll 1 + roll 2 + roll 3
+Frame 10 strike: add frame 10 roll 1 + roll 2 + roll 3
 
 ![frame10-strike](@site/static/img/labs/bowling/frame10-strike.png)
 
-Frame 9 double strike edge case - add frame 9 roll 1 + frame 10 roll 1 + frame 10 roll 2 (not frame 10 roll 3)
+Frame 9 double strike edge case: add frame 9 roll 1 + frame 10 roll 1 + frame 10 roll 2 (not frame 10 roll 3)
+
+Frame 9: 10 + 10 + 3 = 23 (not 10 + 10 + 2)
 
 ![frame9-double-strike-edge-case](@site/static/img/labs/bowling/frame9-double-strike-edge-case.png)
