@@ -142,7 +142,7 @@ You will need this for the set function
 
 ```cpp
   std::vector<int> data{1, 2, 3, 4, 5};
-  data.resize(10 /* new size */, 0, /* fill value */); // resize to 10 elements, fill with 0
+  data.resize(10 /* new size */, 0 /* fill value */); // resize to 10 elements, fill with 0
   // after: {1, 2, 3, 4, 5, 0, 0, 0, 0, 0}
 ```
 

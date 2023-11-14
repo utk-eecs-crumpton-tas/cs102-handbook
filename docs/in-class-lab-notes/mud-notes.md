@@ -28,134 +28,15 @@ file.clear(); // reset the error state
 file.seekg(0); // move the cursor back to the beginning of the file
 ```
 
-We have gone over clear before. Basically when an input stream exhausts its input, it will enter an error state. While in the error state it will ignore any commands we try to give it. We can reset the error state by calling clear.
+We have gone over clear before. Basically, when an input stream exhausts its input, it will enter an error state. While in the error state it will ignore any commands we try to give it. We can reset the error state by calling clear.
 
 `file.seekg(0);` is new. This will set the position of the next character to be read to the beginning of the file. We can essentially reread the file from the beginning like we just opened it.
 
 For future reference, `seekg` can be used to navigating to an arbitrary position in the file, but we will not be using that functionality in this lab.
 
-## Parsing the Input
-
-Parsing the actual file _should_ be pretty straight forward, there are multiple ways to do it, but depending on how you do it, the following code snippet may be helpful.
-
-```cpp
-  string text = "hello\n\n\n";
-  while (text.back() == '\n') {
-    text.pop_back();
-  }
-  cout << text << endl; // prints "hello"
-```
-
-To get the whitespace to match canvas and work with the tests, you may need to do this. This will delete any trailing `\n` characters from the string.
-
-The file is like this:
-
-```txt
-~\n
-room name\n
-~\n
-room description\n
-~\n
-```
-
-You will need to manually remove newlines from the end of the room name, room description, and after the `~` characters
-
-```cpp
-for (size_t i = 0; i < number_of_rooms; ++i) {
-  string name;
-  string description;
-  string exits;
-  string ignore_newline;
-
-
-
-  Room &room = rooms[i]; // shortcut for accessing `rooms[i]` via `room`
-
-  getline(rooms_fin, name, '~');
-
-  // ignore the \n after the `~`, you'll need this more than just here
-  getline(rooms_fin, ignore_newline);
-
-  // TODO: you will need to process `name` further to remove trailing
-  // whitespace
-
-  room.name = name; // save to the current room like this
-
-  getline(rooms_fin, description, '~');
-
-  // TODO: process the description
-
-  getline(rooms_fin, exits, '~');
-  istringstream exits_iss(exits);
-
-  char direction; // read these out of the `istringstream`
-  int room_index;
-
-  while (/* TODO  */) { // parse exit lines
-      // TODO: you don't need to store the direction, but use the direction with a
-      // switch to determine where to write it on the rooms class - see
-      // `set_room_direction` function below
-  }
-}
-```
-
-This is code for a top-level function, but if you are using a room class, you can make it a method
-
-```cpp
-void set_room_direction(Room &room, const char direction,
-                        const int room_index) {
-    switch (direction) {
-    case 'n':
-        // you can use assert statements to help check you are not double assigning,
-        // the program will exit if the assertion is not true
-        // `#include <cassert>` must be included for them to work
-        assert(room.north == -1);
-        break;
-
-    case 's':
-        assert(room.south == -1);
-        break;
-
-    case 'e':
-        assert(room.east == -1);
-        break;
-
-    case 'w':
-        assert(room.west == -1);
-        break;
-
-    default:
-        throw invalid_argument(string("invalid direction ") + direction);
-    }
-}
-```
-
-I would also recommend creating a `get_room_direction`, or creating functions for any time you are switching on a direction.
-
-I should also note, make sure you are downloading the room file from Canvas, and moving the file with `mv`, `cp`, or `scp`. **Do not** copy and paste the contents of the room file. If you are on Windows, this can insert `\r` characters into the file, which will cause issues with your program.
-
 ## Sentinel Values
 
 A sentinel value is an arbitrarily significant value used to encode a special condition, usually to indicate the end of a sequence of values, or a non-existent state aka null. In this lab, we will use sentinel values to indicate that a room does not have a connection in a particular direction.
-
-## Room Class
-
-This is not complete, but it is a good start. You will need to add more member functions and data to this class.
-
-```cpp
-class Room {
-private:
-  int north = -1; // sentinel value, -1 means no room
-  int south = -1;
-  int east = -1;
-  int west = -1;
-  // still needs name, description, and maybe more
-public:
-  void look() const {}
-};
-```
-
-Or you you prefer using a struct, you can do that too.
 
 ```cpp
 struct Room {
@@ -163,10 +44,7 @@ struct Room {
   int south = -1;
   int east = -1;
   int west = -1;
-  // still needs name, description, and maybe more
 };
-
-void look_around_room(const Room &room) {}
 ```
 
 ## `new` and `delete` operators
@@ -263,20 +141,3 @@ int *values = new int[10]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 ```
 
 It is also worth noting that in `c++` memory initialized with `new` is initialized to 0 by default whereas on the stack it is not.
-
-## Destructors
-
-This is not required for this lab, and is a little more advanced of a concept, but in c++ we can automate deleting memory. Classes have another special function called a destructor, this is the exact opposite of the class constructor. Managing memory this way is a lot less error prone. We can specify a destructor by adding a tilde (~) before the class name `~MUD`. If you use this method, you will want to create another class, to hold the rooms. Here is an example:
-
-```cpp
-class MUD {
-  Room *rooms;
-
-public:
-  MUD(Room *const _rooms) { rooms = _rooms; }
-  void run() const {}
-  // this will automatically call delete[] on rooms for us when the Game
-  // object falls out of scope
-  ~MUD() { delete[] rooms; }
-};
-```
