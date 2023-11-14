@@ -55,11 +55,11 @@ Here are the following bitwise operators you'll be working with for C++
 
 | Operator | Description             |
 | -------- | ----------------------- |
-| &        | bitwise AND operator    |
-| &#124;   | bitwise OR operator     |
-| ~        | bitwise NOT operator    |
-| >>       | bitshift right operator |
-| <<       | bitshift left operator  |
+| `&`      | bitwise AND operator    |
+| `\|`     | bitwise OR operator     |
+| `~`      | bitwise NOT operator    |
+| `>>`     | bitshift right operator |
+| `<<`     | bitshift left operator  |
 
 Ignoring what these do for now, similar to an expression `a + 3` in C++, `a & 3` does not modify `a`. It hasn't been stored anywhere. You'd have to do `a += 3` to modify `a` itself. It's the same with bitwise operators `a &= 3`.
 
