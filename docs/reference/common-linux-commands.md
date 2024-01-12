@@ -88,7 +88,7 @@ ssh bricker1@hydra12.eecs.utk.edu
 
 :::
 
-## Copying to/from the lab machines (`scp`)
+## Copying to and from the lab machines (`scp`)
 
 :::note
 [Here](/docs/tutorials/ssh-and-scp.md) is a full `ssh` and `scp` tutorial.

@@ -477,7 +477,7 @@ This may seem like a steep policy, but this will be the policy used for all uppe
 
 The best way to be certain your lab compiles is to download your submission from Canvas, upload it to one of the lab machines, and verify that the submission compiles.
 
-The file can be uploaded using `scp SOURCE DESTINATION` (more on that in the [scp quick guide](/docs/reference/common-linux-commands#copying-tofrom-the-lab-machines)), but in this case, the source is the file on your computer, and the destination is the lab machine.
+The file can be uploaded using `scp SOURCE DESTINATION` (more on that in the [scp quick guide](/docs/reference/common-linux-commands#copying-to-and-from-the-lab-machines-scp)), but in this case, the source is the file on your computer, and the destination is the lab machine.
 
 ```bash
 scp my_program.cpp NETID@hydra0.eecs.utk.edu:~/uploads
