@@ -16,7 +16,7 @@ This site compiles a collection of documentation for CS 102 at UTK intended for 
 - [Tutorials](/docs/category/tutorials) - Tutorials for
   various topics in the course.
 
-- [General](/docs/category/general) - General reference and tips
+- [Reference](/docs/category/reference) - General reference and tips
   for the course.
 
 - [Grading](/docs/category/grading) - Information about grading

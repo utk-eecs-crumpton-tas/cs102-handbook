@@ -16,7 +16,7 @@ On Mac, the color schemes for Neovim will not display right for the default Term
 
 First log into a lab machine with `ssh`.
 
-[`ssh reference`](/docs/general/common-linux-commands#logging-into-the-lab-machines).
+[`ssh reference`](/docs/reference/common-linux-commands#logging-into-the-lab-machines).
 
 To run the installation, run the following command
 
@@ -26,13 +26,13 @@ bash -c "$(curl https://raw.githubusercontent.com/utk-eecs-crumpton-tas/cs102-do
 
 ## Adding the C++ Language Server to Neovim
 
-Open neovim
+Open Neovim
 
 ```bash
 nvim
 ```
 
-If this is your first time opening neovim, it will install several plugins. When it is finished, you can `:q`.
+If this is your first time opening Neovim, it will install several plugins. When it is finished, you can `:q`.
 
 Then run
 
@@ -44,7 +44,7 @@ Scroll down to `clangd` and press `i`.
 
 [Here](https://github.com/williamboman/mason-lspconfig.nvim#available-lsp-servers) is a full list of language servers that come with `mason`.
 
-[Here is a cheatsheet](http://localhost:3000/cs102-writeups/docs/general/vim-cheatsheet) of Vim commands for learning the basics. (Vim and Neovim use the same key bindings.)
+[Here is a cheatsheet](/docs/reference/vim-cheatsheet) of Vim commands for learning the basics. (Vim and Neovim use the same key bindings.)
 
 You can keep the plugins up to date by running the following command in Neovim
 
@@ -111,4 +111,4 @@ And change it to this:
 },
 ```
 
-Check out [this page](/docs/general/vim-cheatsheet) for a short reference of vim commands.
+Check out [this page](/docs/reference/vim-cheatsheet) for a short reference of vim commands.
