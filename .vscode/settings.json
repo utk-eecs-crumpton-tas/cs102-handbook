@@ -1,6 +1,6 @@
 {
-    "files.associations": {
-        "*.md": "markdown",
-        "iostream": "cpp"
-    }
+  "files.associations": {
+    "*.md": "markdown",
+    "iostream": "cpp"
+  }
 }

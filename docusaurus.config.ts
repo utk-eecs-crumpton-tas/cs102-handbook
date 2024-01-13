@@ -1,12 +1,10 @@
-// @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
+import type { Options } from "@docusaurus/preset-classic";
+import type { Config, ThemeConfig } from "@docusaurus/types";
 
-const {
-  themes: { github: lightCodeTheme, dracula: darkCodeTheme },
-} = require("prism-react-renderer");
+import { themes } from "prism-react-renderer";
+const { github: lightCodeTheme, dracula: darkCodeTheme } = themes;
 
-/** @type {import('@docusaurus/types').Config} */
-const config = {
+export default {
   staticDirectories: ["public", "static"],
   title: "CS102 Handbook",
   tagline: "A collection of various helpful documentation for CS102 at UTK",
@@ -41,10 +39,9 @@ const config = {
   presets: [
     [
       "classic",
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+      {
         docs: {
-          sidebarPath: require.resolve("./sidebars.js"),
+          sidebarPath: require.resolve("./sidebars.ts"),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
         },
@@ -56,68 +53,66 @@ const config = {
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
-      }),
+      } satisfies Options,
     ],
   ],
 
-  themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      colorMode: {
-        defaultMode: "dark",
-        disableSwitch: true,
-        respectPrefersColorScheme: false,
-      },
-      liveCodeBlock: {
-        /**
-         * The position of the live playground, above or under the editor
-         * Possible values: "top" | "bottom"
-         */
-        playgroundPosition: "bottom",
-      },
-      // Replace with your project's social card
-      image: "img/cs102.png",
-      navbar: {
-        // title: "CS 102 Handbook",
-        // logo: {
-        //   alt: "My Site Logo",
-        //   src: "img/logo.svg",
-        // },
-        items: [
-          {
-            type: "doc",
-            docId: "home",
-            position: "left",
-            label: "CS102 Handbook",
-          },
-          // { to: "/blog", label: "Blog", position: "left" },
-          {
-            href: "https://github.com/utk-eecs-crumpton-tas/cs102-handbook",
-            label: "GitHub",
-            position: "right",
-          },
-        ],
-      },
-      // footer: {
-      //   style: "dark",
-      //   copyright: `Written by Ethan Rickert, Undergraduate TA for COSC 102 2023 spring semester`,
+  themeConfig: {
+    colorMode: {
+      defaultMode: "dark",
+      disableSwitch: true,
+      respectPrefersColorScheme: false,
+    },
+    liveCodeBlock: {
+      /**
+       * The position of the live playground, above or under the editor
+       * Possible values: "top" | "bottom"
+       */
+      playgroundPosition: "bottom",
+    },
+    // Replace with your project's social card
+    image: "img/cs102-handbook.png",
+    navbar: {
+      // title: "CS102 Handbook",
+      // logo: {
+      //   alt: "My Site Logo",
+      //   src: "img/logo.svg",
       // },
-      prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
-        magicComments: [
-          {
-            className: "code-block-error-line",
-            line: "This will error",
-          },
-          {
-            className: "theme-code-block-highlighted-line",
-            line: "Highlight",
-            block: { start: "highlight-start", end: "highlight-end" },
-          },
-        ],
-      },
-    }),
+      items: [
+        {
+          type: "doc",
+          docId: "home",
+          position: "left",
+          label: "CS102 Handbook",
+        },
+        // { to: "/blog", label: "Blog", position: "left" },
+        {
+          href: "https://github.com/utk-eecs-crumpton-tas/cs102-handbook",
+          label: "GitHub",
+          position: "right",
+        },
+      ],
+    },
+    // footer: {
+    //   style: 'dark',
+    //   copyright: '',
+    // },
+    prism: {
+      theme: lightCodeTheme,
+      darkTheme: darkCodeTheme,
+      magicComments: [
+        {
+          className: "code-block-error-line",
+          line: "This will error",
+        },
+        {
+          className: "theme-code-block-highlighted-line",
+          line: "Highlight",
+          block: { start: "highlight-start", end: "highlight-end" },
+        },
+      ],
+    },
+  } satisfies ThemeConfig,
   plugins: [
     /**
      * TailwindCSS Plugin
@@ -133,12 +128,9 @@ const config = {
         },
       };
     },
-    /** */
   ],
   themes: ["@docusaurus/theme-live-codeblock", "@docusaurus/theme-mermaid"],
   markdown: {
     mermaid: true,
   },
-};
-
-module.exports = config;
+} satisfies Config;
