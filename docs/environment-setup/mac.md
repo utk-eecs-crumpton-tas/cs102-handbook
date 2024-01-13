@@ -139,7 +139,7 @@ I recommend the following settings:
 {
   // other settings...
   "files.autoSave": "onFocusChange", // Will save your files automatically when you change focus away from the editor
-  "editor.formatOnSave": true // Will automatically format your code when your files are saved
+  "editor.formatOnSave": true, // Will automatically format your code when your files are saved
   // other settings...
 }
 ```
