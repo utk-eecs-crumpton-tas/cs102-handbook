@@ -1,7 +1,3 @@
----
-title: Calculator
----
-
 # Calculator
 
 Build a simple arithmetic calculator.
@@ -23,7 +19,7 @@ Your program should do a few things:
 1. Prompt user for the left **operand**.
 2. Prompt user for _operator_.
 3. Prompt user for the right **operand**.
-4. Perform the operation and output the result.
+   Operate and output the result.
 
 Note that the **operands** are integers, while the _operator_ is a single character. You should use a `switch` statement to determine which operation to perform.
 

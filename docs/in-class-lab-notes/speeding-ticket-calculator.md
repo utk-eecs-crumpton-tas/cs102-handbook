@@ -1,6 +1,10 @@
 # Speeding Ticket Calculator Notes
 
+Essentials for the Speeding Ticket Calculator lab
+
 ## Working with files
+
+The basics of working with file streams in C++.
 
 ### Including headers
 

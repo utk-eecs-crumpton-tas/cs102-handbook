@@ -1,8 +1,7 @@
-import React from "react";
-import clsx from "clsx";
+import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
-import Link from "@docusaurus/Link";
+import React from "react";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -11,7 +10,7 @@ function HomepageHeader() {
       <h1 className="text-white text-6xl">{siteConfig.title}</h1>
       <p className="text-white italic">{siteConfig.tagline}</p>
       <Link
-        to="/docs/Home"
+        to="/docs/home"
         className="text-black text-base bg-white p-2 rounded-lg hover:scale-105 transition-all duration-200 ease-out hover:bg-[#DC1E4F] hover:text-white font-bold"
       >
         start reading

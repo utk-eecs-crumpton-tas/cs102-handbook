@@ -99,7 +99,7 @@ The above text is what is actually inside the input file. Notice how each line c
 
 ### Reading The File and The `fstream` Library
 
-As I mentioned [here](#Introduction), `fstream` is the file equivalent of `iostream`.
+As I mentioned [here](#introduction), `fstream` is the file equivalent of `iostream`.
 
 `cin` is to `iostream` as `ifstream` is to `fstream`. You can think of `cin` as just a _pre-defined_ keyword that we can use to easily read from `stdin` (the technical term for the keyboard, basically). `ifstream` is almost the exact same as `cin`, but it's not pre-defined, and it's used to read from a file instead of `stdin` (the keyboard).
 

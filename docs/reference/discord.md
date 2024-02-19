@@ -14,10 +14,9 @@ Before sharing your code on Discord, please format it first. If you're using Vim
 
 There are 3 ways to share code on Discord:
 
-- [Sharing Code on Discord](#sharing-code-on-discord)
-  - [Copying and Pasting](#copying-and-pasting)
-  - [Uploading a File](#uploading-a-file)
-  - [Taking a Screenshot](#taking-a-screenshot)
+- Option 1: [Copying and Pasting](#copying-and-pasting)
+- Option 2: [Uploading a File](#uploading-a-file)
+- Option 3: [Taking a Screenshot](#taking-a-screenshot)
 
 ## Copying and Pasting
 
