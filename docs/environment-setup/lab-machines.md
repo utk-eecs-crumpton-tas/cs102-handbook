@@ -9,8 +9,16 @@ Setting up Oh-My-Zsh and Neovim on the lab machines.
 This guide will walk you through installing [https://ohmyz.sh/](https://ohmyz.sh/) and [Neovim](https://neovim.io/) with [Neovim kickstart](https://github.com/nvim-lua/kickstart.nvim) as well as setting up a language server to enable inline code analysis and autocomplete.
 
 :::note
-On Mac, the color schemes for Neovim will not display right for the default Terminal app. I recommend using [Hyper](https://hyper.is/) as an alternative.
+On Mac, the color schemes for Neovim will not display right for the default Terminal app. I recommend using [iTerm2](https://iterm2.com/) as an alternative.
 :::
+
+After you have run the installation, your editor should look like this.
+
+![Neovim LSP Example](@site/static/img/nvim-lsp-example.png)
+
+And your comamnd line should look like this.
+
+![Oh-My-Zsh Example](@site/static/img/omz-example.png)
 
 ## Setup
 
@@ -24,33 +32,35 @@ To run the installation, run the following command
 bash -c "$(curl https://raw.githubusercontent.com/utk-eecs-crumpton-tas/cs102-downloads/main/scripts/install.bash)"
 ```
 
-## Adding the C++ Language Server to Neovim
-
-Open Neovim
+then open any file with Neovim
 
 ```bash
-nvim
+nvim file.cpp
 ```
 
-If this is your first time opening Neovim, it will install several plugins. When it is finished, you can `:q`.
+and that's it, you're ready to code!
 
-Then run
+## Neovim Usage
+
+Open Neovim and run the following commands in command mode, similar to how you run `:wq` in Vim.
+
+Keep the Neovim plugins up to date with the following command
+
+```vim
+:Lazy update
+```
+
+Use `:q` to leave this screen.
+
+Install additional LSP with [Mason](https://github.com/williamboman/mason-lspconfig.nvim#available-lsp-servers)
 
 ```vim
 :Mason
 ```
 
-Scroll down to `clangd` and press `i`.
+Scroll down to any LSP you want to install and hit `i` to install it.
 
-[Here](https://github.com/williamboman/mason-lspconfig.nvim#available-lsp-servers) is a full list of language servers that come with `mason`.
-
-[Here is a cheatsheet](/docs/reference/vim-cheatsheet) of Vim commands for learning the basics. (Vim and Neovim use the same key bindings.)
-
-You can keep the plugins up to date by running the following command in Neovim
-
-```vim
-:Lazy update
-```
+Use `:q` to leave this screen.
 
 ## OMZ Plugins
 
