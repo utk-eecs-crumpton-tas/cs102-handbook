@@ -29,7 +29,7 @@ First log into a lab machine with `ssh`.
 To run the installation, run the following command
 
 ```bash
-bash -c "$(curl https://raw.githubusercontent.com/utk-eecs-crumpton-tas/cs102-downloads/main/scripts/install.bash)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/utk-eecs-crumpton-tas/cs102-downloads/main/scripts/install.bash)"
 ```
 
 then open any file with Neovim
