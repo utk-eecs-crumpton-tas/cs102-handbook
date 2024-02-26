@@ -8,18 +8,18 @@ Installing [oh my zsh](https://ohmyz.sh/) and [Neovim](https://neovim.io/) with 
 
 ## Examples
 
-After you have run the installation, your editor should look like this.
+After you have run the installation, you will get compiler errors directly inside your editor.
 
 ![Neovim LSP Example](@site/static/img/nvim-lsp-example.png)
 
-And your command line should look like this.
+Your command line will have syntax highlighting and autocomplete with the right arrow key.
 
 ![Oh-My-Zsh Example](@site/static/img/omz-example.png)
 
 ## Installation
 
 1. Log into a lab machine with [`ssh`](/docs/reference/common-linux-commands#logging-into-the-lab-machines).
-2. Run this command. (Copy the command below with the copy button on the far left.)
+2. Run this command
 
    ```bash
    bash -c "$(curl -fsSL https://raw.githubusercontent.com/utk-eecs-crumpton-tas/cs102-downloads/main/scripts/install.bash)"
@@ -33,35 +33,7 @@ And your command line should look like this.
 
 4. If you are on a Mac the color scheme will not display correctly in the default terminal app. You can use [iTerm2](https://iterm2.com/) instead.
 
-## Neovim Usage
-
-Open Neovim and run the following commands in command mode, similar to how you run `:wq` in Vim.
-
-Keep the Neovim plugins up to date with the following command
-
-```vim
-:Lazy update
-```
-
-Use `:q` to leave this screen.
-
-Install additional LSP with [Mason](https://github.com/williamboman/mason-lspconfig.nvim#available-lsp-servers)
-
-```vim
-:Mason
-```
-
-Scroll down to any LSP you want to install and hit `i` to install it.
-
-Use `:q` to leave this screen.
-
-## OMZ Plugins
-
-The script adds the following plugins to OMZ
-
-- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) - This plugin suggests commands as you type based on history and completions similar to the way a web browser suggests websites.
-- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) - This plugin adds color to the command line.
-- [autoupdate](https://github.com/tamcore/autoupdate-oh-my-zsh-plugins) - This plugin automatically updates custom user plugins.
+Here is a [vim command reference](/docs/reference/vim-cheatsheet) to help you get started.
 
 ## Customizing (Optional)
 
@@ -89,6 +61,8 @@ Watch the following video to learn about customizing Neovim and the `init.lua` f
 
 [![Effective Neovim: Instant IDE](https://img.youtube.com/vi/stqUbv-5u2s/0.jpg)](https://youtu.be/stqUbv-5u2s?t=226)
 
+### Neovim Themes
+
 Here is a collection of Vim themes you can use
 
 [Neovim themes](https://vimcolorschemes.com/)
@@ -113,5 +87,3 @@ And change it to this:
     config = function() vim.cmd.colorscheme('tokyonight') end,
 },
 ```
-
-Check out [this page](/docs/reference/vim-cheatsheet) for a short reference of vim commands.
