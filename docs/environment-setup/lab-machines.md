@@ -31,7 +31,7 @@ Your command line will have syntax highlighting and autocomplete with the right 
    nvim file.cpp
    ```
 
-4. If you are on a Mac the color scheme will not display correctly in the default terminal app. You can use [iTerm2](https://iterm2.com/) instead.
+4. If you are on a Mac the color scheme for Neovim will not display correctly in the default terminal app. You can use [iTerm2](https://iterm2.com/) instead.
 
 Here is a [vim command reference](/docs/reference/vim-cheatsheet) to help you get started.
 
