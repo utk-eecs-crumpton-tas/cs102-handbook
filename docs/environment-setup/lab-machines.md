@@ -4,41 +4,34 @@ sidebar_position: 1
 
 # Lab Machines Environment Setup
 
-Setting up Oh-My-Zsh and Neovim on the lab machines.
+Installing [oh my zsh](https://ohmyz.sh/) and [Neovim](https://neovim.io/) with [Neovim kickstart](https://github.com/nvim-lua/kickstart.nvim) on the lab machines.
 
-This guide will walk you through installing [https://ohmyz.sh/](https://ohmyz.sh/) and [Neovim](https://neovim.io/) with [Neovim kickstart](https://github.com/nvim-lua/kickstart.nvim) as well as setting up a language server to enable inline code analysis and autocomplete.
-
-:::note
-On Mac, the color schemes for Neovim will not display right for the default Terminal app. I recommend using [iTerm2](https://iterm2.com/) as an alternative.
-:::
+## Examples
 
 After you have run the installation, your editor should look like this.
 
 ![Neovim LSP Example](@site/static/img/nvim-lsp-example.png)
 
-And your comamnd line should look like this.
+And your command line should look like this.
 
 ![Oh-My-Zsh Example](@site/static/img/omz-example.png)
 
-## Setup
+## Installation
 
-First log into a lab machine with `ssh`.
+1. Log into a lab machine with [`ssh`](/docs/reference/common-linux-commands#logging-into-the-lab-machines).
+2. Run this command. (Copy the command below with the copy button on the far left.)
 
-[`ssh reference`](/docs/reference/common-linux-commands#logging-into-the-lab-machines).
+   ```bash
+   bash -c "$(curl -fsSL https://raw.githubusercontent.com/utk-eecs-crumpton-tas/cs102-downloads/main/scripts/install.bash)"
+   ```
 
-To run the installation, run the following command
+3. That's it, now you can use Neovim. Just replace `vim` with `nvim` when editing your files.
 
-```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/utk-eecs-crumpton-tas/cs102-downloads/main/scripts/install.bash)"
-```
+   ```bash
+   nvim file.cpp
+   ```
 
-then open any file with Neovim
-
-```bash
-nvim file.cpp
-```
-
-and that's it, you're ready to code!
+4. If you are on a Mac the color scheme will not display correctly in the default terminal app. You can use [iTerm2](https://iterm2.com/) instead.
 
 ## Neovim Usage
 
