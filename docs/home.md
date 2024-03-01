@@ -36,3 +36,4 @@ This site compiles a collection of documentation for CS 102 at UTK intended for 
 - [Professor Crumpton's Notes](https://camille-chanel.github.io/cs102)
 - [Professor Crumpton's YouTube page](https://www.youtube.com/@algorithmness)
 - [cs102lings repository](https://github.com/utk-eecs-crumpton-tas/cs102lings)
+- [Ryan's lab slides](https://drive.google.com/drive/u/2/folders/1IdAYtrBtn_bugwrU0EzJAAwuotlb8ed2)
