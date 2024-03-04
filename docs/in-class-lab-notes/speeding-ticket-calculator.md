@@ -120,3 +120,7 @@ while(fin >> word1 >> word2 >> value >> fraction) {
 ```
 
 This code will print the exact same output as the file.
+
+<!--
+TODO: Add examples for switch statements with multiple cases and usage of `setfill`
+-->
