@@ -57,33 +57,62 @@ To customize Neovim, edit the `~/.config/nvim/init.lua` file with
 nvim ~/.config/nvim/init.lua
 ```
 
-Watch the following video to learn about customizing Neovim and the `init.lua` file
+The file contains tons of comments detailing all the configuration options.
 
-[![Effective Neovim: Instant IDE](https://img.youtube.com/vi/stqUbv-5u2s/0.jpg)](https://youtu.be/stqUbv-5u2s?t=226)
+The creator of Neovim kickstart created a YouTube video detailing all the aspects of the config as well.
+
+[![Effective Neovim: Instant IDE](https://img.youtube.com/vi/m8C0Cq9Uv9o/0.jpg)](https://youtu.be/m8C0Cq9Uv9o?si=m8tKHEMPFe7g8iXo)
 
 ### Neovim Themes
 
-Here is a collection of Vim themes you can use
+Nvim comes with several themes. You can switch to another theme with the telescope command:
 
-[Neovim themes](https://vimcolorschemes.com/)
+```vim
+:Telescope colorscheme
+```
 
-If you wanted to change your theme to, for example, [Tokyo Night](https://github.com/folke/tokyonight.nvim), find the section of the `init.lua` file that looks like this:
+You can also add additional themes from the community.
+
+Here is a collection of [Neovim themes](https://vimcolorschemes.com/) you can use.
+
+If you wanted to change your theme to, for example, [One Dark Pro](https://github.com/olimorris/onedarkpro.nvim), find the section of the `init.lua` file that looks like this:
 
 ```lua
--- Theme inspired by Atom
-{
-    'navarasu/onedark.nvim',
-    priority = 1000,
-    config = function() vim.cmd.colorscheme('onedark') end,
-},
+  { -- You can easily change to a different colorscheme.
+    -- Change the name of the colorscheme plugin below, and then
+    -- change the command in the config to whatever the name of that colorscheme is
+    --
+    -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`
+    'folke/tokyonight.nvim',
+    lazy = false, -- make sure we load this during startup if it is your main colorscheme
+    priority = 1000, -- make sure to load this before all the other start plugins
+    config = function()
+      -- Load the colorscheme here
+      vim.cmd.colorscheme 'tokyonight-night'
+
+      -- You can configure highlights by doing something like
+      vim.cmd.hi 'Comment gui=none'
+    end,
+  },
 ```
 
 And change it to this:
 
 ```lua
-{
-    'folke/tokyonight.nvim',
-    priority = 1000,
-    config = function() vim.cmd.colorscheme('tokyonight') end,
-},
+  { -- You can easily change to a different colorscheme.
+    -- Change the name of the colorscheme plugin below, and then
+    -- change the command in the config to whatever the name of that colorscheme is
+    --
+    -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`
+    'navarasu/onedark.nvim',
+    lazy = false, -- make sure we load this during startup if it is your main colorscheme
+    priority = 1000, -- make sure to load this before all the other start plugins
+    config = function()
+      -- Load the colorscheme here
+      vim.cmd.colorscheme 'onedark'
+
+      -- You can configure highlights by doing something like
+      vim.cmd.hi 'Comment gui=none'
+    end,
+  },
 ```
