@@ -68,7 +68,7 @@ NOTE: do not use the `pow` function from `cmath` for this lab!
   int x = 64 << 1; // same as 64 * pow(2, 1) or 64 * 2
   int x = 64 << 3; // same as 64 * pow(2, 3) or 64 * 8
   int x = 64 >> 1; // same as 64 / pow(2, 1) or 64 / 2
-  int x = 64 >> 4; // same as 64 / pow(2, 3) or 64 / 8
+  int x = 64 >> 3; // same as 64 / pow(2, 3) or 64 / 8
 ```
 
 ### Shorthand syntax
