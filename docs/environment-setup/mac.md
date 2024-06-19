@@ -36,10 +36,10 @@ GCC is a compiler for C and C++.
 brew install gcc
 ```
 
-GCC will be run with the command `g++-13` instead of `g++`. On a Mac, `g++` points to the Apple Clang C++ compiler, which is not the same as GCC.
+GCC will be run with the command `g++-14` instead of `g++`. On a Mac, `g++` points to the Apple Clang C++ compiler, which is not the same as GCC.
 
 ```bash
-g++-13 -std=c++11 -o lab0 lab0.cpp
+g++-14 -std=c++11 -o lab0 lab0.cpp
 ```
 
 ## Download VSCode
@@ -114,7 +114,7 @@ You can also compile and run your code from the terminal:
 Compile:
 
 ```bash
-g++-13 -std=c++11 -o hello hello.cpp
+g++-14 -std=c++11 -o hello hello.cpp
 ```
 
 Run:
