@@ -14,12 +14,12 @@ Homebrew is a package manager for macOS. It allows you to install and manage sof
 
 Get it [here](https://brew.sh/) or run the following command in a terminal:
 
-:::warning
-Do not run this command while logged into the lab machines with `ssh`. Run it locally on your own computer.
+:::danger
+Do not run this command while logged into the lab machines with `ssh`. Run it locally from your Mac's terminal.
 :::
 
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/utk-eecs-crumpton-tas/cs102-downloads/main/scripts/install-brew-safe.bash)"
 ```
 
 Keep homebrew and all of its packages up to date with the following command:
