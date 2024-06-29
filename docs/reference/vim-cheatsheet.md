@@ -60,6 +60,18 @@ Used for highlighting and selecting text.
 - `:wq` - Save and exit a document
 - `:q!` - Close the document without saving
 - `shift + zz` - An alias for `:wq` to save and exit a document
+- `shift + zq` - An alias for `:q!` to save and exit a document
+
+## Neovim keymaps
+
+Useful actions specific to Neovim kickstart.
+
+- `space f` - Autoformat with `clang-foramt`, much more thorough formatter than `gg=G`
+- `space rn` - Rename the variable under the cursor
+- `gcc` - Comment toggle a line
+- `space ds` - Search document symbols: functions, class names, etc
+- `space /` - Search the current file
+- `shift + K` - Show LSP information for the symbol under the cursor
 
 <!-- There is a [vim VS Code extension](https://marketplace.visualstudio.com/items?itemName=VS Codevim.vim) if you want to use vim key bindings in VS Code. This is another good [vim VS Code extension](https://marketplace.visualstudio.com/items?itemName=VSCodevim.vim) for setting up the VS Code extension. -->
 
