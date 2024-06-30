@@ -66,6 +66,7 @@ Used for highlighting and selecting text.
 
 Useful actions specific to Neovim kickstart.
 
+- `ctrl + y` - Accept autocomplete suggestion
 - `space f` - Autoformat with `clang-foramt`, much more thorough formatter than `gg=G`
 - `space rn` - Rename the variable under the cursor
 - `gcc` - Comment toggle a line
